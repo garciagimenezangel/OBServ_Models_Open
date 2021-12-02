@@ -1,0 +1,394 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var OBServSites = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/sites"),
+    OBServOrganicSites = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/sitesOrganic"),
+    tableFloralNestCORINE_ESTIMAP = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CORINE_ESTIMAP"),
+    tableFloralNestCORINE_SpainAssessment = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CORINE_SpainAssessment"),
+    tableGuildsSpainAssessment = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/Guilds/Guilds_SpainAssessment"),
+    tableFloralNestCGLSCont_DelphiResults = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CGLSCont_DelphiResults"),
+    tableGuildsSpainAssessmentSimplified = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/Guilds/Guilds_SpainAssessment_Simplified"),
+    tableFloralNestCGLSContSimplified_DelphiResults = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CGLSCont_DelphiResults_Simplified"),
+    tableFloralNestCGLSCont_optimizedGA_large = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CGLSCont_optimizedGA_large"),
+    tableFloralNestCGLSDisc_ESTIMAP = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CGLSDisc_ESTIMAP"),
+    tableFloralNestCGLSDiscSimplified_ESTIMAP = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CGLSDisc_ESTIMAP_Simplified"),
+    tableFloralNestCGLSCont_optimizedGA_small = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CGLSCont_optimizedGA_small"),
+    tableFloralNestCGLSCont_optimizedGA_large_biome1 = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CGLSCont_optimizedGA_large_biome1"),
+    tableFloralNestCGLSCont_optimizedGA_small_biome1 = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CGLSCont_optimizedGA_small_biome1"),
+    tableFloralNestCGLSCont_optimizedGA_large_biome4 = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CGLSCont_optimizedGA_large_biome4"),
+    tableFloralNestCGLSCont_optimizedGA_small_biome4 = ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/FloralNest/FloralNest-CGLSCont_optimizedGA_small_biome4");
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+
+var functions = require('users/angelgimenez/OBServ:lib/functions');
+
+exports.getLandCoverDiscrete = function(lcOption, startYear, endYear) {
+	switch(lcOption) {
+		case "CORINE":
+			if(startYear<=1990 & endYear>=1990) return ee.Image("COPERNICUS/CORINE/V20/100m/1990");
+			if(startYear<=2000 & endYear>=2000) return ee.Image("COPERNICUS/CORINE/V20/100m/2000");
+			if(startYear<=2006 & endYear>=2006) return ee.Image("COPERNICUS/CORINE/V20/100m/2006");
+			if(startYear<=2012 & endYear>=2012) return ee.Image("COPERNICUS/CORINE/V20/100m/2012");
+			if(startYear<=2018 & endYear>=2018) return ee.Image("COPERNICUS/CORINE/V20/100m/2018");
+			return ee.Image("COPERNICUS/CORINE/V20/100m/2018");
+		case "CGLS":
+			if(startYear<=2015 & endYear>=2015) return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2015").select('discrete_classification');
+			if(startYear<=2016 & endYear>=2016) return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2016").select('discrete_classification');
+			if(startYear<=2017 & endYear>=2017) return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2017").select('discrete_classification');
+			if(startYear<=2018 & endYear>=2018) return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2018").select('discrete_classification');
+			if(startYear<=2019 & endYear>=2019) return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2019").select('discrete_classification');
+			return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2019").select('discrete_classification');
+		default:
+			return ee.Image();
+	}	
+};
+
+exports.getLandCoverContinuous = function(lcOption, startYear, endYear) {
+	switch(lcOption) {
+		case "CORINE":
+			return ee.Image();
+		case "CGLS":
+			var selectedFields = ['bare-coverfraction', 'crops-coverfraction', 'grass-coverfraction', 'moss-coverfraction', 'shrub-coverfraction', 'tree-coverfraction', 'snow-coverfraction', 'urban-coverfraction', 'water-permanent-coverfraction', 'water-seasonal-coverfraction'];
+			var newNamesFields = ['bare', 'crop', 'grass', 'moss', 'shrub', 'tree', 'snow', 'urban', 'water_perm', 'water_seas'];
+			if(startYear<=2015 & endYear>=2015) return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2015").select(selectedFields, newNamesFields);
+			if(startYear<=2016 & endYear>=2016) return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2016").select(selectedFields, newNamesFields);
+			if(startYear<=2017 & endYear>=2017) return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2017").select(selectedFields, newNamesFields);
+			if(startYear<=2018 & endYear>=2018) return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2018").select(selectedFields, newNamesFields);
+			if(startYear<=2019 & endYear>=2019) return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2019").select(selectedFields, newNamesFields);
+			return ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2019").select(selectedFields, newNamesFields);			
+		default:
+			return ee.Image();
+	}
+};
+
+exports.getSoilMoisturePercentage = function() {
+	var moisColl = ee.ImageCollection("NASA_USDA/HSL/SMAP_soil_moisture");
+	var moisFra = moisColl.select('smp').mean();
+	var moisPer = moisFra.multiply(100);
+	return moisPer;
+};
+exports.getSoilSandContent = function() {
+	return ee.Image("OpenLandMap/SOL/SOL_SAND-WFRACTION_USDA-3A1A1A_M/v02").select('b0');
+};
+
+exports.getSoilClayContent = function() {
+	return ee.Image("OpenLandMap/SOL/SOL_CLAY-WFRACTION_USDA-3A1A1A_M/v02").select('b0');
+};
+
+exports.getLandcoverDiversity = function(radius, landcover, fieldCover, seminatCover, crs, res) {
+	var maskLC      = fieldCover.or(seminatCover);
+	var maskedLC    = landcover.mask(maskLC);
+	var reducerDiv  = ee.Reducer.countDistinct();
+	var radiusPixel = radius.divide(res).floor();
+	var circle      = ee.Kernel.circle(radiusPixel);
+	return maskedLC.reduceNeighborhood(reducerDiv, circle).reproject({crs:crs, scale:res});
+};
+
+exports.getSoilPollinationLookupTable = function() {
+	return ee.FeatureCollection("users/angelgimenez/OBServ/Mechanistic/Soil-Pollination");
+};
+
+exports.getFloralNestTable = function(reference, lcOption, lcContinuous, simplified, guild) {
+  if (lcContinuous) {
+    switch(reference) {
+      case "Delphi":
+        switch(lcOption) {
+          case "CORINE":
+            print("Warning: continuous fields not available in CORINE, returned empty table");
+            return ee.FeatureCollection();
+          case "CGLS":
+            if (simplified) {
+              return tableFloralNestCGLSContSimplified_DelphiResults;
+            }
+            else {
+              return tableFloralNestCGLSCont_DelphiResults; 
+            }
+        }
+        break;
+      case "optimizedGA":
+        switch(lcOption) {
+          case "CGLS":
+            if (guild == 'large') {
+              print("Floral-Nest table: optimizedGA-large");
+              return tableFloralNestCGLSCont_optimizedGA_large;
+            } else {
+              print("Floral-Nest table: optimizedGA-small");
+              return tableFloralNestCGLSCont_optimizedGA_small; 
+            }
+        }
+        break;
+      case "optimizedGAbiome1":
+        switch(lcOption) {
+          case "CGLS":
+            if (guild == 'large') {
+              print("Floral-Nest table: optimizedGA-large Biome 1");
+              return tableFloralNestCGLSCont_optimizedGA_large_biome1;
+            } else {
+              print("Floral-Nest table: optimizedGA-small Biome 1");
+              return tableFloralNestCGLSCont_optimizedGA_small_biome1; 
+            }
+        }
+        break;
+      case "optimizedGAbiome4":
+        switch(lcOption) {
+          case "CGLS":
+            if (guild == 'large') {
+              print("Floral-Nest table: optimizedGA-large Biome 4");
+              return tableFloralNestCGLSCont_optimizedGA_large_biome4;
+            } else {
+              print("Floral-Nest table: optimizedGA-small Biome 4");
+              return tableFloralNestCGLSCont_optimizedGA_small_biome4; 
+            }
+        }
+        break;
+    }    
+  }
+  else {
+    switch(reference) {
+      case "ESTIMAP":
+        switch(lcOption) {
+          case "CORINE":
+            return tableFloralNestCORINE_ESTIMAP;
+          case "CGLS":
+            if (simplified) {
+              return tableFloralNestCGLSDiscSimplified_ESTIMAP;
+            }
+            else {
+              return tableFloralNestCGLSDisc_ESTIMAP; 
+            }
+            break; 
+        }
+        break;
+      case "SpExperts":
+        switch(lcOption) {
+          case "CORINE":
+            return tableFloralNestCORINE_SpainAssessment;
+          case "CGLS":
+            // TODO: IMPLEMENT  
+        }
+        break;
+    }    
+  }
+  print("Warning: no table floral-nest found for the reference and land cover options selected, returned empty table");
+	return ee.FeatureCollection();
+};
+
+exports.getGuildsTable = function(reference, simplified) {
+	switch(reference) {
+		case "ESTIMAP":
+		case "SpExperts":
+		case "Delphi":
+		case "optimizedGA":
+		case "optimizedGAbiome1":
+		case "optimizedGAbiome4":
+      if (simplified) {
+        return tableGuildsSpainAssessmentSimplified;  
+      }
+      else {
+        return tableGuildsSpainAssessment;
+      }
+      break;
+		default:
+      print("Warning: no reference found, empty guilds table returned");
+			return ee.FeatureCollection();
+	}
+};
+
+var getSeminaturalCover = function(lcOption, landcover) {
+  var forestCover  = getForestCover(lcOption, landcover);
+  var scrubCover   = getScrubCover(lcOption, landcover);
+  var seminatCover = ee.Image(0);
+  switch (lcOption) {
+    case "CORINE":
+      seminatCover = forestCover.or(scrubCover).or(landcover.eq(331).or(landcover.eq(333)));
+      break;
+    case "CGLS":
+      seminatCover = forestCover.or(scrubCover).or(landcover.eq(60).or(landcover.eq(90).or(landcover.eq(100))));
+      break;
+    case "GLOBCOVER":
+      print("WARNING: seminatural cover mask not implemented for GLOBCOVER");
+      break;
+    default:
+  }
+  return seminatCover;
+};
+exports.getSeminaturalCover = getSeminaturalCover;
+
+var getDistanceToSeminatural = function(lcOption, landcover) {
+  var seminatCover = getSeminaturalCover(lcOption, landcover);
+  var ker = ee.Kernel.euclidean(3000,'meters');
+  var dist = seminatCover.distance(ker);
+  return dist.rename('distSeminat_meters');
+};
+exports.getDistanceToSeminatural = getDistanceToSeminatural;
+
+/* Get mask of forest cover */
+var getForestCover = function (lcOption, landcover) {
+  switch (lcOption) {
+		case "CORINE":
+      return landcover.eq(311).or(landcover.eq(312).or(landcover.eq(313)));
+    case "CGLS":
+      return landcover.eq(111).or(landcover.eq(112).or(landcover.eq(113).
+			or(landcover.eq(114).or(landcover.eq(115).or(landcover.eq(116).
+			or(landcover.eq(121).or(landcover.eq(122).or(landcover.eq(123).
+			or(landcover.eq(124).or(landcover.eq(125).or(landcover.eq(126))))))))))));
+		case "GLOBCOVER":
+      return landcover.eq(40).or(landcover.eq(50).or(landcover.eq(60).
+			or(landcover.eq(70).or(landcover.eq(90).or(landcover.eq(100).
+			or(landcover.eq(110).or(landcover.eq(160).or(landcover.eq(170)))))))));
+    default:
+      return ;
+  }
+};
+exports.getForestCover = getForestCover;
+
+/* Get mask of shrub-herbaceous cover */
+var getScrubCover = function (lcOption, landcover) {
+    switch (lcOption) {
+			case "CORINE":
+        return landcover.eq(321).or(landcover.eq(322).or(landcover.eq(323).or(landcover.eq(324))));
+      case "CGLS":
+        return landcover.eq(20).or(landcover.eq(30));
+			case "GLOBCOVER":
+        return landcover.eq(120).or(landcover.eq(130).or(landcover.eq(140).or(landcover.eq(150).or(landcover.eq(180)))));
+			default:
+        return ;
+    }
+};
+exports.getScrubCover = getScrubCover;
+
+/* Get mask of crop fields */
+exports.getCropfieldCover = function (lcOption, landcover) {
+    switch (lcOption) {
+			case "CORINE":
+        var arable = landcover.eq(211).or(landcover.eq(212).or(landcover.eq(213)));
+        var perman = landcover.eq(221).or(landcover.eq(222).or(landcover.eq(223)));
+        var pastur = landcover.eq(231);
+        var hetAgr = landcover.eq(241).or(landcover.eq(242).or(landcover.eq(243).or(landcover.eq(244))));
+        return arable.or(perman.or(pastur.or(hetAgr)));
+      case "CGLS":
+        return landcover.eq(40);
+			case "GLOBCOVER":
+        return landcover.eq(11).or(landcover.eq(14).or(landcover.eq(20).or(landcover.eq(30))));
+			default:
+        return ;
+    }
+};
+
+/* Elevation */
+exports.getElevation = function () {
+  return ee.Image("CGIAR/SRTM90_V4");
+};
+
+/* Returns the resolution of the landcover option (hardcoded) */
+exports.getResolution = function(lcOption) {
+	switch(lcOption) {
+		case "CORINE":
+			return 100;
+		case "CGLS":
+			return 100;
+		default:
+			return 100;
+	}
+};
+
+/* Get an image representing the openness of forest.
+Output: score 0 (treeCover 100%) up to 1.0 (tree cover = 0).  */
+exports.getTreeOpenness = function () {
+    var treeCover = ee.ImageCollection('NASA/MEASURES/GFCC/TC/v3').select('tree_canopy_cover').mean(); // dataset availability 2000-2015. Use mean
+    return treeCover.expression('1.0 - treeCover/100', {
+        'treeCover': treeCover.select('tree_canopy_cover')
+    });
+};
+
+/* Returns crs of the image to export */
+exports.getCRS = function() {
+  return 'EPSG:4326';
+};
+
+/* Return resolution used, in meters */
+exports.getScaleM = function() {
+  return 100;
+};
+
+/* Return dimensions of the image to export */
+exports.getDimensions = function() {
+  return "45642x30721";
+};
+
+var getTypicalFlightDistance = function(species) {
+  var it = getIT(species);
+  return Math.pow(10, -1.643 + 3.242*Math.log(it)/Math.log(10)) * 1000;
+};
+exports.getTypicalFlightDistance = getTypicalFlightDistance;
+
+var getMaximumFlightDistance = function(species) {
+  var it = getIT(species);
+  return Math.pow(10, -1.363 + 3.366*Math.log(it)/Math.log(10)) * 1000;
+};
+exports.getMaximumFlightDistance = getMaximumFlightDistance;
+
+/* Simplify typical distances into 3 possible values: 150, 500, 1000. 
+Tests with values larger than 1000 for Bombus terrestris made computation time out */
+var getRepresentativeTypicalFlightDistance = function(species) {
+  var typFlightDist = getTypicalFlightDistance(species);
+  var simplifiedVals = [150,500,1000];
+  var simplifiedVal = simplifiedVals[0];
+  var minDiff = 100000;
+  for (var i=0; i<simplifiedVals.length; i++) {
+    var diff = Math.abs(typFlightDist - simplifiedVals[i]);
+    if (diff < minDiff) {
+      minDiff = diff;
+      simplifiedVal = simplifiedVals[i];
+    }
+  }
+  return simplifiedVal;
+};
+exports.getRepresentativeTypicalFlightDistance = getRepresentativeTypicalFlightDistance;
+
+/* Get sites */
+exports.getSamplingPoints = function(option) {
+  var sites;
+  switch(option) {
+    case "OBServ field data":
+      sites = OBServSites;
+      break;
+    case "OBServ organic":
+      sites = OBServOrganicSites;
+      break;
+    default:
+  } 
+  return sites;
+};
+
+exports.filterSitesByBoundaries = function(sites, boundaries) {
+  switch(boundaries) {
+    case "USA":
+      var usa = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017').filter(ee.Filter.eq('country_co','US'));
+      boundsFilter = ee.Filter.bounds(usa);
+      sites = sites.filter(boundsFilter);
+      break;
+    case "Spain":
+      var spain = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017').filter(ee.Filter.eq('country_co','SP'));
+      boundsFilter = ee.Filter.bounds(spain);
+      sites = sites.filter(boundsFilter);
+      break;
+    case "Europe":
+      var europe = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017').filterMetadata('wld_rgn', 'equals', 'Europe');
+      boundsFilter = ee.Filter.bounds(europe);
+      sites = sites.filter(boundsFilter);
+      break;
+    default:
+  }
+  return sites;
+};
+
+/* Return a rectangular region covering most of the European territory*/
+exports.getROI = function() {
+  return ee.Geometry.Rectangle([-11, 34, 30, 60]);
+};
+
+/* Return a small region for test purposes*/
+exports.getROITest = function() {
+  return ee.Geometry.Rectangle([-11, 15, 30, 45]);
+};
+
+//var it = 2.19
+//print(Math.pow(10, -1.643 + 3.242*Math.log(it)/Math.log(10)) * 1000);

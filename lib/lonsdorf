@@ -1,0 +1,796 @@
+var functions = require('users/angelgimenez/OBServ:lib/functions');
+var data      = require('users/angelgimenez/OBServ:lib/data');
+
+//////////////////////////////////////////////////
+//////////////// FLORAL RESOURCES ////////////////
+//////////////////////////////////////////////////
+/* Get a list of images (one per guild) with scores for floral resources */
+var getFloralResource = function (config) {
+  var crs = config.refsystem;
+  var res = config.res;
+  var reducer = ee.Reducer.mean();
+  var guild = config.guild;
+  var lookupGuilds = config.tableGuilds;
+  var floralResStack = getFloralResStack(config);
+  var floralRes = ee.Image();
+  var guildRow = lookupGuilds.filter(ee.Filter.eq('guild', guild));
+  var typDistFlight = ee.Number.parse(guildRow.first().get('flight distance'));
+  var radius = typDistFlight.multiply(2.0);
+  var kernel = ee.Kernel.gaussian({
+      radius: radius,
+      sigma: typDistFlight,
+      units: 'meters',
+      normalize: true
+  });
+  if (config.simplified) {
+    floralRes = floralResStack.rename("floral_resource"); 
+  }
+  else {
+    var guildSpring = guildRow.first().get('flight spring');
+    var guildSummer = guildRow.first().get('flight summer');
+    var guildAutumn = guildRow.first().get('flight autumn');
+    var guildWinter = guildRow.first().get('flight winter');
+    floralRes = functions.getWeightedCombination(
+        ee.List([
+                floralResStack.select('floral_spring').rename('floral'),
+                floralResStack.select('floral_summer').rename('floral'),
+                floralResStack.select('floral_autumn').rename('floral'),
+                floralResStack.select('floral_winter').rename('floral')
+            ]),
+        ee.List([
+                guildSpring,
+                guildSummer,
+                guildAutumn,
+                guildWinter
+            ]));
+    floralRes = floralRes.rename("floral_resource");      
+  }
+  floralRes = applyFloralBoosts(floralRes, floralResStack, config);
+  var reducedFloralRes = floralRes.reduceNeighborhood(reducer, kernel).reproject({ crs:crs, scale:res });
+  return reducedFloralRes.rename("floral_resource");
+};
+
+/* Get floral resources map for every season 
+Note: if 'simplified' option is activated, no information about seasons, so no real stack is returned (only one band with the floral map) */
+var getFloralResStack = function (config) {
+  var floralResStack = ee.Image();
+	var codes = getFloralNestValues('landcover', config);
+	if (config.simplified) {
+    var floral = getFloralNestValues('floral', config);
+    if (config.lcContinuous) {
+      var landcoverContSimp = config.landcoverCont;
+      var floralByLC    = codes.map(function(code) {
+        var lcType           = ee.String(code);
+        var imLcTypeFraction = landcoverContSimp.select(lcType);
+        var indexLcType      = codes.indexOf(lcType);
+        var score            = floral.get(indexLcType);
+        var imFloralByLC     = imLcTypeFraction.multiply(ee.Number(score)).divide(100).rename('floral');
+        var stackedImage     = imFloralByLC;
+        return stackedImage.float();
+      });
+      var imFloralCont = ee.ImageCollection(floralByLC).select('floral').sum();
+      floralResStack = imFloralCont;
+    }
+    else {
+      var landcoverSimp = config.landcover;
+      var imFloral      = landcoverSimp.remap(codes, floral).rename("floral");
+      floralResStack    = imFloral;         
+    }
+	}
+	else {
+    var floralSpring = getFloralNestValues('floral spring', config);
+    var floralSummer = getFloralNestValues('floral summer', config);
+    var floralAutumn = getFloralNestValues('floral autumn', config);
+    var floralWinter = getFloralNestValues('floral winter', config);
+    if (config.lcContinuous) {
+      var landcoverCont = config.landcoverCont;
+      var listFloralByLC = codes.map(function(code) {
+        var lcType             = ee.String(code);
+        var imLcTypeFraction   = landcoverCont.select(lcType);
+        var indexLcType        = codes.indexOf(lcType);
+        var scoreSpring        = floralSpring.get(indexLcType);
+        var scoreSummer        = floralSummer.get(indexLcType);
+        var scoreAutumn        = floralAutumn.get(indexLcType);
+        var scoreWinter        = floralWinter.get(indexLcType);
+        var imFloralSpringByLC = imLcTypeFraction.multiply(ee.Number(scoreSpring)).divide(100).rename('floral_spring');
+        var imFloralSummerByLC = imLcTypeFraction.multiply(ee.Number(scoreSummer)).divide(100).rename('floral_summer');
+        var imFloralAutumnByLC = imLcTypeFraction.multiply(ee.Number(scoreAutumn)).divide(100).rename('floral_autumn');
+        var imFloralWinterByLC = imLcTypeFraction.multiply(ee.Number(scoreWinter)).divide(100).rename('floral_winter');
+        var listImFloralByLC   = ee.List([imFloralSpringByLC, imFloralSummerByLC, imFloralAutumnByLC, imFloralWinterByLC]);
+        var stackedImage       = functions.stackCollection(ee.ImageCollection(listImFloralByLC));
+        return stackedImage.float();
+      });
+      var imFloralSpringCont = ee.ImageCollection(listFloralByLC).select('floral_spring').sum();
+      var imFloralSummerCont = ee.ImageCollection(listFloralByLC).select('floral_summer').sum();
+      var imFloralAutumnCont = ee.ImageCollection(listFloralByLC).select('floral_autumn').sum();
+      var imFloralWinterCont = ee.ImageCollection(listFloralByLC).select('floral_winter').sum();
+      var listImFloralCont   = ee.List([imFloralSpringCont, imFloralSummerCont, imFloralAutumnCont, imFloralWinterCont]);
+      floralResStack = functions.stackCollection(ee.ImageCollection(listImFloralCont));    
+    }
+    else {
+      var landcover      = config.landcover;
+      var imFloralSpring = landcover.remap(codes, floralSpring).rename("floral_spring");
+      var imFloralSummer = landcover.remap(codes, floralSummer).rename("floral_summer");
+      var imFloralAutumn = landcover.remap(codes, floralAutumn).rename("floral_autumn");
+      var imFloralWinter = landcover.remap(codes, floralWinter).rename("floral_winter");
+      var listImFloral = ee.List([imFloralSpring, imFloralSummer, imFloralAutumn, imFloralWinter]);
+      floralResStack = functions.stackCollection(ee.ImageCollection(listImFloral));    
+    }
+	}  
+  return floralResStack;
+};
+
+/* Apply positive effects on floral resources depending on the configuration */
+var applyFloralBoosts = function(floralRes, floralResStack, config) {
+	var bonusFieldBorder  = ee.Image(0).float().rename('bonus');
+	var bonusForestBorder = ee.Image(0).float().rename('bonus');
+	var bonusOpenness     = ee.Image(0).float().rename('bonus');
+	var bonusLandsComplex = ee.Image(0).float().rename('bonus');
+	var bonusSeasonalEven = ee.Image(0).float().rename('bonus');	
+	if (config.cropEdgeEffect) {
+    print('Computing field border bonus...');
+    bonusFieldBorder  = getBonusFieldBorder(config).rename('bonus');
+	}
+	if (config.forestEdgeEffect) {
+    print('Computing forest border bonus...');
+    bonusForestBorder = getBonusForestBorder(config).rename('bonus');
+	}
+	if (config.opennessEffect) {
+    print('Computing forest openness bonus...');
+    bonusOpenness     = getBonusOpennessEffect(config).rename('bonus');
+	}
+	if (config.landscapeComplexity) {
+    print('Computing landscape complexity bonus...');
+    bonusLandsComplex = getBonusLandscapeComplexity(config).rename('bonus');
+	}
+	if (config.seasonalEven) { // if simplified=true, this is automatically ignored
+    print('Computing seasonal evenness bonus...');
+    bonusSeasonalEven = getBonusSeasonalEvenness(floralResStack, config).rename('bonus');
+	}	 
+	var bonusColl = ee.ImageCollection([bonusFieldBorder, bonusForestBorder, bonusOpenness, bonusLandsComplex, bonusSeasonalEven]);
+	var bonus = bonusColl.max();
+	return floralRes.add(bonus).min(1.0);
+};
+
+/* Get score on the positive effect of diversity and evenness of land cover types within certain radius */
+var getBonusLandscapeComplexity = function (config) {
+	var diversityLC = config.landCoverDiv;
+	// rescale to [0,0.25] (max value 0.25, for areas with 5 or more lc types)
+	var rescaledDiv = diversityLC.unitScale(1, 5).min(1.0);
+	var bonus       = rescaledDiv.multiply(0.25); 
+	return bonus;
+};
+
+/* Get score on the positive effect of evenness of floral resources */
+var getBonusSeasonalEvenness = function (floralResStack, config) {
+  if (config.simplified) return ee.Image(0); // if simplified, no seasons
+	var crs = config.refsystem;
+	var res = config.res;
+	var listFloralRes = ee.List([
+                        floralResStack.select('floral_spring'),
+                        floralResStack.select('floral_summer'),
+                        floralResStack.select('floral_autumn'),
+                        floralResStack.select('floral_winter')
+						]);
+	var shannonIndexSeasons = functions.getShannonIndex(listFloralRes).reproject({crs: crs,scale: res });
+	return shannonIndexSeasons.multiply(0.05); // return the Shannon index multiplied by 0.05 (to make bonus range between 0 and log(4)*0.05=0.07)
+};
+
+/* Get score on the positive effect of the border of crop fields (motivated by the positive effect of reducing the size of the fields) */
+var getBonusFieldBorder = function (config) {
+	var crs = config.refsystem;
+	var res = config.res;
+	var fieldCover = config.cropfieldCover.reproject({ crs: crs, scale: res });
+	var fieldEdges = functions.getEdges(fieldCover).reproject({	crs: crs,	scale: res });
+	var bonusFields = fieldCover.multiply(fieldEdges).reproject({crs: crs, scale: res});
+	return bonusFields.float().multiply(0.25);
+};
+
+/* Get score on the positive effect of the border of forests (motivated by more light accessible in those areas) */
+var getBonusForestBorder = function (config) {
+	var crs = config.refsystem;
+	var res = config.res;
+	var forestCover = config.forestCover.reproject({ crs: crs, scale: res });
+  var forestEdges = functions.getEdges(forestCover).reproject({ crs: crs, scale: res });
+  var bonusForest = forestCover.multiply(forestEdges).reproject({ crs: crs, scale: res });
+  return bonusForest.float().multiply(0.25);
+};
+
+/* Get score on the positive effect of the openness of the forest canopy (motivated by more light accessible in those areas) */
+var getBonusOpennessEffect = function (config) {
+	var crs = config.refsystem;
+	var res = config.res;
+  var treeOpnness = config.treeOpenness.reproject({ crs: crs, scale: res });
+	var forestCover = config.forestCover.reproject({ crs: crs, scale: res });
+  var bonus = forestCover.multiply(treeOpnness).reproject({ crs: crs, scale: res });
+	return bonus.multiply(0.25);
+};	
+//////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////
+//////////////// NESTING SUITABILITY ////////////////
+/////////////////////////////////////////////////////
+// Get a list of images (one per guild) with scores for nesting 
+var getNestingSuitability = function (config) {
+  var lookupGuilds = config.tableGuilds;
+  var guild        = config.guild;  
+  var guilds       = lookupGuilds.aggregate_array('guild');
+  var nestSuit     = ee.Image();
+  var nestingSuitStack = getNestingSuitStack(config, guild);
+  var guildRow         = lookupGuilds.filter(ee.Filter.eq('guild', guild));
+  if (config.simplified) {
+    var guildCavitySimp = guildRow.first().get('nesting cavity');
+    var guildGroundWood = guildRow.first().get('nesting ground and wood');
+    // nestSuit = functions.getMaxCombination( : use this if we use max instead of weighted combination
+    nestSuit = functions.getWeightedCombination(
+            ee.List([
+                    nestingSuitStack.select('nesting_cavity').rename('nesting'),
+                    nestingSuitStack.select('nesting_groundwood').rename('nesting')
+                ]),
+            ee.List([
+                    guildCavitySimp,
+                    guildGroundWood
+                ]));
+  }
+  else {
+    var guildCavity = guildRow.first().get('nesting cavity');
+    var guildGround = guildRow.first().get('nesting ground');
+    var guildStem   = guildRow.first().get('nesting stem');
+    var guildWood   = guildRow.first().get('nesting wood');
+    // nestSuit = functions.getMaxCombination( : use this if we use max instead of weighted combination
+    nestSuit = functions.getWeightedCombination(
+            ee.List([
+                    nestingSuitStack.select('nesting_cavity').rename('nesting'),
+                    nestingSuitStack.select('nesting_ground').rename('nesting'),
+                    nestingSuitStack.select('nesting_stem').rename('nesting'),
+                    nestingSuitStack.select('nesting_wood').rename('nesting')
+                ]),
+            ee.List([
+                    guildCavity,
+                    guildGround,
+                    guildStem,
+                    guildWood
+                ]));
+  }
+  nestSuit = nestSuit.rename("nesting_suitability");
+  return nestSuit;
+};
+
+/* Get nesting suitability map for every type of nesting (cavity, ground, stem, wood) */
+var getNestingSuitStack = function (config, guild) {
+  var nestingSuitStack = ee.Image();
+  var codes            = getFloralNestValues('landcover', config);
+  if (config.simplified) {
+    var nestCavitySimp = getFloralNestValues('nesting cavity', config); 
+    var nestGroundWood = getFloralNestValues('nesting ground and wood', config); 
+    if (config.lcContinuous) {
+      var landcoverContSimp   = config.landcoverCont;
+      var listNestingByLCSimp = codes.map(function(code) {
+        var lcType               = ee.String(code);
+        var imLcTypeFraction     = landcoverContSimp.select(lcType);
+        var indexLcType          = codes.indexOf(lcType);
+        var scoreGroundWood      = nestGroundWood.get(indexLcType);
+        var scoreCavity          = nestCavitySimp.get(indexLcType);
+        var imNestGroundWoodByLC = imLcTypeFraction.multiply(ee.Number(scoreGroundWood)).divide(100).rename('nesting_groundwood');
+        var imNestCavityByLC     = imLcTypeFraction.multiply(ee.Number(scoreCavity)).divide(100).rename('nesting_cavity');
+        var listImNestByLC       = ee.List([imNestGroundWoodByLC, imNestCavityByLC]);
+        var stackedImage         = functions.stackCollection(ee.ImageCollection(listImNestByLC));
+        return stackedImage.float();
+      });
+      var imNestGroundWoodContSimp = ee.ImageCollection(listNestingByLCSimp).select('nesting_groundwood').sum();
+      var imNestCavityContSimp     = ee.ImageCollection(listNestingByLCSimp).select('nesting_cavity').sum();
+      var listImNestContSimp       = ee.List([imNestGroundWoodContSimp, imNestCavityContSimp]);
+      nestingSuitStack = functions.stackCollection(ee.ImageCollection(listImNestContSimp));    
+    }
+    else {
+      var landcoverSimp    = config.landcover;
+      var imNestCavitySimp = landcoverSimp.remap(codes, nestCavitySimp).rename("nesting_cavity");
+      var imNestGroundWood = landcoverSimp.remap(codes, nestGroundWood).rename("nesting_groundwood");
+      var listImNestSimp   = ee.List([imNestCavitySimp, imNestGroundWood]);
+      nestingSuitStack = functions.stackCollection(ee.ImageCollection(listImNestSimp));
+    }
+  }
+  else {
+    var nestCavity   = getFloralNestValues('nesting cavity',config);
+    var nestStem     = getFloralNestValues('nesting stem',config);
+    var nestWood     = getFloralNestValues('nesting wood',config);
+    var nestGround   = getFloralNestValues('nesting ground',config);
+    if (config.lcContinuous) {
+      var landcoverCont  = config.landcoverCont;
+      var listNestingByLC = codes.map(function(code) {
+        var lcType             = ee.String(code);
+        var imLcTypeFraction   = landcoverCont.select(lcType);
+        var indexLcType        = codes.indexOf(lcType);
+        var scoreGround        = nestGround.get(indexLcType);
+        var scoreCavity        = nestCavity.get(indexLcType);
+        var scoreWood          = nestWood.get(indexLcType);
+        var scoreStem          = nestStem.get(indexLcType);
+        var imNestGroundByLC   = imLcTypeFraction.multiply(ee.Number(scoreGround)).divide(100).rename('nesting_ground');
+        var imNestCavityByLC   = imLcTypeFraction.multiply(ee.Number(scoreCavity)).divide(100).rename('nesting_cavity');
+        var imNestWoodByLC     = imLcTypeFraction.multiply(ee.Number(scoreWood)).divide(100).rename('nesting_wood');
+        var imNestStemByLC     = imLcTypeFraction.multiply(ee.Number(scoreStem)).divide(100).rename('nesting_stem');
+        var listImNestByLC     = ee.List([imNestGroundByLC, imNestCavityByLC, imNestWoodByLC, imNestStemByLC]);
+        var stackedImage       = functions.stackCollection(ee.ImageCollection(listImNestByLC));
+        return stackedImage.float();
+      });
+      var imNestGroundCont = ee.ImageCollection(listNestingByLC).select('nesting_ground').sum();
+      var imNestCavityCont = ee.ImageCollection(listNestingByLC).select('nesting_cavity').sum();
+      var imNestWoodCont   = ee.ImageCollection(listNestingByLC).select('nesting_wood').sum();
+      var imNestStemCont   = ee.ImageCollection(listNestingByLC).select('nesting_stem').sum();
+      var listImNestCont   = ee.List([imNestGroundCont, imNestCavityCont, imNestWoodCont, imNestStemCont]);
+      nestingSuitStack = functions.stackCollection(ee.ImageCollection(listImNestCont));    
+    }
+    else {
+      var landcover    = config.landcover;
+      var imNestCavity = landcover.remap(codes, nestCavity).rename("nesting_cavity");
+      var imNestStem   = landcover.remap(codes, nestStem).rename("nesting_stem");
+      var imNestWood   = landcover.remap(codes, nestWood).rename("nesting_wood");
+      var imNestGround = getNestGroundImage(config, guild);
+      var listImNest   = ee.List([imNestCavity, imNestGround, imNestStem, imNestWood]);
+      nestingSuitStack = functions.stackCollection(ee.ImageCollection(listImNest));
+    }
+  }
+  return nestingSuitStack;
+};
+
+/* Get 'nesting ground' image. Depending on the configuration, it may be derived from soil parameters or from the table of floral-nest scores */
+var getNestGroundImage = function (config, guild) {
+  var isWildbees = ee.Number.parse(ee.String(guild).compareTo('wildbees')); // compareTo returns 0 if guild=='wildbees'
+  if (config.soil && isWildbees.eq(0)) {
+    return deriveSoilSuitability(config);
+  } else {
+		var landcover   = config.landcover;
+    var codes       = getFloralNestValues('landcover', config);
+    var nestGround  = getFloralNestValues('nesting ground', config);
+    nestGround = nestGround.map(function (x) { return ee.Number.parse(x); });
+    return landcover.remap(codes, nestGround).rename("nesting_ground");
+  }
+};
+
+/* Other parameters: moisture
+// Get moisture percentage from soil moisture profile (fraction)
+var moisFra = moisColl.select('smp').reduce(ee.Reducer.mean());
+var moisPer = moisFra.multiply(100);
+var moisAvg = lookupSoil.aggregate_array('Moisture').reduce(ee.Reducer.mean());
+var moisStd = lookupSoil.aggregate_array('Moisture').reduce(ee.Reducer.stdDev());
+var moisCen0  = moisPer.subtract(ee.Number(moisAvg));
+var moisScore = moisCen0.expression(
+'exp(-mois*mois/(2*moisStd*moisStd))', {
+'mois': moisCen0.select('smp_mean'),
+'moisAvg': ee.Number(moisAvg),
+'moisStd': ee.Number(moisStd)
+});
+moisScore = moisScore.rename("mois_score");*/
+
+/* Derive map of nesting suitability from the properties of the soil */
+var deriveSoilSuitability = function (config) {
+	var lookupSoil = config.tableSoil;
+	var sandCont   = config.soilSandCont;
+	var clayCont   = config.soilClayCont;
+    // Lookup table, soil values from Cane et al. (1991)
+    var sandAvg = lookupSoil.aggregate_array('Sand').reduce(ee.Reducer.mean());
+    var clayAvg = lookupSoil.aggregate_array('Clay').reduce(ee.Reducer.mean());
+    var sandStd = lookupSoil.aggregate_array('Sand').reduce(ee.Reducer.stdDev());
+    var clayStd = lookupSoil.aggregate_array('Clay').reduce(ee.Reducer.stdDev());
+
+    // Derive scores from soil maps and a normal distribution from previous lookup table values
+    var sandCen0 = sandCont.subtract(ee.Number(sandAvg));
+    var sandScore = sandCen0.expression(
+            'exp(-sand*sand/(2*sandStd*sandStd))', {
+        'sand': sandCen0.select('b0'),
+        'sandAvg': ee.Number(sandAvg),
+        'sandStd': ee.Number(sandStd)
+    });
+    sandScore = sandScore.rename("sand_score");
+    var clayCen0 = clayCont.subtract(ee.Number(clayAvg));
+    var clayScore = clayCen0.expression(
+            'exp(-clay*clay/(2*clayStd*clayStd))', {
+        'clay': clayCen0.select('b0'),
+        'clayAvg': ee.Number(clayAvg),
+        'clayStd': ee.Number(clayStd)
+    });
+    clayScore = clayScore.rename("clay_score");
+
+    var imList = ee.List([sandScore, clayScore]);
+    var imColl = ee.ImageCollection(imList);
+    var stacked = functions.stackCollection(imColl);
+    var nestingIm = stacked.expression(
+            'sand*clay', {
+        'sand': stacked.select('sand_score'),
+        'clay': stacked.select('clay_score')
+    });
+    return nestingIm.rename("nesting_ground");
+};
+//////////////////////////////////////////////////
+
+/////////////////////////////////////////////////
+//////////////// INSECT ACTIVITY ////////////////
+/////////////////////////////////////////////////
+/* Apply factor of insect activity */
+var applyFactorInsectActivity = function(sourceMap, config) {
+	var factorInsectAct = getFactorInsectActivity(config);
+	sourceMap = sourceMap.multiply(factorInsectAct);
+	return sourceMap;
+};
+
+/* Get factor that describes insect activity depending on solar radiation and temperature */
+var getFactorInsectActivity = function(config) {
+  var guild = config.guild;
+  var tBlackglobe = ee.Image();
+  switch (config.insActOpt) {
+    case "max":
+      tBlackglobe = getMaxTempBlackGlobeActiveMonths(config);
+      break;
+    case "avg":
+      tBlackglobe = getAverageTempBlackGlobeActiveMonths(config);
+      break;
+    default:
+      print("WARNING. Insect activity option not valid");
+  }
+  var f0 = ee.Image();
+  var f1 = ee.Image();
+  // Activity (guild)
+  switch(guild) {
+    case "small":
+      f0 = ee.Image(-0.3989).rename('f0');
+      f1 = ee.Image(0.0413).rename('f1');
+      break;
+    case "large":
+      f0 = ee.Image(-0.2305).rename('f0');
+      f1 = ee.Image(0.0323).rename('f1');
+      break;
+    default:
+      print("WARNING: guild factors not defined for insect activity computation");
+  }
+  return ee.Image().expression(
+    'f0 + f1 * tBlackGlobe',
+    {
+      'tBlackGlobe': tBlackglobe.select('tBlackGlobe'),
+      'f0' : f0.select('f0'),
+      'f1' : f1.select('f1')
+    }
+    ).rename('insect_activity').min(1).max(0); // clamp values to <0 or >1
+};
+exports.getFactorInsectActivity = getFactorInsectActivity;
+
+var getAverageTempBlackGlobeActiveMonths = function(config) {
+  var collTBG = getCollectionTempBlackGlobe(config);
+  var sumTBG  = collTBG.select('tBlackGlobe').sum();
+  var nActive = collTBG.select('flagActive').sum();
+  var avgTBG  = sumTBG.divide(nActive).rename('tBlackGlobe');
+  return avgTBG;
+};
+
+var getMaxTempBlackGlobeActiveMonths = function(config) {
+  var collTBG = getCollectionTempBlackGlobe(config).select('tBlackGlobe');
+  return collTBG.max().rename('tBlackGlobe');
+};
+
+var getCollectionTempBlackGlobe = function(config) {
+	var startDate = config.startDate;
+	var endDate   = config.endDate;
+	var tempList  = ee.ImageCollection("ECMWF/ERA5_LAND/MONTHLY").filter(ee.Filter.date(startDate, endDate)).select('temperature_2m').toList(1000);
+	var tminList  = ee.ImageCollection("IDAHO_EPSCOR/TERRACLIMATE").filter(ee.Filter.date(startDate, endDate)).select('tmmn').toList(1000);
+	var radList   = ee.ImageCollection("IDAHO_EPSCOR/TERRACLIMATE").filter(ee.Filter.date(startDate, endDate)).select('srad').toList(1000);
+  var iter      = ee.List.sequence(0, radList.size().subtract(1));
+  var listTBG   = iter.map(function (it) {
+    var KtoC           = ee.Image(273.15);
+    var refIm          = ee.Image(tempList.get(it));
+    var temp           = ee.Image(tempList.get(it));
+    var tmin           = ee.Image(tminList.get(it));
+    var rad            = ee.Image(radList.get(it));
+    var f0             = ee.Image(-0.62).rename('f0');
+    var f1             = ee.Image(1.027).rename('f1');
+    var f2             = ee.Image(0.006).rename('f2');
+    var minT           = ee.Image(100).rename('minT');
+    switch(config.guild) {
+      case "small":
+        minT = ee.Image(10.05).rename('minT'); 
+        break;
+      case "large":
+        minT = ee.Image(6.44).rename('minT');
+        break;
+      default:
+        print("WARNING: temperature threshold not defined for insect activity computation");
+    }
+    var month          = ee.Date(refIm.get('system:time_start')).get('month');
+    var monthString    = ee.String(month);
+    var daylength      = functions.getDaylength(monthString);
+    var tBlackGlobe = ee.Image().expression(
+      'tmin > minT ? (f0 + f1*temp + f2*rad*24/dl) : 0',
+      {
+        'temp': temp.select('temperature_2m').subtract(273.15),
+        'rad' : rad.select('srad').multiply(0.1),
+        'tmin': tmin.select('tmmn').multiply(0.1),
+        'minT': minT.select('minT'),
+        'f0'  : f0.select('f0'),
+        'f1'  : f1.select('f1'),
+        'f2'  : f2.select('f2'),
+        'dl'  : daylength.select('daylength_hours')
+      }
+    ).rename('tBlackGlobe');
+    var flagActive = ee.Image().expression(
+      'tBG > 0 ? 1 : 0',
+      { 'tBG': tBlackGlobe.select('tBlackGlobe') }
+    ).rename('flagActive');
+    return ee.Image([tBlackGlobe, flagActive]);
+  });
+  return ee.ImageCollection(listTBG);
+};
+
+
+/////////////////////////////////////////////////////////
+//////////////// DISTANCE TO SEMINATURAL ////////////////
+/////////////////////////////////////////////////////////
+var applyDistanceSeminatural = function(sourceMap, config) {
+	var factorDistSeminat = getFactorDistanceSeminatural(config);
+	sourceMap = sourceMap.multiply(factorDistSeminat);
+	return sourceMap;
+};
+
+var getFactorDistanceSeminatural = function(config) {
+  var distSeminat = config.distSeminat;
+  return ee.Image().expression( 'exp(-0.00104*d)' , { 'd': distSeminat.select('distSeminat_meters') } );
+};
+
+/////////////////////////////////////////////////
+//////////////// OTHER FUNCTIONS ////////////////
+/////////////////////////////////////////////////
+/* Get column values from table of floral or nesting resources, taking into account management option */ 
+var getFloralNestValues = function(column, config) {
+  var tableVal    = config.tableFloralNest;
+  var values      = ee.List(tableVal.reduceColumns(ee.Reducer.toList(), [column]).get('list'));
+  var isLandcover = column.indexOf("landcover");
+  if (isLandcover < 0) values = values.map(function(x) { return ee.Number.parse(x); });
+  if (config.management) { // improve scores because of management
+    //check type of the column
+    var isNesting = column.indexOf("nesting");
+    var isFloral  = column.indexOf("floral");
+    if (isNesting >= 0) {
+      var managNesting = ee.List(tableVal.reduceColumns(ee.Reducer.toList(), ['management nesting']).get('list'));
+      managNesting     = managNesting.map(function(x) { return ee.Number.parse(x); });
+      var iterNesting = ee.List.sequence(0, values.size().subtract(1));
+      values = iterNesting.map(function (it) {
+        var managValue = managNesting.get(it);
+        var value      = ee.Number(values.get(it));
+        var newValue   = value.add(managValue);
+        return newValue;
+      });
+    }
+    else if (isFloral >= 0) {
+      var managFloral = ee.List(tableVal.reduceColumns(ee.Reducer.toList(), ['management floral']).get('list'));
+      managFloral     = managFloral.map(function(x) { return ee.Number.parse(x); });
+      var iterFloral = ee.List.sequence(0, values.size().subtract(1));
+      values = iterFloral.map(function (it) {
+        var managValue = managFloral.get(it);
+        var value      = ee.Number(values.get(it));
+        var newValue   = value.add(managValue);
+        return newValue;
+      });
+    }
+  }
+  return values;
+};
+
+///////////////////////////////////////////////////
+//////////////// POLLINATORS SCORE ////////////////
+///////////////////////////////////////////////////
+/* Get the final pollinators' score for the guild */
+var getPollinatorScore = function (sourceMap, config) {
+	var crs = config.refsystem;
+	var res = config.res;
+  var reducer = ee.Reducer.mean();
+  var lookupGuilds = config.tableGuilds;
+  var guild = config.guild;
+  var lookupGuild = lookupGuilds.filter(ee.Filter.eq('guild', guild));
+  var typDistFlight = ee.Number.parse(lookupGuild.aggregate_array('flight distance').get(0));
+  var radius = typDistFlight.multiply(2.0);
+  var kernel = ee.Kernel.gaussian({
+      radius: radius,
+      sigma: typDistFlight,
+      units: 'meters',
+      normalize: true
+  });
+  var pollinatorScore = sourceMap.reduceNeighborhood(reducer, kernel).reproject({ crs: crs, scale: res });
+  return pollinatorScore;
+};
+//////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////
+//////////////// EXPORT FUNCTIONS ////////////////
+//////////////////////////////////////////////////
+var getSites = function(sitesOption, dateInt) {
+  var sites = data.getSamplingPoints(sitesOption)
+					.map(function(feature){
+						var str = ee.String(feature.get('refYear')).split('-').get(0);
+						var num = ee.Number.parse(str);
+						return feature.set('year_num', num);
+					});
+  var filterStart = ee.Filter.gte('year_num',dateInt.startYear);
+  var filterEnd   = ee.Filter.lte('year_num',dateInt.endYear);
+  return sites.filter(filterStart).filter(filterEnd);
+};
+exports.getSites = getSites;
+
+var getConfig  = function(reference,   
+                          lcOption,   
+                          guild,       
+                          lcContinuous,
+                          simplified, 
+                          manOption,   
+                          openOption,
+                          forestEdgeOption,
+                          cropEdgeOption,
+                          divOption,   
+                          radOption,   
+                          insActOpt, 
+                          distOpt,
+                          landSuitOpt,
+                          dateInt)
+{
+  var management          = manOption == "1";   // if true, the study area is assumed to be managed in a pollinator-friendly way 
+  var forestEdgeEffect    = forestEdgeOption == "1";   // if true, the border of forests produce a positive effect on floral resources (motivated by more light accessible in those areas)
+  var cropEdgeEffect      = cropEdgeOption == "1";   // if true, the border of crop fields produce a positive effect on floral resources (motivated by smaller crop fields)
+  var opennessEffect      = openOption == "1";   // if true, lower density of the canopy in forests produces a positive effect on floral resources (motivated by more light accessible in those areas)
+  var landscapeComplexity = divOption == "1";   // if true, diversity and evenness (described by Shannon-index) of land cover types important for pollinators (vegetated types), produce a positive effect on floral resources
+  var seasonalEven        = divOption == "1";   // if true, evenness (described by Shannon-index) of floral resources across seasons, produce a positive effect on the overall score of floral resources
+  var insectAct           = radOption == "1";   // if true, temperature and solar radiation are assumed to modify the amount of accessible floral resources
+  var seminatDist         = distOpt   == "1";   // if true, temperature and solar radiation are assumed to modify the amount of accessible floral resources
+  var soilCompEffect      = false;               // if true, the 'nesting ground' column in the FloralNest table is modified by soil composition  
+  /////////////// INPUT DATA /////////////// 
+  var res             = data.getResolution(lcOption);
+  var landcover       = data.getLandCoverDiscrete(lcOption, dateInt.startYear, dateInt.endYear);
+  var crs             = landcover.projection();
+  var landcoverCont   = data.getLandCoverContinuous(lcOption, dateInt.startYear, dateInt.endYear, crs, res);
+  var cropfieldCover  = data.getCropfieldCover(lcOption, landcover);
+  var forestCover     = data.getForestCover(lcOption, landcover);
+  var scrubCover      = data.getScrubCover(lcOption, landcover);
+  var seminatCover    = data.getSeminaturalCover(lcOption, landcover);
+  var distSeminat     = data.getDistanceToSeminatural(lcOption, landcover);
+  var treeOpenness    = data.getTreeOpenness();
+  var soilMoistPerc   = data.getSoilMoisturePercentage();
+  var soilSandCont    = data.getSoilSandContent();
+  var soilClayCont    = data.getSoilClayContent();
+  var tableSoil       = data.getSoilPollinationLookupTable();
+  var tableFloralNest = data.getFloralNestTable(reference, lcOption, lcContinuous, simplified, guild);
+  var tableGuilds     = data.getGuildsTable(reference, simplified);
+  var guildRow        = tableGuilds.filter(ee.Filter.eq('guild', guild));
+  var typDistFlight   = ee.Number.parse(guildRow.first().get('flight distance'));
+  var landCoverDiv    = data.getLandcoverDiversity(typDistFlight, landcover, cropfieldCover, seminatCover, crs, res);
+  var elevation       = data.getElevation(crs, res);
+  seasonalEven        = simplified ? false : seasonalEven; // if simplified is activated, it is not possible to caclulate seasonal evenness
+	var startYear       = dateInt.startYear;
+	var endYear         = dateInt.endYear;
+	var startDate       = ee.Date.fromYMD(startYear, 1, 1);
+	var endDate         = ee.Date.fromYMD(endYear, 12, 31);
+	/////////////// CONFIGURATION /////////////////
+	return {
+    landcover:landcover, 
+    landcoverCont:landcoverCont,
+    guild:guild,
+		cropfieldCover:cropfieldCover,
+		forestCover:forestCover,
+		scrubCover:scrubCover,
+		treeOpenness:treeOpenness,
+		distSeminat:distSeminat,
+		soilMoistPerc:soilMoistPerc,
+		soilSandCont:soilSandCont,
+		soilClayCont:soilClayCont,
+		landCoverDiv:landCoverDiv,
+		elevation:elevation,
+		tableSoil:tableSoil,
+		tableFloralNest:tableFloralNest,
+		tableGuilds:tableGuilds,
+		lcContinuous:lcContinuous,
+		simplified:simplified,
+		management:management, 
+		forestEdgeEffect:forestEdgeEffect, 
+		cropEdgeEffect:cropEdgeEffect, 
+		opennessEffect:opennessEffect, 
+		landscapeComplexity:landscapeComplexity, 
+		seasonalEven:seasonalEven, 
+		insectAct:insectAct,
+		insActOpt:insActOpt,
+		distOpt:seminatDist,
+		landSuitOpt:landSuitOpt,
+		soilCompEffect:soilCompEffect, 
+		refsystem:crs,
+		res:res,
+		startDate:startDate,
+		endDate:endDate,
+		startYear:startYear,
+		endYear:endYear
+	};
+};
+exports.getConfig = getConfig; 
+
+var computeModel = function(config) {
+  // POLLINATOR SOURCE MAP
+  var floralRes   = getFloralResource(config);
+  var nestingSuit = getNestingSuitability(config);
+  var sourceMap   = ee.Image(0).reproject({crs:config.refsystem, scale:config.res}).rename("pollinator_source");  // initialize source map  
+  switch(config.landSuitOpt) { 
+    case "mult":
+      sourceMap = nestingSuit.multiply(floralRes).float().reproject({crs:config.refsystem, scale:config.res}).rename("pollinator_source");   
+      break;
+    case "avg":
+      sourceMap = nestingSuit.add(floralRes).divide(2).float().reproject({crs:config.refsystem, scale:config.res}).rename("pollinator_source"); 
+      break;
+    case "flo":
+      var wNest = nestingSuit.multiply(0.2);
+      var wFlor = floralRes.multiply(0.8);
+      sourceMap = wNest.add(wFlor).float().reproject({crs:config.refsystem, scale:config.res}).rename("pollinator_source"); 
+      break;
+    default:
+  }
+	// POLLINATOR SCORE 
+  var pollScore = getPollinatorScore(sourceMap, config);
+	// APPLY INSECT ACTIVITY
+	if (config.insectAct) {
+    print('Computing insect activity...');
+    pollScore = applyFactorInsectActivity(pollScore, config);
+	}
+	// APPLY DISTANCE TO SEMINATURAL
+	if (config.distOpt) {
+    print('Computing distance to seminatural...');
+    pollScore = applyDistanceSeminatural(pollScore, config);
+	}
+	return pollScore.rename("poll_score");
+};
+exports.computeModel = computeModel;
+
+//////////////////////////////////////////////////
+/*
+//////////////////////////////////////
+////////////////TESTS ////////////////
+//////////////////////////////////////
+/////////////// SETTINGS //////////////////////// 
+var computeModel        = true;                // compute model
+var extractGeoData      = false;                // extract data at the sites with information that can be useful to understand the model results, such as landscape complexity, ecoregion, topographic diversity, elevation...
+var reference           = "Delphi";         // options: "ESTIMAP", "SpExperts", "Delphi" 
+var lcOption            = "CGLS";            // options: "CORINE", "CGLS"
+var guild               = "small";           // options: "small", "large"
+var lcContinuous        = true;              // If true, use continuous LCC (CGLS offers not only discrete LCC, but also continuous field layers for all basic land cover classes)
+var simplified          = true;              // If true, use simplified tables 
+var manOption           = "0";                 //["0","1"] management bonus, no/yes
+var openOption          = "1";                 //["0","1"] forest openness bonus, no/yes
+var forestEdgeOption    = "1";                 //["0","1"] forest edge bonus, no/yes
+var cropEdgeOption      = "1";                 //["0","1"] cropland edge bonus, no/yes
+var divOption           = "1";                 //["0","1"] seminatural diversity bonus, no/yes
+var radOption           = "1";                 //["0","1"] insect activity factor, no/yes
+var insActOpt           = "max";              // options: "max" or "avg" (use insect activity maximum or averaged over active months)
+var distOpt             = "1";                 // ["0","1"] distance to seminatural factor, no/yes 
+var landSuitOpt         = "avg";              // options to compute landscape suitability: "mult"(nesting*floral),"avg"(avg(nesting, floral),"flo"(0.2nest + 0.8flo)
+var sitesOption         = "OBServ field data"; // options: "ESYRCE", "OBServ field data"
+
+var dateInt            = {startYear:1985, endYear:2015}; 
+var config = getConfig(reference,   
+                       lcOption,   
+                       guild,       
+                       lcContinuous,
+                       simplified, 
+                       manOption,   
+                       openOption,
+                       forestEdgeOption,
+                       cropEdgeOption,
+                       divOption,   
+                       radOption,   
+                       insActOpt, 
+                       distOpt,
+                       landSuitOpt,
+                       dateInt);
+                       
+var im = getFloralResource(config);
+                       
+//var im = ee.Image(-1);                  
+//if (config.distOpt) {
+//  print('Computing distance to seminatural...');
+//  im = getFactorDistanceSeminatural(config);
+//}
+
+print(im);
+//var sites = getSites(sitesOption, dateInt);
+//Map.addLayer(sites);
+*/

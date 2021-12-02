@@ -1,0 +1,303 @@
+
+// INPUT: CGLS-LC landcover layer with the continuous classification of one type (e.g. grass-coverfraction)
+// OUTPUT: percentage of that type within a buffer area of input radius
+exports.getCGLSPercentage = function(landcoverCont, radiusInM) {
+	var res = ee.Number(100); // CGLS res = 100m
+	var crs = landcoverCont.projection();
+	var rad = radiusInM.divide(res).floor();
+	var circle  = ee.Kernel.circle(rad);
+	var mean    = ee.Reducer.mean();
+	return landcoverCont.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:res});
+};
+
+exports.get211Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(211).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('non_irrigated_perc');
+};
+
+exports.get212Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(212).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('perm_irrigated_perc');
+};
+
+exports.get213Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(213).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('rice_perc');
+};
+
+exports.get221Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(221).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('vineyard_perc');
+};
+
+exports.get222Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(222).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('fruit_tree_perc');
+};
+
+exports.get223Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(223).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('olive_perc');
+};
+
+exports.get241Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(241).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('annual_perm_perc');
+};
+
+exports.get242Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(242).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('complex_cult_perc');
+};
+
+exports.get243Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(243).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('agri_veg_perc');
+};
+
+exports.get244Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(244).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('agroforestry_perc');
+};
+
+exports.get311Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(311).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('broadleaf_perc');
+};
+
+exports.get312Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(312).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('conifer_perc');
+};
+
+exports.get313Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(313).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('mixed_forest_perc');
+};
+
+exports.get321Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(321).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('natural_grass_perc');
+};
+
+exports.get322Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(322).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('heathland_perc');
+};
+
+exports.get323Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(323).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('schleroph_perc');
+};
+
+exports.get324Percentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle  = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean    = ee.Reducer.mean();
+	var lc_clip = lcIm.eq(324).clip(roi);
+	var crs     = lc_clip.projection();
+	lc_clip     = lc_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return lc_clip.rename('transitional_perc');
+};
+
+exports.getArablePercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle      = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean        = ee.Reducer.mean();
+	var arable_clip = lcIm.eq(211).or(lcIm.eq(212).or(lcIm.eq(213))).clip(roi);
+	var crs         = arable_clip.projection();
+	arable_clip     = arable_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return arable_clip.rename('arable_perc');
+};
+
+exports.getArtVegPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle       = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean         = ee.Reducer.mean();
+	var art_veg_clip = lcIm.eq(141).or(lcIm.eq(142)).clip(roi);
+	var crs          = art_veg_clip.projection();
+	art_veg_clip     = art_veg_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return art_veg_clip.rename('art_veg_perc');
+};
+
+exports.getForestsPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle       = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean         = ee.Reducer.mean();
+	var forests_clip = lcIm.eq(311).or(lcIm.eq(312).or(lcIm.eq(313))).clip(roi);
+	var crs          = forests_clip.projection();
+	forests_clip     = forests_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return forests_clip.rename('forests_perc');
+};
+
+exports.getHetAgriPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle        = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean          = ee.Reducer.mean();
+	var het_agri_clip = lcIm.eq(241).or(lcIm.eq(242).or(lcIm.eq(243).or(lcIm.eq(244)))).clip(roi);
+	var crs           = het_agri_clip.projection();
+	het_agri_clip     = het_agri_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return het_agri_clip.rename('het_agri_perc');
+};
+
+exports.getInlWatPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle        = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean          = ee.Reducer.mean();
+	var inl_wat_clip  = lcIm.eq(511).or(lcIm.eq(512)).clip(roi);
+	var crs           = inl_wat_clip.projection();
+	inl_wat_clip      = inl_wat_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return inl_wat_clip.rename('inl_wat_perc');
+};
+
+exports.getIndustPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle        = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean          = ee.Reducer.mean();
+	var indust_clip   = lcIm.eq(121).or(lcIm.eq(122).or(lcIm.eq(123).or(lcIm.eq(124)))).clip(roi);
+	var crs           = indust_clip.projection();
+	indust_clip       = indust_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return indust_clip.rename('indust_perc');
+};
+
+exports.getInlWetPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle        = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean          = ee.Reducer.mean();
+	var inl_wet_clip  = lcIm.eq(411).or(lcIm.eq(412)).clip(roi);
+	var crs           = inl_wet_clip.projection();
+	inl_wet_clip      = inl_wet_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return inl_wet_clip.rename('inl_wet_perc');
+};
+
+exports.getMarWatPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle        = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean          = ee.Reducer.mean();
+	var mar_wat_clip  = lcIm.eq(521).or(lcIm.eq(522).or(lcIm.eq(523))).clip(roi);
+	var crs           = mar_wat_clip.projection();
+	mar_wat_clip      = mar_wat_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return mar_wat_clip.rename('mar_wat_perc');
+};
+
+exports.getMarWetPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle        = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean          = ee.Reducer.mean();
+	var mar_wet_clip  = lcIm.eq(421).or(lcIm.eq(422).or(lcIm.eq(423))).clip(roi);
+	var crs           = mar_wet_clip.projection();
+	mar_wet_clip      = mar_wet_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return mar_wet_clip.rename('mar_wet_perc');
+};
+
+exports.getMinePercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle     = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean       = ee.Reducer.mean();
+	var mine_clip  = lcIm.eq(131).or(lcIm.eq(132).or(lcIm.eq(133))).clip(roi);
+	var crs        = mine_clip.projection();
+	mine_clip      = mine_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return mine_clip.rename('mine_perc');
+};
+
+exports.getPasturesPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle        = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean          = ee.Reducer.mean();
+	var pastures_clip = lcIm.eq(231).clip(roi);
+	var crs           = pastures_clip.projection();
+	pastures_clip     = pastures_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return pastures_clip.rename('pastures_perc');
+};
+
+exports.getOpenPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle    = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean      = ee.Reducer.mean();
+	var open_clip = lcIm.eq(331).or(lcIm.eq(332).or(lcIm.eq(333).or(lcIm.eq(334).or(lcIm.eq(335))))).clip(roi);
+	var crs       = open_clip.projection();
+	open_clip     = open_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return open_clip.rename('open_perc');
+};
+
+exports.getPermCropPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle         = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean           = ee.Reducer.mean();
+	var perm_crop_clip = lcIm.eq(221).or(lcIm.eq(222).or(lcIm.eq(223))).clip(roi);
+	var crs            = perm_crop_clip.projection();
+	perm_crop_clip     = perm_crop_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return perm_crop_clip.rename('perm_crop_perc');
+};
+
+exports.getScrubsPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle      = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean        = ee.Reducer.mean();
+	var scrubs_clip = lcIm.eq(321).or(lcIm.eq(322).or(lcIm.eq(323).or(lcIm.eq(324)))).clip(roi);
+	var crs         = scrubs_clip.projection();
+	scrubs_clip     = scrubs_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return scrubs_clip.rename('scrubs_perc');
+};
+
+exports.getUrbanPercentage = function(lcIm, buffer_dist, roi, scale_m) {
+	var circle     = ee.Kernel.circle(Math.floor(buffer_dist/scale_m));
+	var mean       = ee.Reducer.mean();
+	var urban_clip = lcIm.eq(111).or(lcIm.eq(112)).clip(roi);
+	var crs        = urban_clip.projection();
+	urban_clip     = urban_clip.reduceNeighborhood(mean, circle).reproject({crs:crs, scale:scale_m});
+	return urban_clip.rename('urban_perc');
+};
+
+
+
+

@@ -1,0 +1,233 @@
+
+var lonsdorf   = require('users/angelgimenez/OBServ:lib/lonsdorf');
+var ptsSampler = require('users/angelgimenez/OBServ:lib/pointsSampler');
+var lcPercCalc = require('users/angelgimenez/OBServ:lib/lcPercCalc');
+var data       = require('users/angelgimenez/OBServ:lib/data');
+
+/////////////// SETTINGS //////////////////////// 
+var computeModel        = true;                // compute model
+var extractGeoData      = false;                // extract data at the sites with information that can be useful to understand the model results, such as landscape complexity, ecoregion, topographic diversity, elevation...
+var reference           = "optimizedGAbiome4";  // options: "ESTIMAP", "SpExperts", "Delphi", "optimizedGA", "optimizedGAbiome1", "optimizedGAbiome4" 
+var lcOption            = "CGLS";            // options: "CORINE", "CGLS"
+var guild               = "large";           // options: "small", "large"
+var lcContinuous        = true;              // If true, use continuous LCC (CGLS offers not only discrete LCC, but also continuous field layers for all basic land cover classes)
+var simplified          = true;              // If true, use simplified tables 
+var manOption           = "1";                 //["0","1"] management bonus, no/yes
+var openOption          = "0";                 //["0","1"] forest openness bonus, no/yes
+var forestEdgeOption    = "0";                 //["0","1"] forest edge bonus, no/yes
+var cropEdgeOption      = "0";                 //["0","1"] cropland edge bonus, no/yes
+var divOption           = "0";                 //["0","1"] seminatural diversity bonus, no/yes
+var radOption           = "0";                 //["0","1"] insect activity factor, no/yes
+var insActOpt           = "max";              // options: "max" or "avg" (use insect activity maximum or averaged over active months)
+var distOpt             = "0";                 // ["0","1"] distance to seminatural factor, no/yes 
+var landSuitOpt         = "mult";              // options to compute landscape suitability: "mult"(nesting*floral),"avg"(avg(nesting, floral),"flo"(0.2nest + 0.8flo)
+var sitesOption         = "OBServ organic"; // options: "OBServ field data", "OBServ organic"
+/*var dateInts            = [{startYear:1900, endYear:1995}, 
+                          {startYear:1996, endYear:2003},
+                          {startYear:2004, endYear:2009},
+                          {startYear:2010, endYear:2015},
+                          {startYear:2016, endYear:2100}]; */ 
+var dateInts            = [{startYear:1985, endYear:2015}, 
+                           {startYear:2016, endYear:2016},
+                           {startYear:2017, endYear:2017},
+                           {startYear:2018, endYear:2018},
+                           {startYear:2019, endYear:2100}]; 
+ 
+var selectField = ['longitude', 'latitude', 'refYear', 'study_id', 'site_id', 'first']; // Fields to be exported
+
+var exportToDrive = function(listVal, descr, selectField) {
+  var scoreValues = ee.FeatureCollection(listVal.flatten());
+  // Export to Google Drive 
+  Export.table.toDrive({
+    collection: scoreValues,
+    description: descr,
+    fileFormat: 'CSV',
+    folder: 'GEE outputs',
+    selectors: selectField
+  }); 
+};
+
+/////////////////////////////////////
+/////////////// MODEL /////////////// 
+/////////////////////////////////////
+if(computeModel) {
+
+  // Model scores
+  var listScores = ee.List([]);
+  /////////////// LOOP time intervals /////////////// 
+  // TODO?: var listCGLSDataDensity -> Data density indicator for the CGLS LCC
+  dateInts.map(function(dateInt) {
+    var config = lonsdorf.getConfig(reference,   
+                                    lcOption,   
+                                    guild,       
+                                    lcContinuous,
+                                    simplified, 
+                                    manOption,   
+                                    openOption,
+                                    forestEdgeOption,
+                                    cropEdgeOption,
+                                    divOption,   
+                                    radOption,   
+                                    insActOpt, 
+                                    distOpt,
+                                    landSuitOpt,
+                                    dateInt);
+    var sites  = lonsdorf.getSites(sitesOption, dateInt);
+    var pollinatorsScore = lonsdorf.computeModel(config);
+    var newScoreValues   = ptsSampler.extractProp(pollinatorsScore, sites, config.res, 16, selectField);		
+    var newScoreList     = newScoreValues.toList(100000);
+    listScores           = listScores.add(newScoreList);
+  });
+  
+  // EXTRACT MODEL OUTPUT AT SITE POINTS
+  listScores    = listScores.flatten();
+  var lcCont    = lcContinuous ? "1" : "0";
+  var simpl     = simplified ? "1" : "0";
+  // Full name var descr     = guild + '_' + reference + '_' + lcOption + '_lcCont' + lcCont + '_simpl' + simpl + '_man' + manOption + '_open' + openOption + '_forEd' + forestEdgeOption + '_crEd' + cropEdgeOption + '_div' + divOption + '_ins' + radOption + insActOpt + '_dist' + distOpt + '_suit' + landSuitOpt;
+  // Assumptions to reduce the extent of the model name, for the paper: lcOption=CGLS, simplified=true, management=0
+  var descr     = guild + '_' + reference + '_lcCont' + lcCont + '_open' + openOption + '_forEd' + forestEdgeOption + '_crEd' + cropEdgeOption + '_div' + divOption + '_ins' + radOption + insActOpt + '_dist' + distOpt + '_suit' + landSuitOpt;
+  exportToDrive(listScores, descr, selectField);
+}
+
+////////////////////////////////////////
+/////////////// GEO DATA /////////////// 
+////////////////////////////////////////
+if(extractGeoData) {
+  /////////////// LOOP time intervals /////////////// 
+  // Geo data
+  var listLCDiv  = ee.List([]);
+  var listElev   = ee.List([]);
+  var listBare   = ee.List([]);
+  var listCrop   = ee.List([]);
+  var listGrass  = ee.List([]);
+  var listMoss   = ee.List([]);
+  var listShrub  = ee.List([]);
+  var listForest = ee.List([]);
+  var listSnow   = ee.List([]);
+  var listUrban  = ee.List([]);
+  var listWatPer = ee.List([]);
+  var listWatSea = ee.List([]);
+  var listEcoReg = ee.List([]);
+  var listBiome  = ee.List([]);
+  dateInts.map(function(dateInt) {
+    
+    var config = lonsdorf.getConfig(reference,   
+                                    lcOption,   
+                                    guild,       
+                                    lcContinuous,
+                                    simplified, 
+                                    manOption,   
+                                    openOption,
+                                    forestEdgeOption,
+                                    cropEdgeOption,
+                                    divOption,   
+                                    radOption,   
+                                    insActOpt, 
+                                    distOpt,
+                                    landSuitOpt,
+                                    dateInt);
+    var sites  = lonsdorf.getSites(sitesOption, dateInt);
+    // Elevation
+    var newValues = ptsSampler.extractProp(config.elevation, sites, config.res, 16, selectField);	
+    var newList   = newValues.toList(100000);
+    listElev      = listElev.add(newList);
+    // Land cover diversity
+    newValues = ptsSampler.extractProp(config.landCoverDiv, sites, config.res, 16, selectField);
+    newList   = newValues.toList(100000);
+    listLCDiv     = listLCDiv.add(newList);
+    if (lcOption == "CGLS") { // for now, only available for CGLS (TODO?: generalize)
+      var radiusInM = ee.Number(1000);
+      // renamed codes -> ['bare', 'crop', 'grass', 'moss', 'shrub', 'tree', 'snow', 'urban', 'water_perm', 'water_seas']
+      // Bare fraction
+      var perc  = lcPercCalc.getCGLSPercentage(config.landcoverCont.select('bare'), radiusInM);
+      newValues = ptsSampler.extractProp(perc, sites, config.res, 16, selectField);
+      newList   = newValues.toList(100000);
+      listBare  = listBare.add(newList);
+      // Crops fraction
+      perc      = lcPercCalc.getCGLSPercentage(config.landcoverCont.select('crop'), radiusInM);
+      newValues = ptsSampler.extractProp(perc, sites, config.res, 16, selectField);
+      newList   = newValues.toList(100000);
+      listCrop  = listCrop.add(newList);
+      // Grass fraction
+      perc      = lcPercCalc.getCGLSPercentage(config.landcoverCont.select('grass'), radiusInM);
+      newValues = ptsSampler.extractProp(perc, sites, config.res, 16, selectField);
+      newList   = newValues.toList(100000);
+      listGrass = listGrass.add(newList);
+      // Moss fraction
+      perc      = lcPercCalc.getCGLSPercentage(config.landcoverCont.select('moss'), radiusInM);
+      newValues = ptsSampler.extractProp(perc, sites, config.res, 16, selectField);
+      newList   = newValues.toList(100000);
+      listMoss  = listMoss.add(newList);
+      // Shrub fraction
+      perc      = lcPercCalc.getCGLSPercentage(config.landcoverCont.select('shrub'), radiusInM);
+      newValues = ptsSampler.extractProp(perc, sites, config.res, 16, selectField);
+      newList   = newValues.toList(100000);
+      listShrub     = listShrub.add(newList);
+      // Forest fraction
+      perc      = lcPercCalc.getCGLSPercentage(config.landcoverCont.select('tree'), radiusInM);
+      newValues = ptsSampler.extractProp(perc, sites, config.res, 16, selectField);
+      newList   = newValues.toList(100000);
+      listForest= listForest.add(newList);
+      // Snow fraction
+      perc      = lcPercCalc.getCGLSPercentage(config.landcoverCont.select('snow'), radiusInM);
+      newValues = ptsSampler.extractProp(perc, sites, config.res, 16, selectField);
+      newList   = newValues.toList(100000);
+      listSnow      = listSnow.add(newList);
+      // Urban fraction
+      perc      = lcPercCalc.getCGLSPercentage(config.landcoverCont.select('urban'), radiusInM);
+      newValues = ptsSampler.extractProp(perc, sites, config.res, 16, selectField);
+      newList   = newValues.toList(100000);
+      listUrban = listUrban.add(newList);
+      // Water permanent fraction
+      perc      = lcPercCalc.getCGLSPercentage(config.landcoverCont.select('water_perm'), radiusInM);
+      newValues = ptsSampler.extractProp(perc, sites, config.res, 16, selectField);
+      newList   = newValues.toList(100000);
+      listWatPer= listWatPer.add(newList);
+      // Water seasonal fraction
+      perc      = lcPercCalc.getCGLSPercentage(config.landcoverCont.select('water_seas'), radiusInM);
+      newValues = ptsSampler.extractProp(perc, sites, config.res, 16, selectField);
+      newList   = newValues.toList(100000);
+      listWatSea= listWatSea.add(newList);
+    }
+    // Ecoregion and biome
+    var resolve_eco = ee.FeatureCollection("RESOLVE/ECOREGIONS/2017");
+    var empty       = ee.Image().byte(); // Create an empty image into which to paint the features, cast to byte.
+    var fills_eco   = empty.paint({ 
+      featureCollection: resolve_eco,
+      color: 'ECO_ID',
+    });
+    var imEcoRegion = fills_eco.rename('eco_name');
+    newValues       = ptsSampler.extractProp(fills_eco, sites, config.res, 16, selectField);
+    newList         = newValues.toList(100000);
+    listEcoReg      = listEcoReg.add(newList);
+    empty           = ee.Image().byte(); // Create an empty image into which to paint the features, cast to byte.
+    var fills_biome = empty.paint({ 
+      featureCollection: resolve_eco,
+      color: 'BIOME_NUM',
+    });
+    var imBiome     = fills_biome.rename('biome_name');
+    newValues       = ptsSampler.extractProp(imBiome, sites, config.res, 16, selectField);
+    newList         = newValues.toList(100000);
+    listBiome       = listBiome.add(newList);
+  });
+
+  exportToDrive(listElev  , "elevation", selectField);
+  exportToDrive(listLCDiv , "landCoverDiversity", selectField);
+  exportToDrive(listBare  , "barePerc", selectField);
+  exportToDrive(listCrop  , "cropPerc", selectField);
+  exportToDrive(listGrass , "grassPerc", selectField);
+  exportToDrive(listMoss  , "mossPerc", selectField);
+  exportToDrive(listShrub , "shrubPerc", selectField);
+  exportToDrive(listForest, "forestPerc", selectField);
+  exportToDrive(listSnow  , "snowPerc", selectField);
+  exportToDrive(listUrban , "urbanPerc", selectField);
+  exportToDrive(listWatPer, "waterPermPerc", selectField);
+  exportToDrive(listWatSea, "waterSeasPerc", selectField);
+  exportToDrive(listEcoReg, "ecoRegion", selectField);
+  exportToDrive(listBiome,  "biome", selectField);
+}
+
+
+
+
+

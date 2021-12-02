@@ -1,0 +1,237 @@
+var functions = require('users/angelgimenez/OBServ:lib/functions');
+
+/*
+This function adds features with histograms extracted from an image at the sampling points 
+at the 'refYear', within a given buffer distance
+*/
+exports.addHistogramByYearFromImage = function(image, sampling_pts, years, buffer_dist, final_feature_collection) {
+  
+  var auxFunct  = function(x) { return x.buffer(buffer_dist); } ;
+  
+  var i_year;
+  for (i_year = 0; i_year < years.length; i_year++) {
+    
+    // Filter points
+    var year = years[i_year];
+    var filt_points = sampling_pts.filter(ee.Filter.eq('refYear', year));
+    var buffered_pts = filt_points.map(auxFunct);
+    
+    // Extract value
+    var pts_sampling_year = image.reduceRegions(buffered_pts.select(['longitude', 'latitude', 'refYear']),ee.Reducer.frequencyHistogram());  
+    
+    // Add Longitude and Latitude 
+    pts_sampling_year = pts_sampling_year.map(functions.addCentroidLon);
+    pts_sampling_year = pts_sampling_year.map(functions.addCentroidLat);
+    // Bind year's data
+    final_feature_collection = ee.FeatureCollection([final_feature_collection, pts_sampling_year]).flatten();
+
+  }
+  return final_feature_collection;
+};
+
+
+/*
+This function adds features extracted from an image at the sampling points at the 'refYear'
+*/
+exports.addFeaturesByYearFromImage = function(image, sampling_pts, years, final_feature_collection) {
+  
+  var i_year;
+  for (i_year = 0; i_year < years.length; i_year++) {
+    
+    // Filter points
+    var year = years[i_year];
+    var filt_points = sampling_pts.filter(ee.Filter.eq('refYear', year));
+  
+    // Extract value
+    var pts_sampling_year = image.reduceRegions(filt_points.select(['longitude', 'latitude', 'refYear']),ee.Reducer.first());  
+    
+    // Add Longitude and Latitude 
+    pts_sampling_year = pts_sampling_year.map(functions.addLon);
+    pts_sampling_year = pts_sampling_year.map(functions.addLat);
+
+    // Bind year's data
+    final_feature_collection = ee.FeatureCollection([final_feature_collection, pts_sampling_year]).flatten();
+  }
+  return final_feature_collection;
+};
+
+
+/*
+This function exports a csv file with the extraction of values from a single image
+using a feature collection of sampling points
+*/
+exports.exportProp = function(image, samplingPts, classProp, suffix, res, crs, tileScale) {
+
+  // tileScale optional parameter
+  tileScale = typeof tileScale !== 'undefined' ?  tileScale : 16;
+  
+  var sampledPts = image.reduceRegions({
+    collection: samplingPts,
+    reducer:    ee.Reducer.first(),
+    scale:      res,
+    crs:        crs,
+    tileScale:  tileScale
+  });
+  
+  // Add Longitude and Latitude 
+  sampledPts = sampledPts.map(functions.addLon);
+  sampledPts = sampledPts.map(functions.addLat);
+  sampledPts = sampledPts.select(['longitude', 'latitude', 'refYear', classProp]);
+
+  // Export to Google Drive  
+  Export.table.toDrive({
+    collection: sampledPts,
+    description: classProp + suffix,
+    fileFormat: 'CSV',
+    folder: 'GEE outputs'
+  });
+};
+
+/*
+This function extracts values from a single image
+using a feature collection of sampling points
+*/
+exports.extractProp = function(image, samplingPts, res, tileScale, selectFields) {
+
+  // IMPORTANT REMARK: samplingPts MUST BE in CRS=EPSG:4326
+  var crsSamplingPts = "EPSG:4326";
+
+  var imReproj  = image.reproject(crsSamplingPts);
+
+  // tileScale optional parameter
+  tileScale = typeof tileScale !== 'undefined' ?  tileScale : 16;
+  var sampledPts = image.reduceRegions({
+    collection: samplingPts,
+    reducer:    ee.Reducer.first(),
+    scale:      res,
+    crs:        crsSamplingPts,
+    tileScale:  tileScale
+  });
+
+  // Add Longitude and Latitude 
+  sampledPts = sampledPts.map(functions.addLon);
+  sampledPts = sampledPts.map(functions.addLat);
+  sampledPts = sampledPts.select(selectFields);
+
+  return sampledPts;
+};
+
+
+/*
+This function exports a csv file with the extraction of mean values from a collection of images
+using a feature collection of sampling points where 'refYear' is specified, so that the
+extraction of the mean values from the image collection can be performed in the sampling year.
+*/
+exports.exportByYear = function(image_collection, sampling_pts, class_prop, years, suffix) {
+  
+  var year, final_feature_collection;  
+  // Iterate over different years
+  var i_year;
+  for (i_year = 0; i_year < years.length; i_year++) {
+  
+    year = years[i_year];
+    var next = year+1;
+    
+    // Filter points
+    var filt_points = sampling_pts.filter(ee.Filter.eq('refYear', year));
+  
+    var images = image_collection
+                  .filter(ee.Filter.date(year.toString()+'-01-01', next.toString()+'-01-01'))
+                  .select(class_prop);
+      
+    // Extract mean value
+    var meanval = images.reduce(ee.Reducer.mean());
+    var pts_sampling_year = meanval.sampleRegions({
+      collection: filt_points,
+      properties: [class_prop, 'refYear'],
+      scale: 1,
+      geometries: true
+    });
+    
+    // Add Longitude and Latitude 
+    pts_sampling_year = pts_sampling_year.map(functions.addLon);
+    pts_sampling_year = pts_sampling_year.map(functions.addLat);
+    
+    if (i_year === 0) {
+      final_feature_collection = pts_sampling_year;
+    } else {
+      final_feature_collection = ee.FeatureCollection([final_feature_collection, pts_sampling_year]).flatten();
+    }
+  
+  }
+  
+  // Export to Google Drive  
+  Export.table.toDrive({
+    collection: final_feature_collection,
+    description: class_prop + suffix,
+    fileFormat: 'CSV',
+    folder: 'GEE outputs'
+  });
+};
+
+
+/*
+This function exports a csv file with the extraction of values from a collection of images
+using a feature collection of sampling points where 'refYear' is specified, so that the
+extraction of the values from the image collection can be performed in the sampling year.
+*/
+exports.exportByDateRange = function(image_collection, sampling_pts, class_prop, start_date, end_date) {
+  
+  var images = ee.ImageCollection(image_collection)
+                  .filter(ee.Filter.date(start_date, end_date))
+                  .select(class_prop);
+  
+  var meanval = images.reduce(ee.Reducer.mean()).reproject('EPSG:4326');
+  
+  var sampled_pts = meanval.sampleRegions({
+    collection: sampling_pts,
+    properties: [class_prop, 'refYear'],
+    scale: 1,
+    geometries: true
+  });  
+      
+  // Add Longitude and Latitude 
+  sampled_pts = sampled_pts.map(functions.addLon);
+  sampled_pts = sampled_pts.map(functions.addLat);
+  sampled_pts = sampled_pts.select(['longitude', 'latitude', 'refYear', class_prop + '_mean']);  
+  
+  // Export to Google Drive  
+  Export.table.toDrive({
+    collection: sampled_pts,
+    description: class_prop + '_monthly_mean',
+    fileFormat: 'CSV',
+    folder: 'GEE outputs'
+  });
+};
+
+
+/*
+This function exports a csv file with the extraction of the mean value from a collection of images
+using a feature collection of sampling points.
+*/
+exports.exportMean = function(image_collection, sampling_pts, class_prop) {
+  
+  // Extract mean value
+  var images  = image_collection.select(class_prop);
+  var meanval = images.reduce(ee.Reducer.mean());
+  var pts_sampling_mean = meanval.sampleRegions({
+    collection: sampling_pts,
+    properties: [class_prop, 'refYear'],
+    scale: 1,
+    geometries: true
+  });
+    
+  // Add Longitude and Latitude 
+  pts_sampling_mean = pts_sampling_mean.map(functions.addLon);
+  pts_sampling_mean = pts_sampling_mean.map(functions.addLat);
+  
+  // Export to Google Drive  
+  Export.table.toDrive({
+    collection: pts_sampling_mean,
+    description: class_prop + '_mean',
+    fileFormat: 'CSV',
+    folder: 'GEE outputs'
+  });
+};
+
+

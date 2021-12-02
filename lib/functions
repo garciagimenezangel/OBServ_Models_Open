@@ -1,0 +1,234 @@
+
+exports.addLon = function(feature) {
+  return feature.set({longitude: feature.geometry().coordinates().get(0)});
+};
+
+exports.addLat = function(feature) {
+  return feature.set({latitude: feature.geometry().coordinates().get(1)});
+};
+
+exports.getBuffer = function(feature, distance) {
+  return feature.buffer(distance);
+};
+
+exports.addCentroidLon = function(feature) {
+  return feature.set({longitude: feature.centroid().geometry().coordinates().get(0)});
+};
+
+exports.addCentroidLat = function(feature) {
+  return feature.set({latitude: feature.centroid().geometry().coordinates().get(1)});
+};
+
+exports.addAbsenceBand = function(feature) {
+  return feature.set({'presence': 0});
+};
+
+exports.addSourceGBIFBand = function(feature) {
+  return feature.set({'source': 'GBIF'});
+};
+
+exports.stackCollection = function(collection) {
+  // Create an initial image.
+  var first = ee.Image(collection.first()).select([]);
+
+  // Write a function that appends a band to an image.
+  var appendBands = function(image, previous) {
+    return ee.Image(previous).addBands(image);
+  };
+  return ee.Image(collection.iterate(appendBands, first));
+};
+
+exports.getWeightedAverage = function(listValues, listWeights) {
+  var total   = listWeights.reduce(ee.Reducer.sum());
+  var iter    = ee.List.sequence(0, listValues.size().subtract(1));
+  var wValues = iter.map( function(it) {
+    return ee.Number(listValues.get(it)).multiply(ee.Number(listWeights.get(it)));
+  });
+  var wTotal = wValues.reduce(ee.Reducer.sum());
+  return ee.Number(wTotal).divide(total);
+};
+
+exports.getWeightedCombination = function(listImages, listWeights) {
+  var total   = listWeights.reduce(ee.Reducer.sum());
+  var iter    = ee.List.sequence(0, listImages.size().subtract(1));
+  var wImages = iter.map( function(it) {
+    var im  = ee.Image(listImages.get(it));
+    var wg = ee.Number(listWeights.get(it));
+    return im.multiply(wg).float();
+  });  
+  var wImColl = ee.ImageCollection(wImages);
+  var wIm = wImColl.reduce(ee.Reducer.sum());
+  return wIm.divide(ee.Number(total));
+};
+
+exports.getMaxCombination = function(listImages, listWeights) {
+  var iter    = ee.List.sequence(0, listImages.size().subtract(1));
+  var wImages = iter.map( function(it) {
+    var im  = ee.Image(listImages.get(it));
+    var wg = ee.Number(listWeights.get(it));
+    return im.multiply(wg).float();
+  });  
+  var wImColl = ee.ImageCollection(wImages);
+  return wImColl.max();
+};
+
+exports.getShannonIndex = function(listImages) {
+	var iter = ee.List.sequence(0, listImages.size().subtract(1));
+	var renamedList = iter.map( function(it) {
+		var im = ee.Image(listImages.get(it)); 
+		return im.rename('shannon');
+	});
+	var imColl = ee.ImageCollection(renamedList);
+	var sumIm      = imColl.sum();
+	var rescaledList = iter.map( function(it) {
+		var im = ee.Image(renamedList.get(it)); 
+		return im.divide(sumIm);
+	});
+	var listShannonElts = iter.map( function(it) {
+		var im = ee.Image(rescaledList.get(it)); 
+		return im.expression('log(b(0))*b(0)');
+	});
+	imColl = ee.ImageCollection(listShannonElts);
+	return imColl.sum().multiply(-1);
+};
+
+/* Get a mask of edges from another mask (e.g. from a mask of forest cover) */
+exports.getEdges = function (mask) {
+    var edges = ee.Algorithms.CannyEdgeDetector({
+        image: mask,
+        threshold: 1,
+        sigma: 1
+    }).gt(0);
+    edges = edges.reduceNeighborhood(ee.Reducer.sum(), ee.Kernel.square(0, "pixels", false));
+    return edges.gt(0);
+};
+
+exports.getMLClassifier = function(model, mode, training, label, ref_image) {
+  var classifier;
+  switch (model) {
+    case "Random forest":
+      if (mode == "classification") classifier = ee.Classifier.smileRandomForest(100).train(training, label, ref_image.bandNames());
+      if (mode == "probability")    classifier = ee.Classifier.smileRandomForest(100).setOutputMode('PROBABILITY').train(training, label, ref_image.bandNames());
+      break;
+    default:
+  }  
+  return classifier;
+};
+
+exports.exportMLResults = function (classifier, validation, label, mode, ref_image, scale_m, roi, option, species) {
+  switch (option) {
+    case "importance":
+      // Get parameters of the model
+      var dict = classifier.explain();
+      var classifierExplain = ee.Feature(null, {
+        importance:ee.Dictionary(dict).get('importance'),
+        numberOfTrees:ee.Dictionary(dict).get('numberOfTrees'),
+        outOfBagErrorEstimate: ee.Dictionary(dict).get('outOfBagErrorEstimate'),
+        trees:ee.Dictionary(dict).get('trees')
+      });
+      var descriptionExplain = species+'ClassifierExplain';
+      Export.table.toDrive({
+        collection: ee.FeatureCollection(classifierExplain),
+        description: descriptionExplain,
+        fileFormat: 'CSV',
+        folder: 'GEE outputs'
+      });
+      break;
+    case "map":
+      // Classify the image with the same bands used for training.
+      var classified = ref_image.classify(classifier);
+      var descriptionMap = species+'Probability';
+      var assetIdMap = 'users/angelgimenez/OBServ/SDMs-v2-Feb2021/'+descriptionMap;
+      Export.image.toAsset({
+        image: classified,
+        description: descriptionMap,
+        assetId: assetIdMap,
+        scale: scale_m,
+        maxPixels:1e10,
+        region: roi
+      });
+      break;
+    case "accuracy":
+      if (mode == "classification") {
+        // Accuracy assessment
+        // Classify the validation data
+        var validated = validation.classify(classifier);
+        // Get a confusion matrix representing expected accuracy.
+        var testAccuracy = validated.errorMatrix(label, 'classification');
+        // Export the FeatureCollection.
+        var exportAccuracy = ee.Feature(null, 
+        {matrix:      testAccuracy.array(), 
+         overall_acc: testAccuracy.accuracy(),
+         kappa:       testAccuracy.kappa(),
+         consum_acc:  testAccuracy.consumersAccuracy(),
+           produc_acc:  testAccuracy.producersAccuracy()
+        });
+        Export.table.toDrive({
+          collection: ee.FeatureCollection(exportAccuracy),
+          description: 'Accuracy',
+          fileFormat: 'CSV',
+          folder: 'GEE outputs'
+        });
+        printAccuracyResults(testAccuracy);
+      }
+      else print("WARNING: Accuracy option only valid for classification mode");
+      break;
+    default:
+  }
+};
+
+var getRevolutionAngle = function(monthString) {
+  var refDoys = ee.Dictionary({
+    "1":17,
+    "2":45,
+    "3":75,
+    "4":105,
+    "5":135,
+    "6":162,
+    "7":198,
+    "8":228,
+    "9":258,
+    "10":288,
+    "11":318,
+    "12":345
+  });
+  var refDoy = ee.Image(ee.Number(refDoys.get(monthString))).rename('refDoy');
+  var revAngle1 = ee.Image().expression(
+    '0.2163108 + 2*atan(0.9671396 * tan(0.0086 * (refDoy - 186)))',  { 'refDoy': refDoy.select('refDoy') }
+  );
+  var revAngle2 = ee.Image().expression(
+    '0.2163108 + 2*atan(0.9671396 * tan(0.0086 * (refDoy - 185)))',  { 'refDoy': refDoy.select('refDoy') }
+  );
+  var finalAngle = revAngle1.add(revAngle2).divide(2);
+  return( finalAngle.rename('revAngle') );
+};
+exports.getRevolutionAngle = getRevolutionAngle;
+
+// Monthly average of daylength in hours (valid for any latitude, but less accurate near the poles)
+var getDaylength = function(monthString) {
+  var latitude = ee.Image.pixelCoordinates('EPSG:4326').select('y').rename('lat').multiply(Math.PI).divide(180);
+  var revAngle = getRevolutionAngle(monthString);
+  var sunDecli = ee.Image().expression(
+    'asin(0.39795*cos(revAngle))',  { 'revAngle': revAngle.select('revAngle') }
+  );
+  var imInput  = ee.Image([latitude, sunDecli.rename('sunDecli')]);
+  var daylength = imInput.expression(
+    '24 - (24/pi) * acos( ( sin(lat) * sin(sunDecli) ) / ( cos(lat) * cos(sunDecli) ) )',
+    {
+      'lat': imInput.select('lat'),
+      'sunDecli': imInput.select('sunDecli'),
+      'pi': ee.Image(Math.PI),
+    }
+  );
+  return daylength.rename('daylength_hours');
+};
+exports.getDaylength = getDaylength;
+
+
+var printAccuracyResults = function(accuracy) {
+  print('Error matrix: ', accuracy);
+  print('Overall accuracy: ', accuracy.accuracy());
+  print('Kappa coefficient: ', accuracy.kappa());
+  print('Consumers accuracy: ', accuracy.consumersAccuracy());
+  print('Producers accuracy: ', accuracy.producersAccuracy());
+};

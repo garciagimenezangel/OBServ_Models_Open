@@ -1,0 +1,11 @@
+landcover,nesting ground,nesting wood,nesting stem,nesting cavity,management nesting,floral spring,floral summer,floral autumn,floral winter,management floral
+bare,0.7,0.7,0.7,0.7,0,0.4,0.2,0.1,0.1,0
+crop,0.2,0.2,0.2,0.2,0,0.3,0.3,0.3,0.3,0
+grass,0.9,0.9,0.9,0.9,0,0.85,0.85,0.85,0.85,0.1
+moss,0.9,0.9,0.9,0.9,0,1,0.5,0.1,0.4,0
+shrub,1,1,1,1,0,0.8,0.8,0.8,0.8,0.1
+tree,0.8,0.8,0.8,0.8,0,0.5,0.5,0.5,0.5,0.1
+snow,0,0,0,0,0,0,0,0,0,0
+urban,0.3,0.1,0.15,0.1,0,0.2,0.1,0.05,0.05,0
+water_perm,0,0,0,0,0,0,0,0,0,0
+water_seas,0,0,0,0,0,0,0,0,0,0
