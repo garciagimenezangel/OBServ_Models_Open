@@ -1,4 +1,4 @@
-# OBServ_GEE_MM_Open
+# OBServ_Models_Open
 
 This repository contains the implementation of the Lonsdorf model to predict pollination service in Google Earth Engine.
 
