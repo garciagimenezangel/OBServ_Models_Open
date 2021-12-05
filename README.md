@@ -6,4 +6,4 @@ References:
 
 - Lonsdorf E, et al. (2009) Modelling pollination services across agricultural landscapes. Annals of Botany 103(9):1589–1600.
 
-- Gimenez-Garcia A, et al. (in preparation) Applicability of simple and reliable pollination service models from local to global scale.
+- Gimenez-Garcia A, et al. (in preparation) Applicability of simple and reliable pollination supply models from local to global scale.
