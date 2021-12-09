@@ -1,9 +1,9 @@
 # OBServ_Models_Open
 
-This repository contains the implementation of the Lonsdorf model to predict pollination service in Google Earth Engine.
+This repository contains the implementation of the Lonsdorf model to predict pollination supply using Google Earth Engine.
 
 References:
 
 - Lonsdorf E, et al. (2009) Modelling pollination services across agricultural landscapes. Annals of Botany 103(9):1589–1600.
 
-- Gimenez-Garcia A, et al. (in preparation) Applicability of simple and reliable pollination service models from local to global scale.
+- Gimenez-Garcia A, et al. (in preparation) Applicability of simple and reliable pollination supply models from local to global scale.
