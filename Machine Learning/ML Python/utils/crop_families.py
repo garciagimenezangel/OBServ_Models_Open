@@ -1,0 +1,36 @@
+family=dict()
+family['Vaccinium macrocarpon'] = 'Ericaceae' # cranberry
+family['Actinidia deliciosa'] = 'Actinidiaceae'   # kiwi
+family['Citrus paradisi'] = 'Rutaceae'      # grapefruit
+family['Coffea arabica'] = 'Rubiaceae' # coffee
+family['Coffea canephora'] = 'Rubiaceae' # coffee
+family['Solanum lycopersicum'] = 'Solanaceae' # tomato
+family['Cucumis melo'] = 'Cucurbitaceae' # melon
+family['Fagopyrum esculentum'] = 'Polygonaceae' # buckwheat
+family['Mangifera indica'] = 'Anacardiaceae' # mango
+family['Brassica napus'] = 'Brassicaceae' # rapeseed
+family['Trifolium pratense'] = 'Fabaceae' # red clover
+family['Prunus dulcis'] = 'Rosaceae' # almond
+family['Malus domestica'] = 'Rosaceae' # apple
+family['Vaccinium corymbosum'] = 'Ericaceae' # highbush blueberry
+family['Brassica rapa'] = 'Brassicaceae' # turnip
+family['Helianthus annuus'] = 'Asteraceae' # sunflower
+family['Prunus avium'] = 'Rosaceae' # cherry
+family['Cucurbita pepo'] = 'Cucurbitaceae' # pumpkin
+family['Allium porrum'] = 'Amaryllidaceae' # Leek
+family['Fragaria x ananassa'] = 'Rosaceae' # strawberry
+family['Vaccinium meridionale'] = 'Ericaceae' # andean blueberry
+family['Gossypium hirsutum'] = 'Malvaceae' # cotton
+family['Abelmoschus esculentus'] = 'Malvaceae' # okra
+family['Cucumis sativus'] = 'Cucurbitaceae' # cucumber
+family['Luffa acutangula'] = 'Cucurbitaceae' # angled luffa
+family['Momordica charantia'] = 'Cucurbitaceae' # bitter melon
+family['Lagenaria siceraria'] = 'Cucurbitaceae' # calabash
+family['Persea americana'] = 'Lauraceae' # avocado
+family['Citrus limon'] = 'Rutaceae' # lemon
+family['Macadamia integrifolia'] = 'Proteaceae' # macadamia
+family['Rubus idaeus'] = 'Rosaceae' # raspberry
+family['Vicia faba'] = 'Fabaceae' # broad bean
+family['Pyrus communis'] = 'Rosaceae' # pear
+
+

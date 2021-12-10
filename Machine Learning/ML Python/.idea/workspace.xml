@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="35c0d0ca-11e5-48ef-b77c-7fc2ec53c9a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/utils/data_preparation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_DelphiResults.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_DelphiResults_Simplified.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_INVENT_Simplified.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_large.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_large_biome1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_large_biome4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_small.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_small_biome1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_small_biome4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSDisc_ESTIMAP.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSDisc_ESTIMAP_Simplified.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CORINE_ESTIMAP.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CORINE_SpainAssessment.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Guilds/Guilds_SpainAssessment.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Guilds/Guilds_SpainAssessment_Simplified.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Guilds/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/sites.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/sitesOrganic.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/lcPercCalc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/lonsdorf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/pointsSampler" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/lonsdorf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="225bVwCE6HNsHUn1NPkRa6kHhiG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35c0d0ca-11e5-48ef-b77c-7fc2ec53c9a3" name="Default Changelist" comment="" />
+      <created>1639130422349</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639130422349</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

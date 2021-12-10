@@ -1,0 +1,323 @@
+var data     = require('users/angelgimenez/OBServ:lib/data');
+var lonsdorf = require('users/angelgimenez/OBServ:lib/lonsdorf');
+
+// sites
+var sites = data.getSamplingPoints("OBServ field data");
+
+// Typical flight distance
+var typDist_small = ee.Number(500);
+var typDist_large = ee.Number(3000);
+
+// Kernels
+var radius_small = typDist_small.multiply(2.0);
+var kernel_small = ee.Kernel.gaussian({
+    radius: radius_small,
+    sigma: typDist_small,
+    units: 'meters',
+    normalize: true
+});
+var radius_large = typDist_large.multiply(2.0);
+var kernel_large = ee.Kernel.gaussian({
+    radius: radius_large,
+    sigma: typDist_large,
+    units: 'meters',
+    normalize: true
+});
+
+
+// DATASETS NOT DEPENDENT ON REFERENCE YEAR OF THE DATA
+// WORLDCLIM BIO
+var wclim_bio = ee.Image("WORLDCLIM/V1/BIO");
+// CHILI
+var chili = ee.Image("CSP/ERGo/1_0/Global/ALOS_CHILI").rename("chili");
+// TOPO DIVERSITY
+var topo_div = ee.Image("CSP/ERGo/1_0/Global/ALOS_topoDiversity")
+  .select("constant")
+  .rename("topo_div");
+// ELEVATION
+var elevation = ee.Image("CGIAR/SRTM90_V4");
+// CSP gHM: Global Human Modification: dataset availability from 2016 only 
+var gHM = ee.ImageCollection("CSP/HM/GlobalHumanModification").reduce(ee.Reducer.mean()).reproject(chili.projection());
+// OpenLandMap Soil bulk density
+var class_props = ['b10','b200'];
+var soil_dens = ee.Image("OpenLandMap/SOL/SOL_BULKDENS-FINEEARTH_USDA-4A1H_M/v02").select(class_props);
+// OpenLandMap Clay content
+class_props = ['b10','b200'];
+var soil_clay = ee.Image("OpenLandMap/SOL/SOL_CLAY-WFRACTION_USDA-3A1A1A_M/v02").select(class_props);
+// OpenLandMap Sand content
+class_props = ['b10','b200'];
+var soil_sand = ee.Image("OpenLandMap/SOL/SOL_SAND-WFRACTION_USDA-3A1A1A_M/v02").select(class_props);  
+// OpenLandMap Soil organic carbon content
+class_props = ['b10','b200'];
+var soil_carbon = ee.Image("OpenLandMap/SOL/SOL_ORGANIC-CARBON_USDA-6A1C_M/v02").select(class_props);    
+// OpenLandMap Soil water content at 33kPa (field capacity)
+class_props = ['b10','b200'];
+var soil_water = ee.Image("OpenLandMap/SOL/SOL_WATERCONTENT-33KPA_USDA-4B1C_M/v01").select(class_props);    
+// OpenLandMap Soil pH in H2O
+class_props = ['b10','b200'];
+var soil_pH = ee.Image("OpenLandMap/SOL/SOL_PH-H2O_USDA-4C1A2A_M/v02").select(class_props);    
+// EcoRegions
+var eco_regions = ee.FeatureCollection("RESOLVE/ECOREGIONS/2017");
+var empty = ee.Image().byte(); // Create an empty image into which to paint the features, cast to byte.
+var fills = empty.paint({ // Paint the interior of the polygons with the ecoregion ID
+  featureCollection: eco_regions,
+  color: 'BIOME_NUM',
+});
+eco_regions = fills.reproject(chili.projection()).rename('biome_num');
+
+///////////////////
+// Main function //
+///////////////////
+var getFeatures = function(feature) {
+  // Keep this list of properties.
+  var keepProperties = ['study_id', 'site_id', 'refYear'];
+
+  // Define base feature where the new properties will be added
+  var geometry   = feature.geometry();
+  var newFeature = ee.Feature(geometry).copyProperties(feature, keepProperties);
+  
+  // Dates
+  var startYear = feature.get('refYear');
+  var endYear   = startYear;
+  var startDate = ee.Date.fromYMD(startYear, 1, 1);
+  var endDate = ee.Date.fromYMD(startYear, 12, 31);
+
+	///////////////////////////////////////////////
+	// DATASETS THAT DEPEND ON THE REFERENCE YEAR
+	///////////////////////////////////////////////
+	// LANDCOVER CGLS
+  var landcover = data.getLandCoverContinuous("CGLS", startYear, endYear);
+  
+  // Distance to seminatural
+  var landcoverDiscr = data.getLandCoverDiscrete("CGLS", startYear, endYear);
+  var distSeminat    = data.getDistanceToSeminatural("CGLS", landcoverDiscr);
+
+  // (Small) Insect activity
+  var config_small = { guild:"small", insActOpt:"max", startDate:startDate, endDate:endDate };
+  var insAct_small = lonsdorf.getFactorInsectActivity(config_small).reproject(chili.projection());
+
+  // (Large) Insect activity
+  var config_large = { guild:"large", insActOpt:"max", startDate:startDate, endDate:endDate };
+  var insAct_large = lonsdorf.getFactorInsectActivity(config_large).reproject(chili.projection());
+  
+  // TERRACLIMATE -> time range 1958-2020
+  class_props = [ 'def', 'pdsi', 'ro', 'soil', 'srad', 'swe', 'vap', 'vpd', 'vs' ] ;
+  var terraclim   = ee.ImageCollection("IDAHO_EPSCOR/TERRACLIMATE")
+    .filter(ee.Filter.date(startDate, endDate))
+    .select(class_props)
+    .reduce(ee.Reducer.mean())
+    .reproject(chili.projection());
+    
+  // PML_V2: Coupled Evapotranspiration and Gross Primary Product -> time range 2003-2017
+  class_props = [ 'GPP', 'Ec', 'Es', 'Ei' ] ;
+  var cond1 = ee.Number(startYear).lt(2003);
+  var cond2 = ee.Number(startYear).gt(2017);
+  var pml   = ee.Image(ee.Algorithms.If( cond1.or(cond2),
+    ee.ImageCollection("CAS/IGSNRR/PML/V2")
+      .select(class_props)
+      .reduce(ee.Reducer.mean())
+      .reproject(chili.projection()) , // refYear out of catalogue temporal range -> mean of entire collection
+    ee.ImageCollection("CAS/IGSNRR/PML/V2")
+      .filter(ee.Filter.date(startDate, endDate))
+      .select(class_props)
+      .reduce(ee.Reducer.mean())
+      .reproject(chili.projection()) // mean in refYear only
+  ));
+
+  // MOD16A2.006: Terra Net Evapotranspiration 8-Day Global 500m -> time range 2001-2020
+  class_props  = [ 'ET', 'LE', 'PET', 'PLE' ] ;
+  var cond     = ee.Number(startYear).lt(2001);
+  var terranet = ee.Image(ee.Algorithms.If( cond,
+    ee.ImageCollection("MODIS/006/MOD16A2")
+      .select(class_props)
+      .reduce(ee.Reducer.mean())
+      .reproject(chili.projection()) , // refYear out of catalogue temporal range -> mean of entire collection
+    ee.ImageCollection("MODIS/006/MOD16A2")
+      .filter(ee.Filter.date(startDate, endDate))
+      .select(class_props)
+      .reduce(ee.Reducer.mean())
+      .reproject(chili.projection())   // mean in refYear only
+  ));
+  
+  //////////////////////////////////////////////////
+  
+	////////////////////////////////////
+	// EXTRACTION OF FEATURE PROPERTIES
+	////////////////////////////////////
+  // LC COVER FRACTIONS: ['bare', 'crop', 'grass', 'moss', 'shrub', 'tree', 'snow', 'urban', 'water_perm', 'water_seas'];
+  // Small radius
+  var lcWeiMean_small = landcover.reduceNeighborhood( ee.Reducer.mean(), kernel_small);
+  var values          = lcWeiMean_small.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature          = newFeature.set('bare_small', values.get('bare_mean'));
+  newFeature          = newFeature.set('crop_small', values.get('crop_mean'));
+  newFeature          = newFeature.set('grass_small', values.get('grass_mean'));
+  newFeature          = newFeature.set('moss_small', values.get('moss_mean'));
+  newFeature          = newFeature.set('shrub_small', values.get('shrub_mean'));
+  newFeature          = newFeature.set('tree_small', values.get('tree_mean'));
+  newFeature          = newFeature.set('urban_small', values.get('urban_mean'));
+  // Large radius
+  var lcWeiMean_large = landcover.reduceNeighborhood( ee.Reducer.mean(), kernel_large);
+  values              = lcWeiMean_large.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature          = newFeature.set('bare_large', values.get('bare_mean'));
+  newFeature          = newFeature.set('crop_large', values.get('crop_mean'));
+  newFeature          = newFeature.set('grass_large', values.get('grass_mean'));
+  newFeature          = newFeature.set('moss_large', values.get('moss_mean'));
+  newFeature          = newFeature.set('shrub_large', values.get('shrub_mean'));
+  newFeature          = newFeature.set('tree_large', values.get('tree_mean'));
+  newFeature          = newFeature.set('urban_large', values.get('urban_mean'));
+  
+  // Distance to seminatural
+  values = distSeminat.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('dist_seminat', values.get('distSeminat_meters'));
+
+  // (Small) Insect activity
+  values = insAct_small.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('activity_small', values.get('insect_activity'));
+
+  // (Large) Insect activity
+  values = insAct_large.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('activity_large', values.get('insect_activity'));
+  
+  // Soil bulk density
+  values = soil_dens.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('soil_den_b10', values.get('b10'));
+  newFeature = newFeature.set('soil_den_b200', values.get('b200'));
+  
+  // Soil clay content
+  values = soil_clay.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('soil_clay_b10', values.get('b10'));
+  newFeature = newFeature.set('soil_clay_b200', values.get('b200'));  
+
+  // Soil sand content
+  values = soil_sand.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('soil_sand_b10', values.get('b10'));
+  newFeature = newFeature.set('soil_sand_b200', values.get('b200'));  
+  
+  // Soil organic carbon content
+  values = soil_carbon.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('soil_carbon_b10', values.get('b10'));
+  newFeature = newFeature.set('soil_carbon_b200', values.get('b200'));   
+  
+  // Soil water content
+  values = soil_water.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('soil_water_b10', values.get('b10'));
+  newFeature = newFeature.set('soil_water_b200', values.get('b200'));    
+  
+  // Soil pH
+  values = soil_pH.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('soil_pH_b10', values.get('b10'));
+  newFeature = newFeature.set('soil_pH_b200', values.get('b200'));      
+
+  // Bioclimatic variables
+  values = wclim_bio.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('bio01', values.get('bio01'));
+  newFeature = newFeature.set('bio02', values.get('bio02'));
+  newFeature = newFeature.set('bio03', values.get('bio03'));
+  newFeature = newFeature.set('bio04', values.get('bio04'));
+  newFeature = newFeature.set('bio05', values.get('bio05'));
+  newFeature = newFeature.set('bio06', values.get('bio06'));
+  newFeature = newFeature.set('bio07', values.get('bio07'));
+  newFeature = newFeature.set('bio08', values.get('bio08'));
+  newFeature = newFeature.set('bio09', values.get('bio09'));
+  newFeature = newFeature.set('bio10', values.get('bio10'));
+  newFeature = newFeature.set('bio11', values.get('bio11'));
+  newFeature = newFeature.set('bio12', values.get('bio12'));
+  newFeature = newFeature.set('bio13', values.get('bio13'));
+  newFeature = newFeature.set('bio14', values.get('bio14'));
+  newFeature = newFeature.set('bio15', values.get('bio15'));
+  newFeature = newFeature.set('bio16', values.get('bio16'));
+  newFeature = newFeature.set('bio17', values.get('bio17'));
+  newFeature = newFeature.set('bio18', values.get('bio18'));
+  newFeature = newFeature.set('bio19', values.get('bio19'));
+  
+  // Continuous Heat-Insolation Load Index (CHILI) is a surrogate for effects of insolation and topographic 
+  values = chili.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('chili', values.get('chili'));
+ 
+  // Topographic diversity (D) is a surrogate variable that represents the variety of temperature and moisture conditions available to species as local habitats.
+  values = topo_div.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('topo_div', values.get('topo_div'));
+
+  // Elevation
+  values = elevation.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('elevation', values.get('elevation'));
+  
+  // Total evapotranspiration
+  values = terranet.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('et' , values.get('ET_mean'));
+  
+  // total potential evapotranspitation
+  newFeature = newFeature.set('pet', values.get('PET_mean'));
+  
+  // average latent flux
+  newFeature = newFeature.set('le' , values.get('LE_mean'));
+  
+  // average potential latent heat flux
+  newFeature = newFeature.set('ple', values.get('PLE_mean'));
+  
+  // Direct evaporation from the soil
+  values = pml.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('es', values.get('Es_mean'));
+  
+  // transpiration from vegetation
+  newFeature = newFeature.set('ec', values.get('Ec_mean'));
+  
+  // Interception from vegetation canopy
+  newFeature = newFeature.set('ei', values.get('Ei_mean'));
+
+  // Gross primary product
+  newFeature = newFeature.set('gpp', values.get('GPP_mean'));
+
+  // Downward surface shortwave radiation
+  values = terraclim.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('srad', values.get('srad_mean'));
+
+  // Climate water deficit
+  newFeature = newFeature.set('def', values.get('def_mean'));
+
+  // Palmer Drought Severity Index
+  newFeature = newFeature.set('pdsi', values.get('pdsi_mean'));
+
+  // Runoff
+  newFeature = newFeature.set('ro', values.get('ro_mean'));
+
+  // Soil moisture
+  newFeature = newFeature.set('soil', values.get('soil_mean'));
+
+  // Snow water equivalent
+  newFeature = newFeature.set('swe', values.get('swe_mean'));
+
+  // Vapor presure
+  newFeature = newFeature.set('vap', values.get('vap_mean'));
+
+  // Vapor presure deficit
+  newFeature = newFeature.set('vpd', values.get('vpd_mean'));
+
+  // Wind-speed at 10m
+  newFeature = newFeature.set('vs', values.get('vs_mean'));
+
+  // Measure on the amount of human modification of terrestrial lands
+  values = gHM.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('gHM', values.get('gHM_mean'));
+
+  // Terrestrial biomes
+  values = eco_regions.reduceRegion( ee.Reducer.first(), geometry );
+  newFeature = newFeature.set('biome_num', values.get('biome_num'));
+
+  // Return a new Feature, copying new properties
+  return newFeature;
+};
+
+//var sitesFilt = sites.filter(ee.Filter.eq('refYear',2008));
+var sitesFeatures = sites.map(getFeatures);
+
+// Export to Google Drive 
+var descr = "Features";
+Export.table.toDrive({
+  collection: sitesFeatures,
+  description: descr,
+  fileFormat: 'CSV',
+  folder: 'GEE outputs'
+}); 
+
+
