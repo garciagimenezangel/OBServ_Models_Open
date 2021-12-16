@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35c0d0ca-11e5-48ef-b77c-7fc2ec53c9a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/data_preparation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_DelphiResults.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_DelphiResults_Simplified.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_INVENT_Simplified.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_large.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_large_biome1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_large_biome4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_small.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_small_biome1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSCont_optimizedGA_small_biome4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSDisc_ESTIMAP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CGLSDisc_ESTIMAP_Simplified.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CORINE_ESTIMAP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/FloralNest-CORINE_SpainAssessment.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/FloralNest/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/Guilds/Guilds_SpainAssessment.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/Guilds/Guilds_SpainAssessment_Simplified.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/Guilds/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/sites.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/sitesOrganic.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/functions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/lcPercCalc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/lonsdorf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/pointsSampler" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../models/lonsdorf" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Regression/generate_trained_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/generate_trained_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/process_GEE_features_into_predictors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Regression/model_selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Regression/model_selection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Regression/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/Regression/predict.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +33,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -76,5 +56,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

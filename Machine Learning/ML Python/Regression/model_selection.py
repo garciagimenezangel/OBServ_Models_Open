@@ -21,7 +21,7 @@ def get_data_prepared():
 def get_data_reduced(n_features):
     return pd.read_csv(root_folder+'data/train/data_reduced_'+str(n_features)+'.csv')
 
-reduced_n_feat = True
+reduced_n_feat = True # 1st run False, 2nd (after feature collinearity) True
 n_features = 49
 
 if reduced_n_feat:
