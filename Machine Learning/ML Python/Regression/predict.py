@@ -3,15 +3,9 @@ import pickle
 import pandas as pd
 import numpy as np
 import warnings
-from sklearn.linear_model import LinearRegression, BayesianRidge
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.express as px
-from utils import generate_trained_model as gtm
 warnings.filterwarnings('ignore')
-from scipy import stats
 
-root_folder = "C:/Users/angel/git/OBServ_Models_Open/Machine Learning/"
+root_folder = "C:/Users/Angel/Documents/Angel/git/OBServ_Models_Open/Machine Learning/"
 
 def fillEmptyColumns(ref_columns, data):
     data_filled = data.copy()
@@ -35,5 +29,10 @@ pd_result['observations'] = labels_test
 pd_result['predictions'] = yhat
 pd_result.to_csv(root_folder+'data/predictions/test1.csv', index=False)
 
-# TEST 1: compute predictions from a 'features' file computed using the GEE script available in this repository
-# test_prepared = fillEmptyColumns(model.feature_names_in_, test_prepared)
+# TEST 2: compute predictions from a 'features' file computed using the GEE script available in this repository
+features_prepared = pd.read_csv(root_folder+'data/predict_here/features_prepared.csv')
+test_prepared = fillEmptyColumns(model.feature_names_in_, features_prepared)
+test_prepared = test_prepared[model.feature_names_in_]
+yhat = model.predict(test_prepared)
+pd_result =  pd.DataFrame({'predictions':yhat})
+pd_result.to_csv(root_folder+'data/predictions/test2.csv', index=False)
