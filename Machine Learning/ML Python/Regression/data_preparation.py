@@ -1,3 +1,17 @@
+"""
+Script to get and prepare the data for the subsequent steps in the machine learning pipeline:
+1) Prepare data (data_preparation.py)
+2) Select a model to use as baseline for the selection of features (model_selection.py)
+3) Select features based on collinearity (feature_collinearity.py)
+4) Model selection and hyper-parameter tuning (model_selection.py)
+5) Generate a trained model
+6) Compute predictions (predict.py and/or prediction_stats.py)
+
+The preparation of data consists of :
+1) Collect data from the features extracted in GEE and CropPol, apply filters, and harmonize visitation rate values.
+2) Define pipeline for data preparation
+"""
+
 import pandas as pd
 import numpy as np
 from sklearn.compose import ColumnTransformer
