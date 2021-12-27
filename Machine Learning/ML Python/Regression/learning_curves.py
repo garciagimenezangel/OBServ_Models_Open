@@ -1,32 +1,28 @@
+"""
+Script to visualize the learning curves of the models
+"""
 
 import ast
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.experimental import enable_hist_gradient_boosting
-from sklearn.ensemble import HistGradientBoostingRegressor, GradientBoostingRegressor
-from sklearn.linear_model import BayesianRidge
-from sklearn.naive_bayes import GaussianNB
-from sklearn.neighbors import KNeighborsRegressor
 from sklearn.svm import SVC, SVR, NuSVR
-from sklearn.datasets import load_digits
 from sklearn.model_selection import learning_curve
-from sklearn.model_selection import ShuffleSplit
 import pandas as pd
-models_repo = "C:/Users/angel/git/Observ_models/"
+
+from utils import define_root_folder
+root_folder = define_root_folder.root_folder
 
 def get_data_prepared():
-    models_repo    = "C:/Users/angel/git/Observ_models/"
-    data_dir   = models_repo + "data/ML/Regression/train/"
+    data_dir   = root_folder + "data/train/"
     return pd.read_csv(data_dir+'data_prepared.csv')
 
 def get_data_reduced(n_features):
-    models_repo    = "C:/Users/angel/git/Observ_models/"
-    data_dir   = models_repo + "data/ML/Regression/train/"
+    data_dir   = root_folder + "data/train/"
     return pd.read_csv(data_dir+'data_reduced_'+str(n_features)+'.csv')
 
 def get_best_models(n_features=0):
-    data_dir = models_repo + "data/ML/Regression/hyperparameters/"
+    data_dir = root_folder + "data/hyperparameters/"
     if n_features>0:
         return pd.read_csv(data_dir + 'best_scores_'+str(n_features)+'.csv')
     else:
@@ -139,7 +135,7 @@ df_best_models = get_best_models(49)
 predictors = data_prepared.iloc[:, :-1]
 labels = np.array(data_prepared.iloc[:, -1:]).flatten()
 # Load custom cross validation
-with open('C:/Users/angel/git/Observ_models/data/ML/Regression/train/myCViterator.pkl', 'rb') as file:
+with open(root_folder+'/data/train/myCViterator.pkl', 'rb') as file:
     myCViterator = pickle.load(file)
 
 # Plot learning curve
@@ -157,6 +153,6 @@ best_model = df_best_models.loc[df_best_models.model.astype(str) == "NuSVR()"].i
 d = ast.literal_eval(best_model.best_params)
 model = NuSVR(C=d['C'], coef0=d['coef0'], gamma=d['gamma'], nu=d['nu'], kernel=d['kernel'], shrinking=d['shrinking'])
 plot_learning_curve(model, title, predictors, labels, cv=5, n_jobs=6)
-plt.savefig('C:/Users/angel/git/Observ_models/data/ML/Regression/plots/learning_curve_49feat.tiff', format='tiff')
+plt.savefig(root_folder+'/data/plots/learning_curve_49feat.tiff', format='tiff')
 
 

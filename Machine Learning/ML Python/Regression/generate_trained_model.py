@@ -1,12 +1,20 @@
+"""
+Script to train and save ML models, to be used later for predicting visitation rate.
+We save trained models using the entire dataset, and using only the training subset.
+
+This is the fifth step of a process that includes the following operations:
+1) Prepare data (data_preparation.py)
+2) Select a model to use as baseline for the selection of features (model_selection.py)
+3) Select features based on collinearity (feature_collinearity.py)
+4) Model selection and hyper-parameter tuning (model_selection.py)
+5) Generate a trained model
+6) Compute predictions (predict.py and/or prediction_stats.py)
+"""
 
 import pandas as pd
 import numpy as np
 import warnings
-from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
-import seaborn as sns
 from utils import generate_trained_model as gtm
-import plotly.express as px
 warnings.filterwarnings('ignore')
 
 n_features=49

@@ -1,15 +1,20 @@
 """
-Script to get and prepare the data for the subsequent steps in the machine learning pipeline:
+Script to get and prepare the data for the subsequent steps in the machine learning pipeline.
+The preparation of data consists of:
+1) Collect data from the features extracted in GEE and CropPol, apply filters, and harmonize visitation rate values.
+2) Transform data using a specific pipeline for data preparation. This step includes standardizing numeric predictors
+and transforming categorical variables into numeric.
+3) Stratified split training and test (split by author ID). Split data based on the author ID, and create an iterator
+based on the study ID, for any cross-validation in the next steps. See more details in the reference article of this
+work.
+
+This is the first step of a process that includes the following operations:
 1) Prepare data (data_preparation.py)
 2) Select a model to use as baseline for the selection of features (model_selection.py)
 3) Select features based on collinearity (feature_collinearity.py)
 4) Model selection and hyper-parameter tuning (model_selection.py)
 5) Generate a trained model
 6) Compute predictions (predict.py and/or prediction_stats.py)
-
-The preparation of data consists of :
-1) Collect data from the features extracted in GEE and CropPol, apply filters, and harmonize visitation rate values.
-2) Define pipeline for data preparation
 """
 
 import pandas as pd
@@ -103,7 +108,7 @@ data.reset_index(inplace=True, drop=True)
 dataset_prepared.reset_index(inplace=True, drop=True)
 
 #############################################################
-# Stratified split training and test (split by study_id)
+# Stratified split training and test (split by author ID)
 #############################################################
 df_authors = data.groupby('author_id', as_index=False).first()[['author_id','biome_num']]
 # For the training set, take biomes with more than one count (otherwise I get an error in train_test_split.

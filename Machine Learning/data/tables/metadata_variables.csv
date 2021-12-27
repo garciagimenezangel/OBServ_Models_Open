@@ -1,0 +1,66 @@
+Group,Variable,Description,Short,Dataset,Reference
+ ,bare,Bare or sparse vegetation cover,Bareland cover,CGLS-LC100 collection 3,\cite{Buchhorn2020}
+,cropland,Cropland (annual crops) cover,Cropland cover,CGLS-LC100 collection 3,
+,grass,Grassland  cover,Grassland cover,CGLS-LC100 collection 3,
+ ,moss,Moss and lichen  cover,Moss and lichen cover,CGLS-LC100 collection 3,
+Landscape,shrub,Shrubland cover,Shrubland cover,CGLS-LC100 collection 3,
+ ,tree,Forest cover,Forest cover,CGLS-LC100 collection 3,
+ ,urban,Built-up cover,Built-up cover,CGLS-LC100 collection 3,
+ ,dist_seminat,Distance to semi-natural habitats,Dist. to semi-natural,CGLS-LC100 collection 3,
+,lc_div,Land cover diversity,Land cover diversity,CGLS-LC100 collection 3,
+ ,biome,Terrestrial biomes,Terrestrial biomes,RESOLVE Ecoregions 2017,\cite{resolve2017}
+,,,,,
+ ,soil_den_b10,Bulk density (fine earth) at 10cm,Soil bulk density,OpenLandMap Soil bulk density,\cite{bulkDensity}
+,soil_clay_b10,Clay content at 10cm,Soil clay content,OpenLandMap Soil clay content,\cite{clayContent}
+Soil properties,soil_sand_b10,Sand content at 10cm,Soil sand content,OpenLandMap Soil sand content,\cite{sandContent}
+,soil_carbon_b10,Organic carbon at 10cm,Soil organic carbon,OpenLandMap Soil organic carbon content,\cite{orgC}
+,soil_water_b10,Water content at 10cm at 33kPa,Soil water content,OpenLandMap Soil water content at 33kPa,\cite{waterContent}
+,soil_pH_b10,pH in water at 10cm,Soil pH,OpenLandMap Soil pH in H2O,\cite{pH}
+,,,,,
+,bio01,Annual mean temperature,Annual mean T,WorldClim BIO Variables V1,
+,bio02,Mean diurnal range ,Mean diurnal range ,WorldClim BIO Variables V1,
+,bio03,Isothermality ,Isothermality ,WorldClim BIO Variables V1,
+,bio04,Temperature seasonality,T seasonality,WorldClim BIO Variables V1,
+,bio05,Max temperature of warmest month,Max T warmest month,WorldClim BIO Variables V1,
+,bio06,Min temperature of coldest month,Min T coldest month,WorldClim BIO Variables V1,
+,bio07,Temperature annual range,T annual range,WorldClim BIO Variables V1,
+,bio08,Mean temperature of wettest quarter,Mean T wettest quarter,WorldClim BIO Variables V1,
+Bioclimatic,bio09,Mean temperature of driest quarter,Mean T driest quarter,WorldClim BIO Variables V1,\cite{Hijmans2005}
+,bio10,Mean temperature of warmest quarter,Mean T warmest quarter,WorldClim BIO Variables V1,
+,bio11,Mean temperature of coldest quarter,Mean T coldest quarter,WorldClim BIO Variables V1,
+,bio12,Annual precipitation,Annual Prec.,WorldClim BIO Variables V1,
+,bio13,Precipitation of wettest month,Prec. wettest month,WorldClim BIO Variables V1,
+,bio14,Precipitation of driest month,Prec. driest month,WorldClim BIO Variables V1,
+,bio15,Precipitation seasonality,Prec. seasonality,WorldClim BIO Variables V1,
+,bio16,Precipitation of wettest quarter,Prec. wettest quarter,WorldClim BIO Variables V1,
+,bio17,Precipitation of driest quarter,Prec. driest quarter,WorldClim BIO Variables V1,
+,bio18,Precipitation of warmest quarter,Prec. warmest quarter,WorldClim BIO Variables V1,
+,bio19,Precipitation of coldest quarter,Prec. coldest quarter,WorldClim BIO Variables V1,
+,,,,,
+,chili,Continuous Heat-Insolation Load Index,Cont. Heat-Insolation Load ,Global ALOS CHILI,\cite{Theobald2015}
+Topography,topo_div,Topographic diversity,Topographic diversity,Global ALOS Topographic Diversity,\cite{Theobald2015}
+,elevation,Elevation,Elevation,SRTM Digital Elevation Data Version 4,\cite{Jarvis2008}
+,,,,,
+,et,Total evapotranspiration,Total evapotranspiration,MOD16A2.006,\cite{Running2021}
+,pet,Total potential evapotranspiration,Total potential evapotr.,MOD16A2.006,
+,le,Average latent heat flux,Avg. latent heat flux,MOD16A2.006,
+,ple,Average potential latent heat flux,Avg. pot. latent heat flux,MOD16A2.006,
+Energy balance,ec,Transpiration from vegetation,Transp. vegetation,PML(V2),"\cite{ZHANG2019165, Gan2018, Zhang2016}"
+,es,Direct evaporation from the soil,Direct evaporation soil,PML(V2),
+,ei,Interception from vegetation canopy,Interception canopy,PML(V2),
+,gpp,Gross primary product,Gross primary product,PML(V2),
+,srad,Downward surface shortwave radiation,Shortwave radiation,TerraClimate,\cite{Abatzoglou2018}
+,activity,Pollinators activity,Pollinator activity,"TerraClimate, ERA5-Land Monthly Averaged",\cite{ERA5}
+,,,,,
+,def,Climate water deficit,Climate water deficit,TerraClimate,
+,pdsi,Palmer Drought Severity Index,Drought severity index,TerraClimate,
+,ro,Runoff,Runoff,TerraClimate,
+Water balance,soil,Soil moisture,Soil moisture,TerraClimate,
+,swe,Snow water equivalent,Snow water equivalent,TerraClimate,
+,vap,Vapor presure,Vapor presure,TerraClimate,
+,vpd,Vapor presure deficit,Vapor presure deficit,TerraClimate,
+,vs,Wind-speed at 10m,Wind-speed at 10m,TerraClimate,
+,,,,,
+,gHM,Index of human modification of terrestrial lands,Human modification,CSP gHM: Global Human Modification,\cite{Kennedy2019}
+Human-ecosystem interactions,management,Farming management practices,Management,CropPol,\cite{croppol2021}
+,crop,Crop species,Crop species,CropPol,

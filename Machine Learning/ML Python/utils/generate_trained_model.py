@@ -15,7 +15,8 @@ from scipy.stats import norm
 warnings.filterwarnings('ignore')
 import pickle
 
-root_folder = "C:/Users/angel/git/OBServ_Models_Open/Machine Learning/"
+from utils import define_root_folder
+root_folder = define_root_folder.root_folder
 
 def check_normality(array):
     sns.distplot(array)

@@ -1,8 +1,19 @@
+"""
+Script to analyze the collinearity of predictors.
+Because the dataset contains multicollinear features, the permutation importance will show that none of the features
+are important. One approach to handling multicollinearity is by performing hierarchical clustering on the features’
+Spearman rank-order correlations, picking a threshold, and keeping a single feature from each cluster.
+https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html#sphx-glr-auto-examples-inspection-plot-permutation-importance-multicollinear-py
 
-# Because this dataset contains multicollinear features, the permutation importance will show that none of the features
-# are important. One approach to handling multicollinearity is by performing hierarchical clustering on the features’
-# Spearman rank-order correlations, picking a threshold, and keeping a single feature from each cluster.
-# https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html#sphx-glr-auto-examples-inspection-plot-permutation-importance-multicollinear-py
+This is the third step of a process that includes the following operations:
+1) Prepare data (data_preparation.py)
+2) Select a model to use as baseline for the selection of features (model_selection.py)
+3) Select features based on collinearity (feature_collinearity.py)
+4) Model selection and hyper-parameter tuning (model_selection.py)
+5) Generate a trained model
+6) Compute predictions (predict.py and/or prediction_stats.py)
+"""
+
 import pickle
 from collections import defaultdict
 import pandas as pd
@@ -20,7 +31,8 @@ from scipy import stats
 from utils import feature_aliases
 warnings.filterwarnings('ignore')
 
-root_folder = "C:/Users/angel/git/OBServ_Models_Open/Machine Learning/"
+from utils import define_root_folder
+root_folder = define_root_folder.root_folder
 
 def get_train_data_prepared():
     data_dir   = root_folder + "data/train/"

@@ -5,7 +5,8 @@ import numpy as np
 import warnings
 warnings.filterwarnings('ignore')
 
-root_folder = "C:/Users/Angel/Documents/Angel/git/OBServ_Models_Open/Machine Learning/"
+from utils import define_root_folder
+root_folder = define_root_folder.root_folder
 
 def fillEmptyColumns(ref_columns, data):
     data_filled = data.copy()

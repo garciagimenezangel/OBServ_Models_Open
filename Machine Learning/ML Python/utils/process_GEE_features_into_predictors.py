@@ -8,7 +8,8 @@ from utils import data_preparation as dp
 import warnings
 warnings.filterwarnings('ignore')
 
-root_folder = "C:/Users/Angel/Documents/Angel/git/OBServ_Models_Open/Machine Learning/"
+from utils import define_root_folder
+root_folder = define_root_folder.root_folder
 
 #######################################
 # Get
@@ -67,5 +68,5 @@ feature_names = np.concatenate( (numeric_col, onehot_col), axis=0)
 predictors_prepared = pd.DataFrame(x_transformed, columns=feature_names, index=df_features.index)
 
 # Save
-predictors_prepared.to_csv("C:/Users/Angel/Documents/Angel/git/OBServ_Models_Open/Machine Learning/data/predict_here/features_prepared.csv", index=False)
+predictors_prepared.to_csv(root_folder+"/data/predict_here/features_prepared.csv", index=False)
 

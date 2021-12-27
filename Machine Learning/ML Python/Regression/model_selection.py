@@ -13,7 +13,8 @@ from sklearn.model_selection import cross_val_score, RandomizedSearchCV
 from scipy.stats import uniform
 warnings.filterwarnings('ignore')
 
-root_folder = "C:/Users/angel/git/OBServ_Models_Open/Machine Learning/"
+from utils import define_root_folder
+root_folder = define_root_folder.root_folder
 
 def get_data_prepared():
     return pd.read_csv(root_folder+'data/train/data_prepared.csv')

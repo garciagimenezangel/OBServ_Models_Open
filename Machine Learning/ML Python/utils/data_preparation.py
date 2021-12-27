@@ -10,7 +10,8 @@ from utils import crop_families as crop_fam
 import warnings
 warnings.filterwarnings('ignore')
 
-root_folder = "C:/Users/angel/git/OBServ_Models_Open/Machine Learning/"
+from utils import define_root_folder
+root_folder = define_root_folder.root_folder
 
 def get_feature_data():
     featuresDir = root_folder + "data/features/"

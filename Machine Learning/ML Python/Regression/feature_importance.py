@@ -1,3 +1,6 @@
+"""
+Script to compute the relative importance of the features in the ML models
+"""
 
 import pickle
 from functools import reduce
@@ -12,8 +15,8 @@ import ast
 from utils import feature_aliases
 warnings.filterwarnings('ignore')
 
-
-root_folder = "C:/Users/angel/git/OBServ_Models_Open/Machine Learning/"
+from utils import define_root_folder
+root_folder = define_root_folder.root_folder
 
 def get_train_data_reduced(n_features):
     return pd.read_csv(root_folder+'data/train/data_reduced_'+str(n_features)+'.csv')
@@ -64,9 +67,9 @@ df_feat_imp_gbr['feature'] = df_feat_imp_gbr[1]
 df_feat_imp_gbr['GBR']     = df_feat_imp_gbr[0]
 df_feat_imp_gbr = df_feat_imp_gbr[['feature','GBR']]
 
-# #######################################
-# # Permutation importance
-# #######################################
+# ##########################################
+# # Permutation importance for other models
+# ##########################################
 # NuSVR
 best_model       = df_best_models.loc[df_best_models.model.astype(str) == "NuSVR()"].iloc[0]
 d     = ast.literal_eval(best_model.best_params)
