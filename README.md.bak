@@ -6,8 +6,7 @@ The folder **Lonsdorf** contains the implementation of the Lonsdorf model[2] in 
 
 The folder **Machine Learning** contains the implementation of a machine learning pipeline to predict pollinator visitation rate, using scikit-learn in Python.
 
-# Pipeline for Lonsdorf scores
-Run Lonsdorf\pre-post-processing\generate_sites_predictions.py to generate a set of sites where predictions will be computed.
+# Pipeline for Lonsdorf scores (in preparation)
 
 # Pipeline for machine learning predictions (in preparation)
 

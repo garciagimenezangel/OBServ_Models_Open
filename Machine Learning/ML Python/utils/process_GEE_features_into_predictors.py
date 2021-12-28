@@ -1,3 +1,9 @@
+"""
+Script to transform the data extracted in GEE, to be used to compute predictions. The transformation must be the same
+that is performed in the beginning of the ML pipeline for the training and test subsets, and includes standardizing
+numeric predictors and transforming categorical variables into numeric.
+"""
+
 import pandas as pd
 import numpy as np
 from sklearn.compose import ColumnTransformer

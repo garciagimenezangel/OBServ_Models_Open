@@ -1,3 +1,6 @@
+"""
+Ancillary functions for the generation of trained models
+"""
 
 import ast
 import pandas as pd

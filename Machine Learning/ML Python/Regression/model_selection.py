@@ -1,3 +1,15 @@
+"""
+Script to select candidate models among the set of estimators available in scikit-learn, and tune their parameters
+with a randomized search
+
+This script is used in the second and fourth steps of a process that includes the following operations:
+1) Prepare data (data_preparation.py)
+2) Select a model to use as baseline for the selection of features (model_selection.py)
+3) Select features based on collinearity (feature_collinearity.py)
+4) Model selection and hyper-parameter tuning (model_selection.py)
+5) Generate a trained model
+6) Compute predictions (predict.py and/or prediction_stats.py)
+"""
 
 import numpy as np
 import pandas as pd
@@ -37,6 +49,9 @@ labels        = np.array(data_prepared.iloc[:,-1:]).flatten()
 with open(root_folder+'data/train/myCViterator.pkl', 'rb') as file:
     myCViterator = pickle.load(file)
 
+########################
+# Model selection
+########################
 # LIST OF ESTIMATORS OF TYPE "REGRESSOR" (TRY ALL)
 estimators = all_estimators(type_filter='regressor')
 results = []
@@ -63,7 +78,7 @@ else:
     df_results_sorted.to_csv(path_or_buf=root_folder + 'data/hyperparameters/model_selection.csv', index=False)
 
 ########################
-# Shortlist: check df_results and see which show low 'mean' and not-too-low 'rmse_all' (sign of possible overfitting)
+# Shortlist: check df_results and see which show low 'mean' and not-too-low 'MAE all' (sign of possible overfitting)
 #######################
 # Selected estimators (no particular order):
 # 1 NuSVR

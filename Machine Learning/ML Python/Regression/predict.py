@@ -1,3 +1,16 @@
+"""
+Script to compute predictions, based on already trained models.
+Note: the script 'utils/process_GEE_features_into_predictors.py' can be used to generate the csv file that is needed
+here to compute predictions
+
+This is the last step of a process that includes the following operations:
+1) Prepare data (data_preparation.py)
+2) Select a model to use as baseline for the selection of features (model_selection.py)
+3) Select features based on collinearity (feature_collinearity.py)
+4) Model selection and hyper-parameter tuning (model_selection.py)
+5) Generate a trained model
+6) Compute predictions (predict.py and/or prediction_stats.py)
+"""
 
 import pickle
 import pandas as pd
