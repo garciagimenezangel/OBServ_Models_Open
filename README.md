@@ -6,7 +6,7 @@ The folder **Lonsdorf** contains the implementation of the Lonsdorf model[2] in 
 
 The folder **Machine Learning** contains the implementation of a machine learning pipeline to predict pollinator visitation rate, using scikit-learn in Python.
 
-# Pipeline for Lonsdorf scores
+# Pipeline for the computation of Lonsdorf scores at arbitrary locations
 1. Copy the folders Lonsdorf\GEE\lib and Lonsdorf\GEE\models in your GEE repository.
 
 2. Upload the assets in Lonsdorf\GEE\assets to your GEE (depending on the option you choose when running the model, you might want to upload only some of the assets present in the folder).
@@ -21,7 +21,7 @@ The folder **Machine Learning** contains the implementation of a machine learnin
 
 7. Run the script Lonsdorf\GEE\models\lonsdorf. It must produce a task to compute and download the Lonsdorf scores at the new sites.
 
-# Pipeline for machine learning predictions (in preparation)
+# Pipeline for machine learning predictions at arbitrary locations (in preparation)
 
 
 References:
