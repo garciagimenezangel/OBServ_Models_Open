@@ -1,19 +1,9 @@
-"""
-Script to analyze the collinearity of predictors.
-Because the dataset contains multicollinear features, the permutation importance will show that none of the features
-are important. One approach to handling multicollinearity is by performing hierarchical clustering on the features’
-Spearman rank-order correlations, picking a threshold, and keeping a single feature from each cluster.
-https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html#sphx-glr-auto-examples-inspection-plot-permutation-importance-multicollinear-py
 
-This is the third step of a process that includes the following operations:
-1) Prepare data (data_preparation.py)
-2) Select a model to use as baseline for the selection of features (model_selection.py)
-3) Select features based on collinearity (feature_collinearity.py)
-4) Model selection and hyper-parameter tuning (model_selection.py)
-5) Generate a trained model
-6) Compute predictions (predict.py and/or prediction_stats.py)
-"""
-
+# Because this dataset contains multicollinear features, the permutation importance will show that none of the features
+# are important. One approach to handling multicollinearity is by performing hierarchical clustering on the features’
+# Spearman rank-order correlations, picking a threshold, and keeping a single feature from each cluster.
+# https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html#sphx-glr-auto-examples-inspection-plot-permutation-importance-multicollinear-py
+import ast
 import pickle
 from collections import defaultdict
 import pandas as pd
@@ -21,26 +11,28 @@ import warnings
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import spearmanr
+from scipy.cluster import hierarchy
+from sklearn.inspection import permutation_importance
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error
-from sklearn.svm import NuSVR
+from sklearn.svm import NuSVR, SVR
 from scipy.cluster import hierarchy
 from scipy.spatial.distance import squareform
 from scipy import stats
 from utils import feature_aliases
 warnings.filterwarnings('ignore')
+models_repo = "C:/Users/Angel/git/OBServ/Observ_models/"
+root_dir    = models_repo + "data/Prepared Datasets/"
 
-from utils import define_root_folder
-root_folder = define_root_folder.root_folder
 
 def get_train_data_prepared():
-    data_dir   = root_folder + "data/train/"
-    return pd.read_csv(data_dir+'data_prepared.csv')
+    return pd.read_csv(root_dir+'ml_train.csv')
+
 
 def get_test_data_prepared():
-    data_dir   = root_folder + "data/test/"
-    return pd.read_csv(data_dir+'data_prepared.csv')
+    return pd.read_csv(root_dir+'ml_test.csv')
+
 
 def compute_vif(X):
     # Calculating VIF
@@ -49,34 +41,45 @@ def compute_vif(X):
     vif["VIF"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
     return(vif)
 
+
+def get_best_models(n_features=0):
+    data_dir = models_repo + "data/ML/Regression/hyperparameters/"
+    if n_features > 0:
+        return pd.read_csv(data_dir + 'best_scores_' + str(n_features) + '.csv')
+    else:
+        return pd.read_csv(data_dir + 'best_scores_all_predictors.csv')
+
+
 ############################################
 # The analysis of collinearity and subsequent selection of features based on such analysis, must be done using the
 # training set only, because selection of the features affect the final predictions on the test set, so if used in this
 # process, those predictions would be biased to better results.
 train_prepared = get_train_data_prepared()
-predictors_train = train_prepared.iloc[:, :-1]
-labels_train = np.array(train_prepared.iloc[:, -1:]).flatten()
-test_prepared   = get_test_data_prepared()
-predictors_test = test_prepared.iloc[:,:-1]
+predictors_train = train_prepared.drop(columns=['study_id', 'site_id', 'author_id', 'log_vr_small', 'log_vr_large', 'log_visit_rate'])
+labels_train = np.array(train_prepared['log_visit_rate'])
+test_prepared = get_test_data_prepared()
+predictors_test = test_prepared.drop(columns=['study_id', 'site_id', 'author_id', 'log_vr_small', 'log_vr_large', 'log_visit_rate'])
 
 # Load custom cross validation
-with open(root_folder + 'data/train/myCViterator.pkl', 'rb') as file:
+with open(root_dir + 'myCViterator.pkl', 'rb') as file:
     myCViterator = pickle.load(file)
 
 # This analysis is performed only on originally-numeric columns
 num_cols = list(predictors_train.columns[:56])
 cat_cols = list(predictors_train.columns[56:])
-cat_cols.remove('x1_Brassica rapa')         # Crops species that are not present in the training set (if crop species used)
-cat_cols.remove('x1_Citrus limon')
-cat_cols.remove('x1_Cucurbita pepo')
-cat_cols.remove('x1_Gossypium hirsutum')
-# cat_cols.remove('x1_Rutaceae')            # Crops families that are not present in the training set (if crop families used)
-cat_cols.remove('x0_6.0')                   # Biomes that are not present in the training set
+is_col_all_zero_train = [(predictors_train[col] == 0).all() for col in predictors_train.columns]  # crop species and biomes that are not present in the training set
+columns_all_zero_train = predictors_train.columns[is_col_all_zero_train]
+for col in columns_all_zero_train:
+    print("Removed column {} from training set".format(col))
+    cat_cols.remove(col)
 train_num = train_prepared[num_cols]
 predictors_train = predictors_train[num_cols+cat_cols]
 
 # Define model
-model = NuSVR() # Any model (loop over several?)
+df_best_models = get_best_models()
+best_model = df_best_models.loc[df_best_models.model.astype(str) == "SVR()"].iloc[0]
+d = ast.literal_eval(best_model.best_params)
+model = SVR(C=d['C'], coef0=d['coef0'], gamma=d['gamma'], epsilon=d['epsilon'], kernel=d['kernel'], shrinking=d['shrinking'])
 
 ################################################
 # Plot a heatmap of the correlated features:
@@ -100,7 +103,7 @@ dendro_idx = np.arange(0, len(dendro['ivl']))
 # ax2.set_yticklabels(dendro['ivl'])
 # fig.tight_layout()
 # plt.show()
-plt.savefig(root_folder + 'plots/dendrogram.eps', format='eps', bbox_inches='tight')
+plt.savefig('C:/Users/Angel/git/OBServ/Observ_models/data/ML/Regression/plots/dendrogram.eps', format='eps', bbox_inches='tight')
 
 # Cross-validation to find the best threshold
 results = []
@@ -153,7 +156,8 @@ for t in thresholds:
     })
 
     # Plot results
-    df_results = pd.DataFrame(results)
+    # df_results = pd.DataFrame(results)
+    df_results = pd.read_csv('C:/Users/Angel/git/OBServ/Observ_models/data/ML/Regression/tables/feature_collinearity.csv')
     fig = plt.figure()
     axes = plt.subplot(111)
     box = axes.get_position()
@@ -166,9 +170,9 @@ for t in thresholds:
     axes.fill_between(df_results.threshold, df_results.mae_mean - df_results.mae_std, df_results.mae_mean + df_results.mae_std, color='r', alpha=0.1)
     axes.fill_between(df_results.threshold, df_results.r2_mean - df_results.r2_std, df_results.r2_mean + df_results.r2_std, color='g', alpha=0.1)
     axes.fill_between(df_results.threshold, df_results.sp_mean - df_results.sp_std, df_results.sp_mean + df_results.sp_std, color='b', alpha=0.1)
-    axes.legend(bbox_to_anchor=(1.4, 1), loc=1, borderaxespad=0.)
-    df_results.to_csv(root_folder + 'data/tables/feature_collinearity.csv', index=False)
-    plt.savefig(root_folder + 'data/plots/feature_collinearity.tiff', format='tiff', bbox_inches='tight')
+    axes.legend(bbox_to_anchor=(1.5, 1), loc=1, borderaxespad=0.)
+    # df_results.to_csv('C:/Users/Angel/git/OBServ/Observ_models/data/ML/Regression/tables/feature_collinearity.csv', index=False)
+    plt.savefig('C:/Users/Angel/git/OBServ/Observ_models/data/ML/Regression/plots/feature_collinearity.tiff', format='tiff', bbox_inches='tight')
 
 # Select features with the best threshold
 best_t = 0.75
@@ -187,18 +191,16 @@ vif = compute_vif(predictors_reduced_train)
 # selected_features = ...
 # predictors_reduced_train = predictors_train[selected_features]
 # ...repeat vif until all variables show VIF<10...
-vif.to_csv(root_folder + 'data/tables/vif.csv', index=False)
+vif.to_csv('C:/Users/Angel/git/OBServ/Observ_models/data/ML/Regression/tables/vif.csv', index=False)
 
 # Save reduced datasets
 predictors_reduced_train = predictors_train[selected_features+cat_cols]
 predictors_reduced_test  = predictors_test[selected_features+cat_cols]
-data_reduced_train       = pd.concat([predictors_reduced_train, train_prepared.iloc[:,-1:]], axis=1)
-data_reduced_test        = pd.concat([predictors_reduced_test,  test_prepared.iloc[:,-1:]], axis=1)
+data_reduced_train       = pd.concat([predictors_reduced_train, train_prepared['log_visit_rate']], axis=1)
+data_reduced_test        = pd.concat([predictors_reduced_test,  test_prepared['log_visit_rate']], axis=1)
 
-data_reduced_train.to_csv(root_folder + 'data/train/data_reduced_'+
-                         str(np.size(selected_features+cat_cols)) +'.csv', index=False)
-data_reduced_test.to_csv(root_folder + 'data/test/data_reduced_'+
-                         str(np.size(selected_features+cat_cols)) +'.csv', index=False)
+data_reduced_train.to_csv(root_dir + 'ml_train_reduced_' + str(np.size(selected_features+cat_cols)) +'.csv', index=False)
+data_reduced_test.to_csv(root_dir + 'ml_test_reduced_' + str(np.size(selected_features+cat_cols)) +'.csv', index=False)
 
 # Save table for clusters
 clusters = []
@@ -207,4 +209,4 @@ for values in cluster_id_to_feature_ids.values():
     features = [feature_aliases.feat_dict[x] for x in train_num.columns[values[0:]]]
     clusters.append({'Proxy': proxy, 'Features': ', '.join(features)})
 df_clusters = pd.DataFrame(clusters)
-df_clusters.to_csv(root_folder + 'data/tables/feature_clusters.csv', index=False)
+df_clusters.to_csv('C:/Users/Angel/git/OBServ/Observ_models/data/ML/Regression/tables/feature_clusters.csv', index=False)

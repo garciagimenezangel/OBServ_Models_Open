@@ -2,8 +2,8 @@ rm(list=ls())
 library(rlist)
 library(stringr)
 
-# data_folder = "C:/Users/angel/git/OBservData/Final_Data/"
-data_folder = "C:/Users/angel.gimenez/git/OBservData/Final_Data/"
+# data_folder = "C:/Users/angel/git/OBServ/OBservData/Final_Data/"
+data_folder = "C:/Users/angel.gimenez/git/OBServ/OBservData/Final_Data/"
 dfOBServFieldData = read.csv(file=paste0(data_folder,"CropPol_field_level_data.csv"), header = TRUE)
 dfOBServFieldData  = dfOBServFieldData[, c("study_id", "site_id", "latitude","longitude", "sampling_start_month", "sampling_end_month", "sampling_year")]
 

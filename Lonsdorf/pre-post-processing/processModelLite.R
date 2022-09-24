@@ -5,10 +5,10 @@ rm(list=ls())
 #######################################
 # Load the data (models and cropPol)
 #######################################
-modelsRepo = "C:/Users/angel/git/Observ_models/"
+modelsRepo = "C:/Users/Angel/git/OBServ/Observ_models//"
 df_model   = read.csv(paste0(modelsRepo, "data/model_data.csv"), header=T) %>% select(!contains("geodata"))
 
-fieldDataRepo = "C:/Users/angel/git/OBservData/"
+fieldDataRepo = "C:/Users/angel/git/OBServ/OBservData/"
 fieldDataDir = paste0(fieldDataRepo, "Final_Data/")
 source(paste0(modelsRepo, "code/lib/functions.R")) # general functions for the repo
 df_field = getOBServFieldData(fieldDataDir) %>% select(c('study_id', 'site_id','management'))

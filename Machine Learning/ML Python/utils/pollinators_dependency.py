@@ -1,7 +1,3 @@
-"""
-Crops' pollinators dependency (0-1)
-"""
-
 dep = dict()
 dep['Vaccinium macrocarpon'] = 0.65 # cranberry
 dep['Actinidia deliciosa'] = 0.95   # kiwi

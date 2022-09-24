@@ -8,8 +8,8 @@ library(stringr)
 rm(list = ls())
 
 # Repositories
-modelsRepo    = "C:/Users/angel/git/Observ_models/"
-fieldDataRepo = "C:/Users/angel/git/OBservData/"
+modelsRepo    = "C:/Users/Angel/git/OBServ/Observ_models//"
+fieldDataRepo = "C:/Users/angel/git/OBServ/OBservData/"
 
 # Folders
 GEEdataDir   = paste0(modelsRepo, "data/GEE/GEE outputs/")
