@@ -1,0 +1,1404 @@
+site_id,study_id,latitude,longitude,crop,management,ab_wildbees,ab_bombus,total_sampled_time,sampling_year,sampling_abundance
+Arroyo Claro,Agustin_Saez_Rubus_idaeus_Argentina_2014,-41.945183,-71.520683,Rubus idaeus,organic,20.0,67.0,,2014,sweep net
+Miguel,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.01035,-71.52805,Rubus idaeus,organic,10.0,104.0,,2014,sweep net
+Marcelino,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.115781,-71.43862,Rubus idaeus,organic,5.0,42.0,,2014,sweep net
+Valle del Medio,Agustin_Saez_Rubus_idaeus_Argentina_2014,-41.99975,-71.552483,Rubus idaeus,organic,2.0,47.0,,2014,sweep net
+Omar,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.125874,-71.42318,Rubus idaeus,organic,31.0,77.0,,2014,sweep net
+El Inca,Agustin_Saez_Rubus_idaeus_Argentina_2014,-41.895272,-71.549982,Rubus idaeus,organic,16.0,178.0,,2014,sweep net
+Nelson,Agustin_Saez_Rubus_idaeus_Argentina_2014,-41.924705,-71.514139,Rubus idaeus,organic,22.0,141.0,,2014,sweep net
+CEPA,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.114368,-71.560604,Rubus idaeus,organic,2.0,81.0,,2014,sweep net
+Silva,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.046983,-71.510317,Rubus idaeus,organic,9.0,40.0,,2014,sweep net
+Andrea,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.127667,-71.581217,Rubus idaeus,organic,2.0,88.0,,2014,sweep net
+Ines,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.066017,-71.504517,Rubus idaeus,organic,2.0,15.0,,2014,sweep net
+Tranquerita,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.095833,-71.518417,Rubus idaeus,organic,5.0,43.0,,2014,sweep net
+Hernan,Agustin_Saez_Rubus_idaeus_Argentina_2014,-41.902983,-71.536111,Rubus idaeus,organic,22.0,156.0,,2014,sweep net
+El Chucao,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.028397,-71.589024,Rubus idaeus,organic,3.0,96.0,,2014,sweep net
+El Monje,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.099967,-71.452717,Rubus idaeus,organic,5.0,26.0,,2014,sweep net
+Las Acacias,Agustin_Saez_Rubus_idaeus_Argentina_2014,-42.088268,-71.485892,Rubus idaeus,organic,0.0,37.0,,2014,sweep net
+Angel,Alejandro_Trillo_Fragaria_ananassa_Spain_2016,37.194164276123,-6.8266658782959,Fragaria x ananassa,conventional,0.0,12.0,240.0,2016,transects
+Francisco1,Alejandro_Trillo_Fragaria_ananassa_Spain_2016,37.2452774047852,-6.59694385528564,Fragaria x ananassa,conventional,2.0,0.0,240.0,2016,transects
+Francisco2,Alejandro_Trillo_Fragaria_ananassa_Spain_2016,37.2797203063965,-6.59972190856934,Fragaria x ananassa,conventional,0.0,1.0,240.0,2016,transects
+Juanantonio,Alejandro_Trillo_Fragaria_ananassa_Spain_2016,37.2613868713379,-6.7994441986084,Fragaria x ananassa,conventional,0.0,2.0,240.0,2016,transects
+Maria,Alejandro_Trillo_Fragaria_ananassa_Spain_2016,37.085277557373,-6.55111122131348,Fragaria x ananassa,conventional,0.0,1.0,240.0,2016,transects
+Mazagon1,Alejandro_Trillo_Fragaria_ananassa_Spain_2016,37.1719436645508,-6.85027694702148,Fragaria x ananassa,conventional,0.0,7.0,240.0,2016,transects
+Bramlett,Alexandra_Maria_Klein_Prunus_dulcis_USA_2009,38.8905338,-122.2290552,Prunus dulcis,,37.0,8.0,13.3333333333333,2009,focal observations
+Etters,Alexandra_Maria_Klein_Prunus_dulcis_USA_2009,38.7679852,-122.1633011,Prunus dulcis,,6.0,0.0,13.3333333333333,2009,focal observations
+Full Belly,Alexandra_Maria_Klein_Prunus_dulcis_USA_2009,38.8708174,-122.2289264,Prunus dulcis,,13.0,8.0,13.3333333333333,2009,focal observations
+Laury,Alexandra_Maria_Klein_Prunus_dulcis_USA_2009,38.9016493,-122.2408052,Prunus dulcis,,22.0,3.0,13.3333333333333,2009,focal observations
+T&P3,Alexandra_Maria_Klein_Prunus_dulcis_USA_2009,38.8973999,-122.0648183,Prunus dulcis,,5.0,0.0,13.3333333333333,2009,focal observations
+Taber,Alexandra_Maria_Klein_Prunus_dulcis_USA_2009,38.6997295,-122.1089041,Prunus dulcis,,8.0,1.0,13.3333333333333,2009,focal observations
+Tim Mueller 1,Alexandra_Maria_Klein_Prunus_dulcis_USA_2009,38.7796138,-122.168718,Prunus dulcis,,12.0,3.0,13.3333333333333,2009,focal observations
+Tim Mueller 2,Alexandra_Maria_Klein_Prunus_dulcis_USA_2009,38.8082465,-122.1822281,Prunus dulcis,,4.0,0.0,13.3333333333333,2009,focal observations
+COF2,Alice_Classen_Coffea_arabica_Tanzania_2011_2012,-3.232177212,37.268548,Coffea arabica,conventional,4.0,0.0,170.0,2011-2012,focal observations
+COF3,Alice_Classen_Coffea_arabica_Tanzania_2011_2012,-3.247466484,37.32059835,Coffea arabica,conventional,5.0,0.0,170.0,2011-2012,focal observations
+COF5,Alice_Classen_Coffea_arabica_Tanzania_2011_2012,-3.274800858,37.47067258,Coffea arabica,conventional,1.0,0.0,170.0,2011-2012,focal observations
+HOM1,Alice_Classen_Coffea_arabica_Tanzania_2011_2012,-3.185998687,37.25462826,Coffea arabica,organic,6.0,0.0,170.0,2011-2012,focal observations
+HOM2,Alice_Classen_Coffea_arabica_Tanzania_2011_2012,-3.269033234,37.3091989,Coffea arabica,organic,11.0,0.0,170.0,2011-2012,focal observations
+HOM4,Alice_Classen_Coffea_arabica_Tanzania_2011_2012,-3.33711016,37.49247115,Coffea arabica,organic,45.0,0.0,170.0,2011-2012,focal observations
+SUN1,Alice_Classen_Coffea_arabica_Tanzania_2011_2012,-3.27816463,37.19449647,Coffea arabica,conventional,1.0,0.0,170.0,2011-2012,focal observations
+SUN2,Alice_Classen_Coffea_arabica_Tanzania_2011_2012,-3.235175792,37.27169284,Coffea arabica,conventional,2.0,0.0,170.0,2011-2012,focal observations
+SUN4,Alice_Classen_Coffea_arabica_Tanzania_2011_2012,-3.275414554,37.32344919,Coffea arabica,conventional,3.0,0.0,170.0,2011-2012,focal observations
+CanBeia,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.6778333333333,2.56405555555555,Prunus dulcis,,11.0,218.0,130.0,2015,focal observations
+Cooperativa,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.6903611111111,2.86172222222222,Prunus dulcis,,0.0,9.0,150.0,2015,focal observations
+EsRafal,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.64775,2.76172222222222,Prunus dulcis,,2.0,0.0,285.0,2015,focal observations
+FestivalPark,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.6452222222222,2.74675,Prunus dulcis,,2.0,0.0,260.0,2015,focal observations
+SaCanova,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.74625,3.01677777777777,Prunus dulcis,,17.0,5.0,250.0,2015,focal observations
+SaFillola,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.7063055555555,3.08586111111111,Prunus dulcis,,21.0,1.0,300.0,2015,focal observations
+SaMarineta,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.5815833333333,3.34894444444444,Prunus dulcis,,0.0,2.0,65.0,2015,focal observations
+SesCabanasses,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.6796666666666,3.22822222222222,Prunus dulcis,,20.0,13.0,215.0,2015,focal observations
+Shospitalet,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.4909444444444,3.25575,Prunus dulcis,,83.0,2.0,295.0,2015,focal observations
+Sindioteria,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.6169166666666,2.67766666666666,Prunus dulcis,,6.0,14.0,285.0,2015,focal observations
+SonBlai,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.6229722222222,2.64733333333333,Prunus dulcis,,1.0,14.0,210.0,2015,focal observations
+SonCos,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.6314444444444,2.74722222222222,Prunus dulcis,,5.0,0.0,390.0,2015,focal observations
+SonMarrano,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.4338333333333,2.94677777777777,Prunus dulcis,,36.0,5.0,300.0,2015,focal observations
+SonPinya,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.4508611111111,3.09455555555555,Prunus dulcis,,21.0,1.0,185.0,2015,focal observations
+SonPou,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.6161388888888,2.64680555555555,Prunus dulcis,,1.0,15.0,240.0,2015,focal observations
+SonPujol,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.7208055555555,2.88797222222222,Prunus dulcis,,5.0,0.0,335.0,2015,focal observations
+SonVives,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.6190277777777,3.31272222222222,Prunus dulcis,,9.0,2.0,270.0,2015,focal observations
+Xorrigo,Amparo_Lazaro_Prunus_dulcis_Spain_2015,39.5814722222222,2.80502777777777,Prunus dulcis,,0.0,5.0,300.0,2015,focal observations
+CanBeia,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.6778333333333,2.56405555555555,Prunus dulcis,,1.0,328.0,145.0,2016,focal observations
+Cooperativa,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.6903611111111,2.86172222222222,Prunus dulcis,,12.0,0.0,235.0,2016,focal observations
+EsRafal,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.64775,2.76172222222222,Prunus dulcis,,1.0,0.0,255.0,2016,focal observations
+FestivalPark,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.6452222222222,2.74675,Prunus dulcis,,43.0,0.0,180.0,2016,focal observations
+SaCanova,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.74625,3.01677777777777,Prunus dulcis,,18.0,0.0,295.0,2016,focal observations
+SaFillola,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.7063055555555,3.08586111111111,Prunus dulcis,,127.0,0.0,285.0,2016,focal observations
+SesCabanasses,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.6796666666666,3.22822222222222,Prunus dulcis,,25.0,14.0,300.0,2016,focal observations
+Shospitalet,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.4909444444444,3.25575,Prunus dulcis,,1.0,0.0,240.0,2016,focal observations
+Sindioteria,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.6169166666666,2.67766666666666,Prunus dulcis,,39.0,0.0,195.0,2016,focal observations
+SonCos,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.6314444444444,2.74722222222222,Prunus dulcis,,32.0,2.0,225.0,2016,focal observations
+SonMarrano,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.4338333333333,2.94677777777777,Prunus dulcis,,17.0,0.0,280.0,2016,focal observations
+SonPinya,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.4508611111111,3.09455555555555,Prunus dulcis,,90.0,0.0,170.0,2016,focal observations
+SonPou,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.6161388888888,2.64680555555555,Prunus dulcis,,0.0,5.0,130.0,2016,focal observations
+SonPujol,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.7208055555555,2.88797222222222,Prunus dulcis,,0.0,1.0,245.0,2016,focal observations
+SonVives,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.6190277777777,3.31272222222222,Prunus dulcis,,2.0,18.0,215.0,2016,focal observations
+Xorrigo,Amparo_Lazaro_Prunus_dulcis_Spain_2016,39.5814722222222,2.80502777777777,Prunus dulcis,,29.0,0.0,280.0,2016,focal observations
+L 1 Snitowski,Betina_Blochtein_Brassica_napus_Brazil_2011,-28.1429691314697,-54.3186988830566,Brassica napus,conventional,5.0,0.0,270.0,2011,sweep net
+L2 Snitowski,Betina_Blochtein_Brassica_napus_Brazil_2011,-28.1548595428467,-54.3274116516113,Brassica napus,conventional,11.0,0.0,270.0,2011,sweep net
+L3 Karlec,Betina_Blochtein_Brassica_napus_Brazil_2011,-28.1376895904541,-54.3471794128418,Brassica napus,conventional,11.0,1.0,270.0,2011,sweep net
+L4 Rupp,Betina_Blochtein_Brassica_napus_Brazil_2011,-28.0762805938721,-54.3076782226562,Brassica napus,conventional,27.0,0.0,270.0,2011,sweep net
+L5 Sr. Rupp,Betina_Blochtein_Brassica_napus_Brazil_2011,-28.0795192718506,-54.3138008117676,Brassica napus,conventional,3.0,0.0,270.0,2011,sweep net
+L 6 Sr. Donadel,Betina_Blochtein_Brassica_napus_Brazil_2011,-28.1334209442139,-54.3103218078613,Brassica napus,conventional,6.0,0.0,270.0,2011,sweep net
+CA1,Breno_M_Freitas_Anacardium_occidentale_Brazil_2011,-4.10378340386198,-38.3881488658494,Anacardium occidentale,conventional,9.0,0.0,,2011,sweep net
+CA2,Breno_M_Freitas_Anacardium_occidentale_Brazil_2011,-4.11036081944337,-38.3891006387568,Anacardium occidentale,conventional,1.0,0.0,,2011,sweep net
+CA3,Breno_M_Freitas_Anacardium_occidentale_Brazil_2011,-4.11385062537106,-38.3899277376575,Anacardium occidentale,conventional,7.0,0.0,,2011,sweep net
+CA4,Breno_M_Freitas_Anacardium_occidentale_Brazil_2011,-4.09072626592055,-38.412743600952,Anacardium occidentale,conventional,5.0,0.0,,2011,sweep net
+CA5,Breno_M_Freitas_Anacardium_occidentale_Brazil_2011,-4.09686143546379,-38.4126301194546,Anacardium occidentale,conventional,1.0,0.0,,2011,sweep net
+CA6,Breno_M_Freitas_Anacardium_occidentale_Brazil_2011,-4.1009420104133,-38.3917772118165,Anacardium occidentale,conventional,10.0,0.0,,2011,sweep net
+CA7,Breno_M_Freitas_Anacardium_occidentale_Brazil_2011,-4.11186334231027,-38.3925500480251,Anacardium occidentale,conventional,7.0,0.0,,2011,sweep net
+CA8,Breno_M_Freitas_Anacardium_occidentale_Brazil_2011,-4.09560572504662,-38.4149959324957,Anacardium occidentale,conventional,7.0,0.0,,2011,sweep net
+CA9,Breno_M_Freitas_Anacardium_occidentale_Brazil_2011,-4.10059241594882,-38.4304520999432,Anacardium occidentale,conventional,19.0,0.0,,2011,sweep net
+CA10,Breno_M_Freitas_Anacardium_occidentale_Brazil_2011,-4.10355813145356,-38.4321473421995,Anacardium occidentale,conventional,3.0,0.0,,2011,sweep net
+CA1,Breno_M_Freitas_Anacardium_occidentale_Brazil_2012,-4.103783403862,-38.388148865849,Anacardium occidentale,conventional,11.0,0.0,,2012,sweep net
+CA2,Breno_M_Freitas_Anacardium_occidentale_Brazil_2012,-4.110360819443,-38.389100638757,Anacardium occidentale,conventional,40.0,0.0,,2012,sweep net
+CA3,Breno_M_Freitas_Anacardium_occidentale_Brazil_2012,-4.113850625371,-38.389927737658,Anacardium occidentale,conventional,15.0,0.0,,2012,sweep net
+CA4,Breno_M_Freitas_Anacardium_occidentale_Brazil_2012,-4.090726265921,-38.412743600952,Anacardium occidentale,conventional,8.0,0.0,,2012,sweep net
+CA5,Breno_M_Freitas_Anacardium_occidentale_Brazil_2012,-4.096861435464,-38.412630119455,Anacardium occidentale,conventional,18.0,0.0,,2012,sweep net
+CA6,Breno_M_Freitas_Anacardium_occidentale_Brazil_2012,-4.100942010413,-38.391777211817,Anacardium occidentale,conventional,18.0,0.0,,2012,sweep net
+CA7,Breno_M_Freitas_Anacardium_occidentale_Brazil_2012,-4.11186334231,-38.392550048025,Anacardium occidentale,conventional,13.0,0.0,,2012,sweep net
+CA8,Breno_M_Freitas_Anacardium_occidentale_Brazil_2012,-4.095605725047,-38.414995932496,Anacardium occidentale,conventional,9.0,0.0,,2012,sweep net
+CA9,Breno_M_Freitas_Anacardium_occidentale_Brazil_2012,-4.100592415949,-38.430452099943,Anacardium occidentale,conventional,21.0,0.0,,2012,sweep net
+CA10,Breno_M_Freitas_Anacardium_occidentale_Brazil_2012,-4.103558131454,-38.4321473422,Anacardium occidentale,conventional,30.0,0.0,,2012,sweep net
+AN1,Breno_M_Freitas_Bixa_orellana_Brazil_2007,-3.91085395580737,-38.8494852642288,Bixa orellana,conventional,112.0,0.0,,2007,other
+AN2,Breno_M_Freitas_Bixa_orellana_Brazil_2007,-3.6407580091499,-38.8483638530602,Bixa orellana,conventional,131.0,0.0,,2007,other
+AN3,Breno_M_Freitas_Bixa_orellana_Brazil_2007,-3.64181449161759,-38.8472002589409,Bixa orellana,conventional,86.0,0.0,,2007,other
+AN4,Breno_M_Freitas_Bixa_orellana_Brazil_2007,-3.6426502512006,-38.846173572376,Bixa orellana,conventional,86.0,0.0,,2007,other
+AN5,Breno_M_Freitas_Bixa_orellana_Brazil_2007,-3.64281723642992,-38.8439565654078,Bixa orellana,conventional,187.0,0.0,,2007,other
+AN6,Breno_M_Freitas_Bixa_orellana_Brazil_2007,-3.64221127606592,-38.8450120300951,Bixa orellana,conventional,163.0,0.0,,2007,other
+AC1,Breno_M_Freitas_Malpighia_emarginata_Brazil_2011,-3.86851204744879,-41.0950445856371,Malpighia emarginata,organic,119.0,0.0,,2011,sweep net
+AC2,Breno_M_Freitas_Malpighia_emarginata_Brazil_2011,-3.86857708983544,-41.0910500398361,Malpighia emarginata,organic,121.0,0.0,,2011,sweep net
+AC3,Breno_M_Freitas_Malpighia_emarginata_Brazil_2011,-3.87555232634127,-41.0942535929857,Malpighia emarginata,organic,115.0,0.0,,2011,sweep net
+AC4,Breno_M_Freitas_Malpighia_emarginata_Brazil_2011,-3.87497232087295,-41.0897092535491,Malpighia emarginata,organic,139.0,0.0,,2011,sweep net
+AC5,Breno_M_Freitas_Malpighia_emarginata_Brazil_2011,-3.88347812767888,-41.1027280059606,Malpighia emarginata,organic,150.0,0.0,,2011,sweep net
+AC6,Breno_M_Freitas_Malpighia_emarginata_Brazil_2011,-3.88320954005859,-41.0973211876112,Malpighia emarginata,organic,147.0,0.0,,2011,sweep net
+AC7,Breno_M_Freitas_Malpighia_emarginata_Brazil_2011,-3.89134422754456,-41.1017708568167,Malpighia emarginata,organic,155.0,0.0,,2011,sweep net
+AC8,Breno_M_Freitas_Malpighia_emarginata_Brazil_2011,-3.89318221580196,-41.0959875366017,Malpighia emarginata,organic,140.0,0.0,,2011,sweep net
+mango2,Bryony_Willcox_Mangifera_indica_Australia_2016,-16.98266111,145.4638417,Mangifera indica,conventional,7.0,0.0,180.0,2016,focal observations
+mango3,Bryony_Willcox_Mangifera_indica_Australia_2016,-16.9115,145.4241472,Mangifera indica,conventional,4.0,0.0,220.0,2016,focal observations
+mango4,Bryony_Willcox_Mangifera_indica_Australia_2016,-16.90098333,145.4300806,Mangifera indica,conventional,64.0,0.0,200.0,2016,focal observations
+mango5,Bryony_Willcox_Mangifera_indica_Australia_2016,-17.01975278,145.3408472,Mangifera indica,conventional,51.0,0.0,160.0,2016,focal observations
+mango6,Bryony_Willcox_Mangifera_indica_Australia_2016,-16.99886667,145.3672361,Mangifera indica,conventional,2.0,0.0,360.0,2016,focal observations
+mango7,Bryony_Willcox_Mangifera_indica_Australia_2016,-17.19234444,145.4690472,Mangifera indica,conventional,1.0,0.0,180.0,2016,focal observations
+mango8,Bryony_Willcox_Mangifera_indica_Australia_2016,-17.01152778,145.453925,Mangifera indica,conventional,138.0,0.0,240.0,2016,focal observations
+mango9,Bryony_Willcox_Mangifera_indica_Australia_2016,-17.033075,145.2985306,Mangifera indica,conventional,289.0,0.0,220.0,2016,focal observations
+mango10,Bryony_Willcox_Mangifera_indica_Australia_2016,-16.99231389,145.3496889,Mangifera indica,conventional,9.0,0.0,240.0,2016,focal observations
+avo_1,Bryony_Willcox_Persea_americana_Australia_2015,-25.1581,152.351,Persea americana,conventional,2.0,0.0,180.0,2015,transects
+avo_3,Bryony_Willcox_Persea_americana_Australia_2015,-25.1294,152.38,Persea americana,conventional,2.0,0.0,120.0,2015,transects
+avo_5,Bryony_Willcox_Persea_americana_Australia_2015,-25.1231,152.123,Persea americana,conventional,15.0,0.0,120.0,2015,transects
+avo_6,Bryony_Willcox_Persea_americana_Australia_2015,-25.114,152.152,Persea americana,conventional,60.0,0.0,120.0,2015,transects
+avo_9,Bryony_Willcox_Persea_americana_Australia_2015,-34.1422,140.702,Persea americana,conventional,1.0,0.0,120.0,2015,transects
+avo_1,Bryony_Willcox_Persea_americana_Australia_2016,-25.1581,152.351,Persea americana,conventional,11.0,0.0,140.0,2016,transects
+avo_2,Bryony_Willcox_Persea_americana_Australia_2016,-25.1411,152.362,Persea americana,conventional,90.0,0.0,160.0,2016,transects
+avo_3,Bryony_Willcox_Persea_americana_Australia_2016,-25.1294,152.38,Persea americana,conventional,2.0,0.0,160.0,2016,transects
+avo_5,Bryony_Willcox_Persea_americana_Australia_2016,-25.1231,152.123,Persea americana,conventional,3.0,0.0,80.0,2016,transects
+avo_6,Bryony_Willcox_Persea_americana_Australia_2016,-25.114,152.152,Persea americana,conventional,310.0,0.0,160.0,2016,transects
+avo_1,Bryony_Willcox_Persea_americana_Australia_2017,-25.1581,152.351,Persea americana,conventional,7.0,0.0,180.0,2017,transects
+avo_2,Bryony_Willcox_Persea_americana_Australia_2017,-25.1411,152.362,Persea americana,conventional,51.0,0.0,180.0,2017,transects
+avo_3,Bryony_Willcox_Persea_americana_Australia_2017,-25.1294,152.38,Persea americana,conventional,4.0,0.0,200.0,2017,transects
+avo_5,Bryony_Willcox_Persea_americana_Australia_2017,-25.1231,152.123,Persea americana,conventional,106.0,0.0,160.0,2017,transects
+avo_6,Bryony_Willcox_Persea_americana_Australia_2017,-25.114,152.152,Persea americana,conventional,79.0,0.0,120.0,2017,transects
+MIR1,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.2110667,-96.8997333,Coffea arabica,organic,15.0,0.0,100.0,2004,focal observations
+MIR2,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.2135333,-96.8995167,Coffea arabica,organic,10.0,0.0,100.0,2004,focal observations
+MIR3,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.2098833,-96.8965,Coffea arabica,organic,12.0,0.0,100.0,2004,focal observations
+MIR4,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.2101167,-96.8876667,Coffea arabica,organic,8.0,0.0,100.0,2004,focal observations
+ORD1,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.2055833,-96.8977333,Coffea arabica,conventional,1.0,0.0,100.0,2004,focal observations
+ORD2,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.20565,-96.89855,Coffea arabica,conventional,3.0,0.0,100.0,2004,focal observations
+ORD3,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.2070167,-96.8843,Coffea arabica,conventional,2.0,0.0,100.0,2004,focal observations
+ORD4,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.2063,-96.8850667,Coffea arabica,conventional,13.0,0.0,100.0,2004,focal observations
+VSE1,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.4726667,-96.9256333,Coffea arabica,conventional,3.0,0.0,100.0,2004,focal observations
+VSE2,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.4724667,-96.9286167,Coffea arabica,conventional,1.0,0.0,100.0,2004,focal observations
+VSE3,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.4715833,-96.92925,Coffea arabica,conventional,1.0,0.0,100.0,2004,focal observations
+VSE4,Carlos_H_Vergara_Coffea_arabica_Mexico_2004,19.4649667,-96.9343,Coffea arabica,conventional,1.0,0.0,100.0,2004,focal observations
+Nich_VTblu_Site_01,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.299605,-73.187766,Vaccinium corymbosum,organic,22.0,25.0,160.0,2014,sweep net
+Nich_VTblu_Site_01,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.299605,-73.187766,Vaccinium corymbosum,organic,15.0,10.0,100.0,2015,sweep net
+Nich_VTblu_Site_02,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.4010957014,-73.0691734064,Vaccinium corymbosum,organic,15.0,28.0,140.0,2014,sweep net
+Nich_VTblu_Site_02,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.4010957014,-73.0691734064,Vaccinium corymbosum,organic,8.0,29.0,80.0,2015,sweep net
+Nich_VTblu_Site_02,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.4010957014,-73.0691734064,Vaccinium corymbosum,organic,6.0,11.0,60.0,2013,sweep net
+Nich_VTblu_Site_03,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.5161895867,-72.9278982195,Vaccinium corymbosum,organic,32.0,16.0,140.0,2014,sweep net
+Nich_VTblu_Site_03,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.5161895867,-72.9278982195,Vaccinium corymbosum,organic,19.0,7.0,80.0,2015,sweep net
+Nich_VTblu_Site_03,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.5161895867,-72.9278982195,Vaccinium corymbosum,organic,11.0,25.0,80.0,2013,sweep net
+Nich_VTblu_Site_04,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.28951,-73.243322,Vaccinium corymbosum,conventional,11.0,18.0,100.0,2014,sweep net
+Nich_VTblu_Site_04,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.28951,-73.243322,Vaccinium corymbosum,conventional,1.0,7.0,40.0,2015,sweep net
+Nich_VTblu_Site_05,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.214885,-72.793697,Vaccinium corymbosum,organic,8.0,19.0,80.0,2015,sweep net
+Nich_VTblu_Site_06,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.3917677495,-73.0959985426,Vaccinium corymbosum,organic,13.0,35.0,100.0,2014,sweep net
+Nich_VTblu_Site_06,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.3917677495,-73.0959985426,Vaccinium corymbosum,organic,14.0,28.0,80.0,2015,sweep net
+Nich_VTblu_Site_06,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.3917677495,-73.0959985426,Vaccinium corymbosum,organic,17.0,45.0,60.0,2013,sweep net
+Nich_VTblu_Site_07,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.1900231201,-72.8462866788,Vaccinium corymbosum,organic,61.0,51.0,160.0,2014,sweep net
+Nich_VTblu_Site_07,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.1900231201,-72.8462866788,Vaccinium corymbosum,organic,32.0,29.0,100.0,2015,sweep net
+Nich_VTblu_Site_07,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.1900231201,-72.8462866788,Vaccinium corymbosum,organic,20.0,36.0,80.0,2013,sweep net
+Nich_VTblu_Site_08,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.2645144479,-73.1342006234,Vaccinium corymbosum,conventional,36.0,27.0,160.0,2014,sweep net
+Nich_VTblu_Site_08,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.2645144479,-73.1342006234,Vaccinium corymbosum,conventional,27.0,24.0,80.0,2015,sweep net
+Nich_VTblu_Site_08,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.2645144479,-73.1342006234,Vaccinium corymbosum,conventional,27.0,42.0,60.0,2013,sweep net
+Nich_VTblu_Site_09,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.1007070105,-73.0757323969,Vaccinium corymbosum,organic,36.0,20.0,120.0,2014,sweep net
+Nich_VTblu_Site_09,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.1007070105,-73.0757323969,Vaccinium corymbosum,organic,22.0,21.0,120.0,2015,sweep net
+Nich_VTblu_Site_09,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.1007070105,-73.0757323969,Vaccinium corymbosum,organic,12.0,16.0,60.0,2013,sweep net
+Nich_VTblu_Site_10,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.3688490193,-73.014138027,Vaccinium corymbosum,organic,57.0,34.0,160.0,2014,sweep net
+Nich_VTblu_Site_10,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.3688490193,-73.014138027,Vaccinium corymbosum,organic,38.0,32.0,100.0,2015,sweep net
+Nich_VTblu_Site_10,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.3688490193,-73.014138027,Vaccinium corymbosum,organic,30.0,23.0,60.0,2013,sweep net
+Nich_VTblu_Site_11,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.533144,-73.184739,Vaccinium corymbosum,conventional,47.0,24.0,120.0,2014,sweep net
+Nich_VTblu_Site_11,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.533144,-73.184739,Vaccinium corymbosum,conventional,28.0,17.0,100.0,2015,sweep net
+Nich_VTblu_Site_11,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.533144,-73.184739,Vaccinium corymbosum,conventional,23.0,26.0,80.0,2013,sweep net
+Nich_VTblu_Site_12,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.4747230566,-73.0565947991,Vaccinium corymbosum,conventional,37.0,24.0,140.0,2014,sweep net
+Nich_VTblu_Site_12,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.4747230566,-73.0565947991,Vaccinium corymbosum,conventional,12.0,14.0,40.0,2015,sweep net
+Nich_VTblu_Site_12,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.4747230566,-73.0565947991,Vaccinium corymbosum,conventional,35.0,20.0,40.0,2013,sweep net
+Nich_VTblu_Site_13,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.2948077174,-73.2590273474,Vaccinium corymbosum,conventional,10.0,19.0,120.0,2014,sweep net
+Nich_VTblu_Site_13,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.2948077174,-73.2590273474,Vaccinium corymbosum,conventional,3.0,7.0,40.0,2015,sweep net
+Nich_VTblu_Site_13,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.2948077174,-73.2590273474,Vaccinium corymbosum,conventional,6.0,11.0,60.0,2013,sweep net
+Nich_VTblu_Site_14,Charlie_Nicholson_Vaccinium_corymbosum_USA_2014,44.5276604202,-73.2035236401,Vaccinium corymbosum,conventional,46.0,22.0,160.0,2014,sweep net
+Nich_VTblu_Site_14,Charlie_Nicholson_Vaccinium_corymbosum_USA_2015,44.5276604202,-73.2035236401,Vaccinium corymbosum,conventional,23.0,4.0,60.0,2015,sweep net
+Nich_VTblu_Site_14,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.5276604202,-73.2035236401,Vaccinium corymbosum,conventional,27.0,21.0,80.0,2013,sweep net
+Nich_VTblu_Site_15,Charlie_Nicholson_Vaccinium_corymbosum_USA_2013,44.6131031472,-73.086652461,Vaccinium corymbosum,organic,16.0,61.0,60.0,2013,sweep net
+2,Christof_Schuepp_Prunus_avium_Switzerland_2011,47.1046834362074,7.3510507033829,Prunus avium,unmanaged,1.0,0.0,90.0,2011,focal observations
+9,Christof_Schuepp_Prunus_avium_Switzerland_2011,47.0446672220971,7.44180262206297,Prunus avium,unmanaged,1.0,0.0,90.0,2011,focal observations
+11,Christof_Schuepp_Prunus_avium_Switzerland_2011,47.0111341608516,7.36156800810066,Prunus avium,unmanaged,4.0,0.0,90.0,2011,focal observations
+12,Christof_Schuepp_Prunus_avium_Switzerland_2011,46.9911050354719,7.34194397246877,Prunus avium,unmanaged,1.0,0.0,90.0,2011,focal observations
+16,Christof_Schuepp_Prunus_avium_Switzerland_2011,46.9165094138281,7.26106859114582,Prunus avium,unmanaged,1.0,0.0,90.0,2011,focal observations
+20,Christof_Schuepp_Prunus_avium_Switzerland_2011,46.9982413151417,7.30131778654013,Prunus avium,unmanaged,1.0,0.0,90.0,2011,focal observations
+24,Christof_Schuepp_Prunus_avium_Switzerland_2011,47.0448592624336,7.35276810372994,Prunus avium,unmanaged,1.0,0.0,90.0,2011,focal observations
+25,Christof_Schuepp_Prunus_avium_Switzerland_2011,47.0155745423849,7.53381226800864,Prunus avium,unmanaged,3.0,0.0,90.0,2011,focal observations
+26,Christof_Schuepp_Prunus_avium_Switzerland_2011,47.1549399702978,7.49593651125484,Prunus avium,unmanaged,4.0,0.0,90.0,2011,focal observations
+27,Christof_Schuepp_Prunus_avium_Switzerland_2011,47.079799337558,7.46254318953969,Prunus avium,unmanaged,1.0,0.0,90.0,2011,focal observations
+30,Christof_Schuepp_Prunus_avium_Switzerland_2011,47.167622670124,7.5119089583646,Prunus avium,unmanaged,1.0,0.0,90.0,2011,focal observations
+AR,Claire_Kremen_Fragaria_ananassa_USA_2012,36.3722,-121.51261,Fragaria x ananassa,organic,134.0,22.0,120.0,2012,transects
+C,Claire_Kremen_Fragaria_ananassa_USA_2012,36.83217,-121.7667,Fragaria x ananassa,organic,33.0,22.0,120.0,2012,transects
+CB,Claire_Kremen_Fragaria_ananassa_USA_2012,36.91617,-121.83333,Fragaria x ananassa,organic,69.0,12.0,120.0,2012,transects
+DS,Claire_Kremen_Fragaria_ananassa_USA_2012,36.89917,-121.64,Fragaria x ananassa,organic,11.0,0.0,120.0,2012,transects
+F,Claire_Kremen_Fragaria_ananassa_USA_2012,37.02467,-121.935,Fragaria x ananassa,organic,325.0,0.0,120.0,2012,transects
+FE,Claire_Kremen_Fragaria_ananassa_USA_2012,36.8915,-121.745,Fragaria x ananassa,organic,14.0,0.0,120.0,2012,transects
+LE,Claire_Kremen_Fragaria_ananassa_USA_2012,36.9815,-121.785,Fragaria x ananassa,organic,76.0,0.0,120.0,2012,transects
+M,Claire_Kremen_Fragaria_ananassa_USA_2012,36.9445,-121.78667,Fragaria x ananassa,organic,370.0,0.0,120.0,2012,transects
+RB,Claire_Kremen_Fragaria_ananassa_USA_2012,36.67833,-121.68667,Fragaria x ananassa,organic,113.0,3.0,120.0,2012,transects
+RF,Claire_Kremen_Fragaria_ananassa_USA_2012,36.66467,-121.545,Fragaria x ananassa,organic,72.0,26.0,120.0,2012,transects
+RH,Claire_Kremen_Fragaria_ananassa_USA_2012,36.89633,-121.77667,Fragaria x ananassa,organic,24.0,1.0,120.0,2012,transects
+RK,Claire_Kremen_Fragaria_ananassa_USA_2012,36.9045,-121.82,Fragaria x ananassa,organic,15.0,0.0,120.0,2012,transects
+S,Claire_Kremen_Fragaria_ananassa_USA_2012,36.98883,-122.145,Fragaria x ananassa,organic,114.0,2.0,120.0,2012,transects
+SH,Claire_Kremen_Fragaria_ananassa_USA_2012,37.0605,-122.15667,Fragaria x ananassa,organic,49.0,25.0,120.0,2012,transects
+TB,Claire_Kremen_Fragaria_ananassa_USA_2012,36.9025,-121.73333,Fragaria x ananassa,organic,4.0,0.0,120.0,2012,transects
+UC,Claire_Kremen_Fragaria_ananassa_USA_2012,36.9835,-122.05667,Fragaria x ananassa,organic,190.0,1.0,120.0,2012,transects
+OS23,Dara_Stanley_Brassica_napus_Ireland_2009,52.72892,-6.56195,Brassica napus,conventional,0.0,10.0,78.4313725490196,2009,transects
+OS24,Dara_Stanley_Brassica_napus_Ireland_2009,52.57463,-6.64081,Brassica napus,conventional,0.0,2.0,78.4313725490196,2009,transects
+OS26,Dara_Stanley_Brassica_napus_Ireland_2009,52.77564,-6.92658,Brassica napus,conventional,2.0,28.0,78.4313725490196,2009,transects
+OS27,Dara_Stanley_Brassica_napus_Ireland_2009,52.94156,-6.3387108,Brassica napus,conventional,1.0,13.0,78.4313725490196,2009,transects
+OS29,Dara_Stanley_Brassica_napus_Ireland_2009,52.42036,-6.72643,Brassica napus,conventional,1.0,7.0,78.4313725490196,2009,transects
+AK,Dara_Stanley_Brassica_napus_Ireland_2010,52.73080313,-6.56770855,Brassica napus,conventional,2.0,11.0,210.0,2010,focal observations
+JL,Dara_Stanley_Brassica_napus_Ireland_2010,52.57597721,-6.63040624,Brassica napus,conventional,2.0,9.0,210.0,2010,focal observations
+NJ,Dara_Stanley_Brassica_napus_Ireland_2010,52.8260031,-6.74837599,Brassica napus,conventional,1.0,1.0,210.0,2010,focal observations
+He1P0,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-16.124894,-47.877333,Phaseolus vulgaris L.,conventional,1.0,1.0,,2015-2016,sweep net
+A1P1DF,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.918783,-47.411775,Phaseolus vulgaris L.,conventional,14.0,0.0,,2015-2016,sweep net
+A1P0GO,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-16.217118,-47.54622,Phaseolus vulgaris L.,conventional,11.0,0.0,,2015-2016,sweep net
+A2P0GO,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-16.211006,-47.54372,Phaseolus vulgaris L.,conventional,2.0,0.0,,2015-2016,sweep net
+A3P0GO,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-16.207117,-47.541498,Phaseolus vulgaris L.,conventional,1.0,0.0,,2015-2016,sweep net
+J1P0,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.860727,-47.601498,Phaseolus vulgaris L.,conventional,7.0,1.0,,2015-2016,sweep net
+W1P1NN,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.855172,-47.554553,Phaseolus vulgaris L.,conventional,3.0,0.0,,2015-2016,sweep net
+W1P0NN,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.854061,-47.556498,Phaseolus vulgaris L.,conventional,1.0,0.0,,2015-2016,sweep net
+W1P0S,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.871561,-47.557886,Phaseolus vulgaris L.,conventional,1.0,0.0,,2015-2016,sweep net
+W1P1NS,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.861283,-47.555109,Phaseolus vulgaris L.,conventional,1.0,1.0,,2015-2016,sweep net
+L1P1,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.972117,-47.572609,Phaseolus vulgaris L.,conventional,4.0,0.0,,2015-2016,sweep net
+L1P0,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.969894,-47.575942,Phaseolus vulgaris L.,conventional,2.0,0.0,,2015-2016,sweep net
+R1P0,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.695727,-47.511219,Phaseolus vulgaris L.,conventional,2.0,5.0,,2015-2016,sweep net
+R3P0,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.696282,-47.501497,Phaseolus vulgaris L.,conventional,1.0,0.0,,2015-2016,sweep net
+D1P0,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.765449,-47.332885,Phaseolus vulgaris L.,conventional,0.0,2.0,,2015-2016,sweep net
+R1P0N,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.689338,-47.517886,Phaseolus vulgaris L.,conventional,1.0,0.0,,2016-2017,sweep net
+R3P0N,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.693782,-47.501219,Phaseolus vulgaris L.,conventional,0.0,0.01,,2016-2017,sweep net
+R1P0S,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.695449,-47.511775,Phaseolus vulgaris L.,conventional,1.0,0.02,,2016-2017,sweep net
+J1P0N,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.84841,-47.580789,Phaseolus vulgaris L.,conventional,5.0,0.0,,2016-2017,sweep net
+J2P0N,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.844894,-47.578164,Phaseolus vulgaris L.,conventional,3.0,0.0,,2016-2017,sweep net
+J1P0S,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.861561,-47.59122,Phaseolus vulgaris L.,conventional,21.01,0.01,,2016-2017,sweep net
+J2P0S,Davi_L_Ramos_Phaseolus_vulgaris L_Brazil_2015_2016,-15.855449,-47.603442,Phaseolus vulgaris L.,conventional,1.0,0.0,,2016-2017,sweep net
+clar1,David_Crowder_Brassica_napus_USA_2013,46.81185,-117.2215833,Brassica napus,conventional,0.0,3.0,30.0,2013,sweep net
+clar2,David_Crowder_Brassica_napus_USA_2013,46.81383333,-117.1973667,Brassica napus,conventional,1.0,0.0,30.0,2013,sweep net
+conr1,David_Crowder_Brassica_napus_USA_2013,46.80415,-117.3888167,Brassica napus,conventional,9.0,0.0,30.0,2013,sweep net
+druf1,David_Crowder_Brassica_napus_USA_2013,46.5284,-117.1001167,Brassica napus,conventional,1.0,0.0,30.0,2013,sweep net
+hinn1,David_Crowder_Brassica_napus_USA_2013,46.8398,-117.3381667,Brassica napus,conventional,4.0,0.0,30.0,2013,sweep net
+hinn2,David_Crowder_Brassica_napus_USA_2013,46.82255,-117.27005,Brassica napus,conventional,3.0,0.0,30.0,2013,sweep net
+jens1,David_Crowder_Brassica_napus_USA_2013,46.61418333,-117.0011667,Brassica napus,conventional,1.0,0.0,30.0,2013,sweep net
+odbe1,David_Crowder_Brassica_napus_USA_2013,46.62156667,-116.87755,Brassica napus,conventional,2.0,0.0,30.0,2013,sweep net
+pcfs2,David_Crowder_Brassica_napus_USA_2013,46.75708333,-117.1911,Brassica napus,conventional,4.0,0.0,30.0,2013,sweep net
+stub3,David_Crowder_Brassica_napus_USA_2013,46.80275,-117.7483667,Brassica napus,conventional,3.0,0.0,30.0,2013,sweep net
+stub7,David_Crowder_Brassica_napus_USA_2013,46.82483333,-117.8013833,Brassica napus,conventional,2.0,0.0,30.0,2013,sweep net
+UIK,David_Crowder_Brassica_napus_USA_2013,46.58333333,-116.9490333,Brassica napus,conventional,1.0,0.0,30.0,2013,sweep net
+UIP,David_Crowder_Brassica_napus_USA_2013,46.72315,-116.9525167,Brassica napus,conventional,2.0,0.0,30.0,2013,sweep net
+winf1,David_Crowder_Brassica_napus_USA_2013,46.76711667,-117.2727833,Brassica napus,conventional,1.0,0.0,30.0,2013,sweep net
+beck2,David_Crowder_Brassica_napus_USA_2014,46.52049516,-116.8654018,Brassica napus,conventional,4.0,0.0,30.0,2014,sweep net
+clar4,David_Crowder_Brassica_napus_USA_2014,46.82851615,-117.1829879,Brassica napus,conventional,5.0,0.0,30.0,2014,sweep net
+conr4,David_Crowder_Brassica_napus_USA_2014,46.80452402,-117.3863142,Brassica napus,conventional,6.0,0.0,30.0,2014,sweep net
+conr5,David_Crowder_Brassica_napus_USA_2014,46.76715511,-117.4239025,Brassica napus,conventional,3.0,1.0,30.0,2014,sweep net
+druf3,David_Crowder_Brassica_napus_USA_2014,46.54601958,-117.0951377,Brassica napus,conventional,1.0,0.0,30.0,2014,sweep net
+jens3,David_Crowder_Brassica_napus_USA_2014,46.62818398,-116.9656215,Brassica napus,conventional,10.0,0.0,30.0,2014,sweep net
+jens4,David_Crowder_Brassica_napus_USA_2014,46.5844899,-117.0123397,Brassica napus,conventional,2.0,0.0,30.0,2014,sweep net
+odbe2,David_Crowder_Brassica_napus_USA_2014,46.5121441,-116.8315732,Brassica napus,conventional,5.0,1.0,30.0,2014,sweep net
+olso3,David_Crowder_Brassica_napus_USA_2014,46.78988156,-117.8018531,Brassica napus,conventional,12.0,0.0,30.0,2014,sweep net
+UIK2,David_Crowder_Brassica_napus_USA_2014,46.59202993,-116.9462683,Brassica napus,conventional,1.0,0.0,30.0,2014,sweep net
+UIP4,David_Crowder_Brassica_napus_USA_2014,46.72732337,-116.9558962,Brassica napus,conventional,16.0,0.0,30.0,2014,sweep net
+site_3,David_Crowder_Fragaria_ananassa_USA_2016,47.57,-122.316,Fragaria x ananassa,organic,1.0,12.0,60.0,2016,sweep net
+site_5,David_Crowder_Fragaria_ananassa_USA_2016,47.57,-122.316,Fragaria x ananassa,organic,1.0,11.0,60.0,2016,sweep net
+site_6,David_Crowder_Fragaria_ananassa_USA_2016,47.057,-122.97,Fragaria x ananassa,organic,2.0,30.0,60.0,2016,sweep net
+site_7,David_Crowder_Fragaria_ananassa_USA_2016,47.057,-122.97,Fragaria x ananassa,organic,0.0,8.0,60.0,2016,sweep net
+site_8,David_Crowder_Fragaria_ananassa_USA_2016,47.678,-121.949,Fragaria x ananassa,organic,1.0,1.0,60.0,2016,sweep net
+site_13,David_Crowder_Fragaria_ananassa_USA_2016,47.678,-121.949,Fragaria x ananassa,organic,2.0,16.0,60.0,2016,sweep net
+site_18,David_Crowder_Fragaria_ananassa_USA_2016,47.063,-122.926,Fragaria x ananassa,organic,2.0,12.0,60.0,2016,sweep net
+site_23,David_Crowder_Fragaria_ananassa_USA_2016,47.063,-122.926,Fragaria x ananassa,organic,1.0,3.0,60.0,2016,sweep net
+site_24,David_Crowder_Fragaria_ananassa_USA_2016,48.543,-122.413,Fragaria x ananassa,organic,1.0,2.0,60.0,2016,sweep net
+site_25,David_Crowder_Fragaria_ananassa_USA_2016,48.543,-122.413,Fragaria x ananassa,organic,0.0,13.0,60.0,2016,sweep net
+site_26,David_Crowder_Fragaria_ananassa_USA_2016,47.562,-122.303,Fragaria x ananassa,organic,1.0,2.0,60.0,2016,sweep net
+site_29,David_Crowder_Fragaria_ananassa_USA_2016,47.562,-122.303,Fragaria x ananassa,organic,0.0,2.0,60.0,2016,sweep net
+site_30,David_Crowder_Fragaria_ananassa_USA_2016,47.543,-122.287,Fragaria x ananassa,organic,3.0,0.0,60.0,2016,sweep net
+site_34,David_Crowder_Fragaria_ananassa_USA_2016,47.671,-121.976,Fragaria x ananassa,organic,6.0,3.0,60.0,2016,sweep net
+site_36,David_Crowder_Fragaria_ananassa_USA_2016,47.671,-121.976,Fragaria x ananassa,organic,1.0,10.0,60.0,2016,sweep net
+1_Prod_Field,David_Kleijn_Allium_porrum_Italy_2012,41.249514,15.384286,Allium porrum,,18.0,6.0,10.0,2012,transects
+1TT,David_Kleijn_Allium_porrum_Italy_2012,41.465556,15.088056,Allium porrum,,23.0,2.0,10.0,2012,transects
+2TT,David_Kleijn_Allium_porrum_Italy_2012,41.242222,15.349722,Allium porrum,,21.0,21.0,10.0,2012,transects
+3TT,David_Kleijn_Allium_porrum_Italy_2012,41.296667,15.58,Allium porrum,,6.0,0.0,10.0,2012,transects
+4TT,David_Kleijn_Allium_porrum_Italy_2012,41.290892,15.440464,Allium porrum,,11.0,1.0,10.0,2012,transects
+5TT,David_Kleijn_Allium_porrum_Italy_2012,41.275,15.5225,Allium porrum,,1.0,2.0,10.0,2012,transects
+6TT,David_Kleijn_Allium_porrum_Italy_2012,41.358333,15.035,Allium porrum,,21.0,10.0,10.0,2012,transects
+7TT,David_Kleijn_Allium_porrum_Italy_2012,41.173006,15.465022,Allium porrum,,2.0,0.0,10.0,2012,transects
+8TT,David_Kleijn_Allium_porrum_Italy_2012,41.099167,15.323611,Allium porrum,,9.0,9.0,10.0,2012,transects
+Prod. Bedr.,David_Kleijn_Allium_porrum_Italy_2012,41.314486,15.464256,Allium porrum,,9.0,0.0,10.0,2012,transects
+Dreumel,David_Kleijn_Malus_domestica_Netherlands_2010,51.86754489,5.430759851,Malus domestica,conventional,18.0,6.0,,2010,transects
+Echteld,David_Kleijn_Malus_domestica_Netherlands_2010,51.89446027,5.503424942,Malus domestica,conventional,9.0,5.0,,2010,transects
+Heeselt,David_Kleijn_Malus_domestica_Netherlands_2010,51.81361496,5.343697266,Malus domestica,conventional,18.0,15.0,,2010,transects
+Hurwenen,David_Kleijn_Malus_domestica_Netherlands_2010,51.79560244,5.28573089,Malus domestica,conventional,14.0,8.0,,2010,transects
+Varik,David_Kleijn_Malus_domestica_Netherlands_2010,51.83159882,5.372694962,Malus domestica,conventional,24.0,16.0,,2010,transects
+Zaltbommel,David_Kleijn_Malus_domestica_Netherlands_2010,51.81355054,5.256687134,Malus domestica,conventional,27.0,5.0,,2010,transects
+Dreumel,David_Kleijn_Malus_domestica_Netherlands_2011,51.86754489,5.430759851,Malus domestica,conventional,32.0,21.0,,2011,transects
+Echteld,David_Kleijn_Malus_domestica_Netherlands_2011,51.89446027,5.503424942,Malus domestica,conventional,11.0,7.0,,2011,transects
+Heeselt,David_Kleijn_Malus_domestica_Netherlands_2011,51.81361496,5.343697266,Malus domestica,conventional,25.0,15.0,,2011,transects
+Hurwenen,David_Kleijn_Malus_domestica_Netherlands_2011,51.79560244,5.28573089,Malus domestica,conventional,20.0,42.0,,2011,transects
+Varik,David_Kleijn_Malus_domestica_Netherlands_2011,51.83159882,5.372694962,Malus domestica,conventional,16.0,12.0,,2011,transects
+Zaltbommel,David_Kleijn_Malus_domestica_Netherlands_2011,51.81355054,5.256687134,Malus domestica,conventional,48.0,51.0,,2011,transects
+E1,David_Kleijn_Malus_domestica_Netherlands_2013,51.8601613,5.80627209999999,Malus domestica,conventional,0.0,5.0,,2013,sweep net
+E2,David_Kleijn_Malus_domestica_Netherlands_2013,51.8703706,5.4417973,Malus domestica,conventional,5.0,4.0,,2013,sweep net
+E3,David_Kleijn_Malus_domestica_Netherlands_2013,51.9029795,5.5128768,Malus domestica,conventional,0.0,4.0,,2013,sweep net
+E4,David_Kleijn_Malus_domestica_Netherlands_2013,51.8282669,5.1994014,Malus domestica,conventional,4.0,29.0,,2013,sweep net
+E5,David_Kleijn_Malus_domestica_Netherlands_2013,51.7477187,5.1439569,Malus domestica,conventional,2.0,4.0,,2013,sweep net
+E6,David_Kleijn_Malus_domestica_Netherlands_2013,52.0425936,5.125056,Malus domestica,conventional,0.0,10.0,,2013,sweep net
+E7,David_Kleijn_Malus_domestica_Netherlands_2013,51.8442913,5.6505153,Malus domestica,conventional,1.0,2.0,,2013,sweep net
+E8,David_Kleijn_Malus_domestica_Netherlands_2013,51.9036083,5.2891051,Malus domestica,conventional,0.0,8.0,,2013,sweep net
+E9,David_Kleijn_Malus_domestica_Netherlands_2013,52.0070326,5.2756257,Malus domestica,conventional,2.0,6.0,,2013,sweep net
+E10,David_Kleijn_Malus_domestica_Netherlands_2013,52.0039453,5.2189094,Malus domestica,conventional,6.0,19.0,,2013,sweep net
+E12,David_Kleijn_Malus_domestica_Netherlands_2013,52.0388246,5.1987092,Malus domestica,conventional,0.0,7.0,,2013,sweep net
+E13,David_Kleijn_Malus_domestica_Netherlands_2013,51.8536685,5.2779504,Malus domestica,conventional,1.0,2.0,,2013,sweep net
+E14,David_Kleijn_Malus_domestica_Netherlands_2013,51.8654452,5.3574102,Malus domestica,conventional,1.0,7.0,,2013,sweep net
+E15,David_Kleijn_Malus_domestica_Netherlands_2013,51.9172435,5.7995369,Malus domestica,conventional,1.0,7.0,,2013,sweep net
+E1,David_Kleijn_Malus_domestica_Netherlands_2014,51.8601614,5.8062722,Malus domestica,conventional,15.0,22.0,,2014,sweep net
+E2,David_Kleijn_Malus_domestica_Netherlands_2014,51.8698299,5.444991,Malus domestica,conventional,2.0,16.0,,2014,sweep net
+E3,David_Kleijn_Malus_domestica_Netherlands_2014,51.9029796,5.5128768,Malus domestica,conventional,1.0,7.0,,2014,sweep net
+E4,David_Kleijn_Malus_domestica_Netherlands_2014,51.827383,5.2030751,Malus domestica,conventional,22.0,44.0,,2014,sweep net
+E6,David_Kleijn_Malus_domestica_Netherlands_2014,52.0427288,5.1251719,Malus domestica,conventional,6.0,11.0,,2014,sweep net
+E7,David_Kleijn_Malus_domestica_Netherlands_2014,51.8442913,5.6505153,Malus domestica,conventional,4.0,21.0,,2014,sweep net
+E8,David_Kleijn_Malus_domestica_Netherlands_2014,51.9036084,5.2891051,Malus domestica,conventional,1.0,7.0,,2014,sweep net
+E9,David_Kleijn_Malus_domestica_Netherlands_2014,52.0070327,5.2756257,Malus domestica,conventional,7.0,19.0,,2014,sweep net
+E11,David_Kleijn_Malus_domestica_Netherlands_2014,51.8751675,5.2435112,Malus domestica,conventional,2.0,4.0,,2014,sweep net
+E13,David_Kleijn_Malus_domestica_Netherlands_2014,51.8536685,5.2779504,Malus domestica,conventional,7.0,19.0,,2014,sweep net
+E14,David_Kleijn_Malus_domestica_Netherlands_2014,51.8654452,5.3574102,Malus domestica,conventional,4.0,4.0,,2014,sweep net
+E15,David_Kleijn_Malus_domestica_Netherlands_2014,51.9172436,5.7995369,Malus domestica,conventional,5.0,23.0,,2014,sweep net
+E31,David_Kleijn_Malus_domestica_Netherlands_2014,51.8837047,5.6211019,Malus domestica,conventional,2.0,2.0,,2014,sweep net
+E32,David_Kleijn_Malus_domestica_Netherlands_2014,51.8780994,5.5563312,Malus domestica,conventional,2.0,11.0,,2014,sweep net
+E33,David_Kleijn_Malus_domestica_Netherlands_2014,51.904667,5.68758929999999,Malus domestica,conventional,10.0,38.0,,2014,sweep net
+Dreumel_P5,David_Kleijn_Pyrus_communis_Netherlands_2010,51.84957276,5.416229109,Pyrus communis,conventional,14.0,0.0,,2010,transects
+Echteld_P6,David_Kleijn_Pyrus_communis_Netherlands_2010,51.89446027,5.503424942,Pyrus communis,conventional,14.0,1.0,,2010,transects
+Heeselt_P4,David_Kleijn_Pyrus_communis_Netherlands_2010,51.81361943,5.358198976,Pyrus communis,conventional,29.0,3.0,,2010,transects
+Hurwenen_P3,David_Kleijn_Pyrus_communis_Netherlands_2010,51.80460245,5.300209484,Pyrus communis,conventional,18.0,2.0,,2010,transects
+Zaltbommel_P1,David_Kleijn_Pyrus_communis_Netherlands_2010,51.81355054,5.256687134,Pyrus communis,conventional,27.0,12.0,,2010,transects
+Zaltbommel_P2,David_Kleijn_Pyrus_communis_Netherlands_2010,51.81355054,5.256687134,Pyrus communis,conventional,25.0,11.0,,2010,transects
+Dreumel_P5,David_Kleijn_Pyrus_communis_Netherlands_2011,51.84957276,5.416229109,Pyrus communis,conventional,83.0,8.0,,2011,transects
+Echteld_P6,David_Kleijn_Pyrus_communis_Netherlands_2011,51.89446027,5.503424942,Pyrus communis,conventional,23.0,0.0,,2011,transects
+Heeselt_P4,David_Kleijn_Pyrus_communis_Netherlands_2011,51.81361943,5.358198976,Pyrus communis,conventional,32.0,9.0,,2011,transects
+Hurwenen_P3,David_Kleijn_Pyrus_communis_Netherlands_2011,51.80460245,5.300209484,Pyrus communis,conventional,16.0,3.0,,2011,transects
+Zaltbommel_P1,David_Kleijn_Pyrus_communis_Netherlands_2011,51.81355054,5.256687134,Pyrus communis,conventional,57.0,15.0,,2011,transects
+Zaltbommel_P2,David_Kleijn_Pyrus_communis_Netherlands_2011,51.81355054,5.256687134,Pyrus communis,conventional,26.0,14.0,,2011,transects
+B16,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,51.2088514,6.0587518,Vaccinium corymbosum,conventional,1.0,170.0,,2013,sweep net
+B17,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,51.4920974,6.1489818,Vaccinium corymbosum,conventional,4.0,60.0,,2013,sweep net
+B18,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,51.2315975,5.9440147,Vaccinium corymbosum,conventional,2.0,124.0,,2013,sweep net
+B19,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,52.7476279999999,6.55037129999999,Vaccinium corymbosum,conventional,2.0,197.0,,2013,sweep net
+B20,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,51.2889976,5.9757352,Vaccinium corymbosum,conventional,1.0,116.0,,2013,sweep net
+B21,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,51.4422332,5.9461707,Vaccinium corymbosum,conventional,0.0,118.0,,2013,sweep net
+B22,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,51.2832048,5.9046948,Vaccinium corymbosum,conventional,2.0,191.0,,2013,sweep net
+B23,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,51.3121815,5.831574,Vaccinium corymbosum,conventional,0.0,309.0,,2013,sweep net
+B24,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,51.4352356,6.0898714,Vaccinium corymbosum,conventional,0.0,95.0,,2013,sweep net
+B25,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,51.4701715,6.0979813,Vaccinium corymbosum,conventional,1.0,117.0,,2013,sweep net
+B26,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,52.4294047,6.67178029999999,Vaccinium corymbosum,conventional,2.0,98.0,,2013,sweep net
+B27,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,51.4755862,6.0900194,Vaccinium corymbosum,conventional,2.0,92.0,,2013,sweep net
+B28,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,52.7225649,6.6248891,Vaccinium corymbosum,conventional,2.0,140.0,,2013,sweep net
+B29,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,52.7139189,6.6606383,Vaccinium corymbosum,conventional,0.0,119.0,,2013,sweep net
+B30,David_Kleijn_Vaccinium_corymbosum_Netherlands_2013,52.7391660999999,6.7475419,Vaccinium corymbosum,conventional,3.0,112.0,,2013,sweep net
+B16,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,51.2083099999999,6.059116,Vaccinium corymbosum,conventional,1.0,217.0,,2014,sweep net
+B17,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,51.4903063,6.13965,Vaccinium corymbosum,conventional,3.0,158.0,,2014,sweep net
+B18,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,51.2315817,5.9454463,Vaccinium corymbosum,conventional,0.0,139.0,,2014,sweep net
+B19,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,52.7481441,6.5518365,Vaccinium corymbosum,conventional,6.0,204.0,,2014,sweep net
+B20,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,51.2859604,5.973761,Vaccinium corymbosum,conventional,0.0,86.0,,2014,sweep net
+B21,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,51.4415827,5.9450121,Vaccinium corymbosum,conventional,0.0,137.0,,2014,sweep net
+B24,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,51.4211712,6.0650265,Vaccinium corymbosum,conventional,0.0,141.0,,2014,sweep net
+B25,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,51.4726773,6.1056777,Vaccinium corymbosum,conventional,1.0,67.0,,2014,sweep net
+B26,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,52.4296667,6.6774493,Vaccinium corymbosum,conventional,3.0,90.0,,2014,sweep net
+B27,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,51.4751417,6.09663389999999,Vaccinium corymbosum,conventional,0.0,46.0,,2014,sweep net
+B28,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,52.7219451,6.6239983,Vaccinium corymbosum,conventional,0.0,159.0,,2014,sweep net
+B29,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,52.7142729,6.6611666,Vaccinium corymbosum,conventional,0.0,102.0,,2014,sweep net
+B30,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,52.7393223,6.7488203,Vaccinium corymbosum,conventional,2.0,74.0,,2014,sweep net
+B34,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,51.2966597,5.5655453,Vaccinium corymbosum,conventional,1.0,173.0,,2014,sweep net
+B35,David_Kleijn_Vaccinium_corymbosum_Netherlands_2014,51.5802429,5.411049,Vaccinium corymbosum,conventional,9.0,183.0,,2014,sweep net
+Plot_2C_2010_Glebe500_06,Fabiana_Oliveira_da_Silva_Malus_domestica_Brazil_2010,-13.271828,-41.412784,Malus domestica,conventional,2.0,0.0,40.0,2010,sweep net + focal observations
+Plot_5B_2010_Glebe500_06,Fabiana_Oliveira_da_Silva_Malus_domestica_Brazil_2010,-13.273813,-41.411739,Malus domestica,conventional,3.0,0.0,140.0,2010,sweep net + focal observations
+Plot_5C_2010_Glebe500_05,Fabiana_Oliveira_da_Silva_Malus_domestica_Brazil_2010,-13.271473,-41.415136,Malus domestica,conventional,5.0,0.0,120.0,2010,sweep net + focal observations
+Plot_6A_2010_Glebe500_06,Fabiana_Oliveira_da_Silva_Malus_domestica_Brazil_2010,-13.275858,-41.411419,Malus domestica,conventional,8.0,0.0,120.0,2010,sweep net + focal observations
+Bukidnon02_dry,Finbarr_G_Horgan_Abelmoschus_esculentus_Philippines_2015,7.02833318710327,126.207496643066,Abelmoschus esculentus,conventional,1.0,0.0,60.0,2015,focal observations
+Bukidnon02_wet,Finbarr_G_Horgan_Abelmoschus_esculentus_Philippines_2015,7.02833318710327,126.207496643066,Abelmoschus esculentus,conventional,2.0,0.0,60.0,2015,focal observations
+Iloilo_wet,Finbarr_G_Horgan_Abelmoschus_esculentus_Philippines_2015,10.8947219848633,121.742774963379,Abelmoschus esculentus,conventional,6.0,0.0,60.0,2015,focal observations
+IRRI500_wet,Finbarr_G_Horgan_Abelmoschus_esculentus_Philippines_2015,14.2866659164429,121.288887023926,Abelmoschus esculentus,conventional,1.0,0.0,60.0,2015,focal observations
+Bukidnon01_dry,Finbarr_G_Horgan_Cucumis_sativus_Philippines_2015,7.03583288192749,125.204719543457,Cucumis sativus,conventional,21.0,0.0,60.0,2015,focal observations
+Bukidnon01_wet,Finbarr_G_Horgan_Cucumis_sativus_Philippines_2015,7.03583288192749,125.204719543457,Cucumis sativus,conventional,5.0,0.0,60.0,2015,focal observations
+Bukidnon02_dry,Finbarr_G_Horgan_Cucumis_sativus_Philippines_2015,7.02833318710327,126.207496643066,Cucumis sativus,conventional,5.0,0.0,60.0,2015,focal observations
+Bukidnon02_wet,Finbarr_G_Horgan_Cucumis_sativus_Philippines_2015,7.02833318710327,126.207496643066,Cucumis sativus,conventional,1.0,0.0,60.0,2015,focal observations
+Iloilo_wet,Finbarr_G_Horgan_Cucumis_sativus_Philippines_2015,10.8947219848633,121.742774963379,Cucumis sativus,conventional,3.0,0.0,60.0,2015,focal observations
+IRRI700_wet,Finbarr_G_Horgan_Cucumis_sativus_Philippines_2015,14.1501884460449,121.301940917969,Cucumis sativus,conventional,2.0,0.0,60.0,2015,focal observations
+Tanay_dry,Finbarr_G_Horgan_Cucumis_sativus_Philippines_2015,14.7236108779907,121.410552978516,Cucumis sativus,conventional,18.0,0.0,60.0,2015,focal observations
+Tanay_wet,Finbarr_G_Horgan_Cucumis_sativus_Philippines_2015,14.7236108779907,121.410552978516,Cucumis sativus,conventional,5.0,0.0,60.0,2015,focal observations
+Bukidnon01_wet,Finbarr_G_Horgan_Lagenaria_siceraria_Philippines_2015,7.03583288192749,125.204719543457,Lagenaria siceraria,conventional,2.0,0.0,60.0,2015,focal observations
+Bukidnon02_wet,Finbarr_G_Horgan_Lagenaria_siceraria_Philippines_2015,7.02833318710327,126.207496643066,Lagenaria siceraria,conventional,1.0,0.0,60.0,2015,focal observations
+Iloilo_wet,Finbarr_G_Horgan_Lagenaria_siceraria_Philippines_2015,10.8947219848633,121.742774963379,Lagenaria siceraria,conventional,2.0,0.0,60.0,2015,focal observations
+IRRI500_wet,Finbarr_G_Horgan_Lagenaria_siceraria_Philippines_2015,14.2866659164429,121.288887023926,Lagenaria siceraria,conventional,1.0,0.0,60.0,2015,focal observations
+Tanay_dry,Finbarr_G_Horgan_Lagenaria_siceraria_Philippines_2015,14.7236108779907,121.410552978516,Lagenaria siceraria,conventional,3.0,0.0,60.0,2015,focal observations
+Bukidnon01_dry,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,7.03583288192749,125.204719543457,Luffa acutangula,conventional,8.0,0.0,60.0,2015,focal observations
+Bukidnon01_wet,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,7.03583288192749,125.204719543457,Luffa acutangula,conventional,20.0,0.0,60.0,2015,focal observations
+Bukidnon02_dry,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,7.02833318710327,126.207496643066,Luffa acutangula,conventional,14.0,0.0,60.0,2015,focal observations
+Bukidnon02_wet,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,7.02833318710327,126.207496643066,Luffa acutangula,conventional,2.0,0.0,60.0,2015,focal observations
+Iloilo_dry,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,10.8947219848633,121.742774963379,Luffa acutangula,conventional,3.0,0.0,60.0,2015,focal observations
+Iloilo_wet,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,10.8947219848633,121.742774963379,Luffa acutangula,conventional,5.0,0.0,60.0,2015,focal observations
+IRRI500_dry,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,14.2866659164429,121.288887023926,Luffa acutangula,conventional,6.0,0.0,60.0,2015,focal observations
+IRRI500_wet,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,14.2866659164429,121.288887023926,Luffa acutangula,conventional,4.0,0.0,60.0,2015,focal observations
+IRRI700_dry,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,14.1501884460449,121.301940917969,Luffa acutangula,conventional,3.0,0.0,60.0,2015,focal observations
+IRRI700_wet,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,14.1501884460449,121.301940917969,Luffa acutangula,conventional,3.0,0.0,60.0,2015,focal observations
+Tanay_dry,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,14.7236108779907,121.410552978516,Luffa acutangula,conventional,14.0,0.0,60.0,2015,focal observations
+Tanay_wet,Finbarr_G_Horgan_Luffa_acutangula_Philippines_2015,14.7236108779907,121.410552978516,Luffa acutangula,conventional,3.0,0.0,60.0,2015,focal observations
+Bukidnon01_dry,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,7.03583288192749,125.204719543457,Momordica charantia,conventional,8.0,0.0,60.0,2015,focal observations
+Bukidnon01_wet,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,7.03583288192749,125.204719543457,Momordica charantia,conventional,13.0,0.0,60.0,2015,focal observations
+Bukidnon02_dry,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,7.02833318710327,126.207496643066,Momordica charantia,conventional,10.0,0.0,60.0,2015,focal observations
+Bukidnon02_wet,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,7.02833318710327,126.207496643066,Momordica charantia,conventional,2.0,0.0,60.0,2015,focal observations
+Iloilo_dry,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,10.8947219848633,121.742774963379,Momordica charantia,conventional,4.0,0.0,60.0,2015,focal observations
+Iloilo_wet,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,10.8947219848633,121.742774963379,Momordica charantia,conventional,4.0,0.0,60.0,2015,focal observations
+IRRI500_wet,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,14.2866659164429,121.288887023926,Momordica charantia,conventional,6.0,0.0,60.0,2015,focal observations
+IRRI700_dry,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,14.1501884460449,121.301940917969,Momordica charantia,conventional,1.0,0.0,60.0,2015,focal observations
+IRRI700_wet,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,14.1501884460449,121.301940917969,Momordica charantia,conventional,1.0,0.0,60.0,2015,focal observations
+Tanay_dry,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,14.7236108779907,121.410552978516,Momordica charantia,conventional,78.0,0.0,60.0,2015,focal observations
+Tanay_wet,Finbarr_G_Horgan_Momordica_charantia_Philippines_2015,14.7236108779907,121.410552978516,Momordica charantia,conventional,3.0,0.0,60.0,2015,focal observations
+OSR_01,Frank_Jauker_Brassica_napus_Germany_2006,50.406904,8.735204,Brassica napus,conventional,16.0,11.0,60.0,2006,sweep net
+OSR_02,Frank_Jauker_Brassica_napus_Germany_2006,50.402117,8.72057,Brassica napus,conventional,0.0,5.0,30.0,2006,sweep net
+OSR_03,Frank_Jauker_Brassica_napus_Germany_2006,50.419429,8.757048,Brassica napus,conventional,0.0,1.0,30.0,2006,sweep net
+OSR_04,Frank_Jauker_Brassica_napus_Germany_2006,50.421015,8.759923,Brassica napus,conventional,1.0,2.0,30.0,2006,sweep net
+OSR_05,Frank_Jauker_Brassica_napus_Germany_2006,50.425089,8.764772,Brassica napus,conventional,6.0,6.0,30.0,2006,sweep net
+OSR_06,Frank_Jauker_Brassica_napus_Germany_2006,50.422656,8.715591,Brassica napus,conventional,5.0,2.0,90.0,2006,sweep net
+OSR_07,Frank_Jauker_Brassica_napus_Germany_2006,50.433482,8.722115,Brassica napus,conventional,15.0,15.0,120.0,2006,sweep net
+OSR_08,Frank_Jauker_Brassica_napus_Germany_2006,50.429299,8.698726,Brassica napus,conventional,3.0,0.0,30.0,2006,sweep net
+OSR_09,Frank_Jauker_Brassica_napus_Germany_2006,50.436352,8.73735,Brassica napus,conventional,9.0,18.0,60.0,2006,sweep net
+OSR_10,Frank_Jauker_Brassica_napus_Germany_2006,50.436598,8.739967,Brassica napus,conventional,6.0,1.0,60.0,2006,sweep net
+OSR_12,Frank_Jauker_Brassica_napus_Germany_2006,50.436625,8.755288,Brassica napus,conventional,2.0,1.0,90.0,2006,sweep net
+OSR_13,Frank_Jauker_Brassica_napus_Germany_2006,50.44477,8.742843,Brassica napus,conventional,2.0,3.0,60.0,2006,sweep net
+OSR_14,Frank_Jauker_Brassica_napus_Germany_2006,50.447093,8.743615,Brassica napus,conventional,7.0,2.0,60.0,2006,sweep net
+OSR_15,Frank_Jauker_Brassica_napus_Germany_2006,50.447558,8.745718,Brassica napus,conventional,2.0,0.0,30.0,2006,sweep net
+OSR_16,Frank_Jauker_Brassica_napus_Germany_2006,50.447749,8.749237,Brassica napus,conventional,1.0,5.0,60.0,2006,sweep net
+OSR_17,Frank_Jauker_Brassica_napus_Germany_2006,50.449471,8.752842,Brassica napus,conventional,0.0,2.0,60.0,2006,sweep net
+OSR_18,Frank_Jauker_Brassica_napus_Germany_2006,50.448569,8.755374,Brassica napus,conventional,4.0,8.0,90.0,2006,sweep net
+OSR_19,Frank_Jauker_Brassica_napus_Germany_2006,50.449799,8.70718,Brassica napus,conventional,1.0,0.0,30.0,2006,sweep net
+OSR_20,Frank_Jauker_Brassica_napus_Germany_2006,50.45193,8.70482,Brassica napus,conventional,1.0,0.0,30.0,2006,sweep net
+OSR_21,Frank_Jauker_Brassica_napus_Germany_2006,50.454936,8.703361,Brassica napus,conventional,3.0,1.0,60.0,2006,sweep net
+OSR_22,Frank_Jauker_Brassica_napus_Germany_2006,50.459635,8.705378,Brassica napus,conventional,1.0,1.0,30.0,2006,sweep net
+OSR_23,Frank_Jauker_Brassica_napus_Germany_2006,50.464853,8.697824,Brassica napus,conventional,1.0,6.0,60.0,2006,sweep net
+1.1,Georg_Andersson_Brassica_rapa_Sweden_2010,55.981034,13.11472,Brassica rapa,organic,8.0,27.0,1360.0,2010,sweep net
+2.0.1,Georg_Andersson_Brassica_rapa_Sweden_2010,56.21922,13.86215,Brassica rapa,conventional,4.0,10.0,960.0,2010,sweep net
+2.0.2,Georg_Andersson_Brassica_rapa_Sweden_2010,55.806788,13.861388,Brassica rapa,conventional,5.0,10.0,840.0,2010,sweep net
+2.1,Georg_Andersson_Brassica_rapa_Sweden_2010,56.20546,13.755509,Brassica rapa,organic,5.0,7.0,760.0,2010,sweep net
+2.4,Georg_Andersson_Brassica_rapa_Sweden_2010,55.937886,13.290105,Brassica rapa,organic,4.0,23.0,1040.0,2010,sweep net
+2.4.2,Georg_Andersson_Brassica_rapa_Sweden_2010,55.773553,13.861608,Brassica rapa,organic,11.0,20.0,1000.0,2010,sweep net
+4.1,Georg_Andersson_Brassica_rapa_Sweden_2010,55.506062,13.864372,Brassica rapa,organic,13.0,35.0,1160.0,2010,sweep net
+4.1.2,Georg_Andersson_Brassica_rapa_Sweden_2010,55.635744,13.751394,Brassica rapa,organic,24.0,23.0,970.0,2010,sweep net
+4.4,Georg_Andersson_Brassica_rapa_Sweden_2010,55.83502,13.518199,Brassica rapa,organic,3.0,70.0,515.0,2010,sweep net
+5.0.1,Georg_Andersson_Brassica_rapa_Sweden_2010,55.425796,13.196088,Brassica rapa,conventional,1.0,34.0,670.0,2010,sweep net
+5.4,Georg_Andersson_Brassica_rapa_Sweden_2010,55.402118,13.202387,Brassica rapa,organic,10.0,19.0,640.0,2010,sweep net
+CASTELLANOS,Guiomar_Nates_Parra_Vaccinium_meridionale_Colombia_2013,5.531797,-73.729151,Vaccinium meridionale,organic,0.0,14.0,80.0,2013,sweep net + focal observations
+GONZALEZ,Guiomar_Nates_Parra_Vaccinium_meridionale_Colombia_2013,5.571607,-73.7379,Vaccinium meridionale,organic,39.0,19.0,80.0,2013,sweep net + focal observations
+JIMENEZ,Guiomar_Nates_Parra_Vaccinium_meridionale_Colombia_2013,5.554149,-73.724777,Vaccinium meridionale,organic,13.0,56.0,80.0,2013,sweep net + focal observations
+PENA,Guiomar_Nates_Parra_Vaccinium_meridionale_Colombia_2013,5.628739,-73.727764,Vaccinium meridionale,organic,1.0,7.0,80.0,2013,sweep net + focal observations
+SIERRA,Guiomar_Nates_Parra_Vaccinium_meridionale_Colombia_2013,5.458649,-73.664724,Vaccinium meridionale,organic,4.0,23.0,80.0,2013,sweep net + focal observations
+Biala,Hajnalka_Szentgyorgyi_Fagopyrum_esculentum_Poland_2005,50.7402763366699,22.3950004577637,Fagopyrum esculentum,conventional,3.0,0.0,270.0,2005,transects
+Branew,Hajnalka_Szentgyorgyi_Fagopyrum_esculentum_Poland_2005,50.7602767944336,22.5630550384521,Fagopyrum esculentum,conventional,3.0,0.0,780.0,2005,transects
+Kapronie,Hajnalka_Szentgyorgyi_Fagopyrum_esculentum_Poland_2005,50.6491661071777,22.5727787017822,Fagopyrum esculentum,conventional,8.0,1.0,990.0,2005,transects
+Kolonia Branewska,Hajnalka_Szentgyorgyi_Fagopyrum_esculentum_Poland_2005,50.7211112976074,22.5394439697266,Fagopyrum esculentum,conventional,2.0,0.0,780.0,2005,transects
+Majdan,Hajnalka_Szentgyorgyi_Fagopyrum_esculentum_Poland_2005,50.6947212219238,22.456111907959,Fagopyrum esculentum,conventional,2.0,0.0,660.0,2005,transects
+Wolka Ratajska,Hajnalka_Szentgyorgyi_Fagopyrum_esculentum_Poland_2005,50.7311096191406,22.4738883972168,Fagopyrum esculentum,conventional,2.0,0.0,480.0,2005,transects
+2,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.5875,140.44562,Fagopyrum esculentum,conventional,1.0,0.0,,2007,sweep net
+3,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.59589,140.43996,Fagopyrum esculentum,conventional,3.0,0.0,,2007,sweep net
+4,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.58083,140.46078,Fagopyrum esculentum,conventional,6.0,0.0,,2007,sweep net
+5,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.56832,140.46266,Fagopyrum esculentum,conventional,2.0,0.0,,2007,sweep net
+6,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.62001,140.44448,Fagopyrum esculentum,conventional,5.0,0.0,,2007,sweep net
+7,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.62213,140.4498,Fagopyrum esculentum,conventional,2.0,0.0,,2007,sweep net
+9,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.63495,140.45381,Fagopyrum esculentum,conventional,1.0,0.0,,2007,sweep net
+10,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.62191,140.46072,Fagopyrum esculentum,conventional,6.0,0.0,,2007,sweep net
+11,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.61694,140.45945,Fagopyrum esculentum,conventional,1.0,0.0,,2007,sweep net
+12,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.61234,140.45453,Fagopyrum esculentum,conventional,3.0,0.0,,2007,sweep net
+13,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.6125,140.44771,Fagopyrum esculentum,conventional,5.0,0.0,,2007,sweep net
+15,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2007,36.60324,140.46136,Fagopyrum esculentum,conventional,2.0,0.0,,2007,sweep net
+1,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.58494,140.44174,Fagopyrum esculentum,conventional,1.0,0.0,,2008,sweep net
+2,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.5875,140.44562,Fagopyrum esculentum,conventional,2.0,0.0,,2008,sweep net
+3,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.59589,140.43996,Fagopyrum esculentum,conventional,1.0,0.0,,2008,sweep net
+4,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.58083,140.46078,Fagopyrum esculentum,conventional,3.0,0.0,,2008,sweep net
+5,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.56832,140.46266,Fagopyrum esculentum,conventional,1.0,0.0,,2008,sweep net
+6,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.62001,140.44448,Fagopyrum esculentum,conventional,1.0,0.0,,2008,sweep net
+8,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.63956,140.45187,Fagopyrum esculentum,conventional,6.0,0.0,,2008,sweep net
+9,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.63495,140.45381,Fagopyrum esculentum,conventional,5.0,0.0,,2008,sweep net
+10,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.62191,140.46072,Fagopyrum esculentum,conventional,1.0,0.0,,2008,sweep net
+12,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.61234,140.45453,Fagopyrum esculentum,conventional,3.0,0.0,,2008,sweep net
+13,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.6125,140.44771,Fagopyrum esculentum,conventional,3.0,0.0,,2008,sweep net
+14,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.61435,140.44212,Fagopyrum esculentum,conventional,2.0,0.0,,2008,sweep net
+17,Hisatomo_Taki_Fagopyrum_esculentum_Japan_2008,36.56215,140.45846,Fagopyrum esculentum,conventional,1.0,0.0,,2008,sweep net
+1,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.403912,14.180431,Brassica napus,conventional,0.0,4.0,30.0,2013,transects
+2,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.200082,13.556258,Brassica napus,conventional,4.0,2.0,30.0,2013,transects
+3,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.171296,13.643916,Brassica napus,conventional,1.0,0.0,30.0,2013,transects
+5,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.563892,13.029755,Brassica napus,conventional,0.0,1.0,30.0,2013,transects
+6,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.527049,12.958532,Brassica napus,conventional,2.0,7.0,30.0,2013,transects
+7,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.503509,13.044996,Brassica napus,conventional,3.0,2.0,30.0,2013,transects
+8,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.527629,13.033413,Brassica napus,conventional,1.0,5.0,30.0,2013,transects
+10,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.351229,13.249006,Brassica napus,conventional,0.0,1.0,30.0,2013,transects
+11,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.269476,13.028376,Brassica napus,conventional,0.0,1.0,30.0,2013,transects
+12,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.280797,12.942646,Brassica napus,conventional,2.0,0.0,30.0,2013,transects
+15,Ignasi_Bartomeus_Brassica_napus_Sweden_2013,58.259148,13.258576,Brassica napus,conventional,4.0,3.0,30.0,2013,transects
+Close1,Jens_Astrom_Malus_domestica_Norway_2013,59.414814867,9.000524584,Malus domestica,conventional,0.0,11.0,120.0,2013,sweep net
+Close2,Jens_Astrom_Malus_domestica_Norway_2013,59.426596165,9.10409523999999,Malus domestica,conventional,0.0,4.0,120.0,2013,sweep net
+Close3,Jens_Astrom_Malus_domestica_Norway_2013,59.387574366,9.27419789099999,Malus domestica,conventional,3.0,19.0,120.0,2013,sweep net
+Close4,Jens_Astrom_Malus_domestica_Norway_2013,59.5571411880001,10.285390626,Malus domestica,conventional,0.0,5.0,120.0,2013,sweep net
+Dist2,Jens_Astrom_Malus_domestica_Norway_2013,59.654172301,9.751090555,Malus domestica,conventional,0.0,41.0,120.0,2013,sweep net
+Dist3,Jens_Astrom_Malus_domestica_Norway_2013,59.694841686,9.822686294,Malus domestica,conventional,0.0,1.0,120.0,2013,sweep net
+Dist4,Jens_Astrom_Malus_domestica_Norway_2013,59.635852524,9.937774076,Malus domestica,conventional,6.0,39.0,120.0,2013,sweep net
+Dist5,Jens_Astrom_Malus_domestica_Norway_2013,59.670353554,10.37172966,Malus domestica,conventional,0.0,12.0,120.0,2013,sweep net
+Med1,Jens_Astrom_Malus_domestica_Norway_2013,59.421429533,9.16316729699999,Malus domestica,conventional,2.0,8.0,120.0,2013,sweep net
+Med3,Jens_Astrom_Malus_domestica_Norway_2013,59.420927402,9.28088931600001,Malus domestica,conventional,0.0,3.0,120.0,2013,sweep net
+Med4,Jens_Astrom_Malus_domestica_Norway_2013,59.724583874,9.86577883400001,Malus domestica,conventional,0.0,2.0,120.0,2013,sweep net
+Med5,Jens_Astrom_Malus_domestica_Norway_2013,59.541833061,10.3177361,Malus domestica,conventional,0.0,4.0,120.0,2013,sweep net
+Bussloo,Jeroen_Scheper_Brassica_napus_Netherlands_2011,52.195183182192,6.13862973982095,Brassica napus,conventional,3.0,15.0,60.0,2011,transects
+Deventer,Jeroen_Scheper_Brassica_napus_Netherlands_2011,52.2429213893911,6.24098153361637,Brassica napus,conventional,4.0,28.0,60.0,2011,transects
+Doetinchem,Jeroen_Scheper_Brassica_napus_Netherlands_2011,51.9636019891765,6.39632293822613,Brassica napus,conventional,7.0,116.0,60.0,2011,transects
+Gelselaar,Jeroen_Scheper_Brassica_napus_Netherlands_2011,52.1661993536807,6.5412642030328,Brassica napus,conventional,0.0,68.0,60.0,2011,transects
+Lengel,Jeroen_Scheper_Brassica_napus_Netherlands_2011,51.8916609125745,6.27430518753041,Brassica napus,conventional,3.0,10.0,60.0,2011,transects
+Lettele,Jeroen_Scheper_Brassica_napus_Netherlands_2011,52.284544383587,6.25072730315329,Brassica napus,conventional,4.0,35.0,60.0,2011,transects
+Schalkhaar,Jeroen_Scheper_Brassica_napus_Netherlands_2011,52.2884198332622,6.19339533985267,Brassica napus,conventional,1.0,13.0,60.0,2011,transects
+Bussloo,Jeroen_Scheper_Brassica_napus_several_countries_2012,52.1967867288651,6.14022438145396,Brassica napus,conventional,6.0,2.0,60.0,2012,transects
+Doetinchem,Jeroen_Scheper_Brassica_napus_several_countries_2012,51.9654312401522,6.40014778293476,Brassica napus,conventional,10.0,3.0,60.0,2012,transects
+Gelselaar,Jeroen_Scheper_Brassica_napus_several_countries_2012,52.1680841251071,6.5402242725312,Brassica napus,conventional,3.0,2.0,60.0,2012,transects
+Kloosterhaar,Jeroen_Scheper_Brassica_napus_several_countries_2012,52.514284285797,6.70283891787997,Brassica napus,conventional,4.0,3.0,60.0,2012,transects
+Lengel,Jeroen_Scheper_Brassica_napus_several_countries_2012,51.8901053929626,6.27509703435707,Brassica napus,conventional,3.0,12.0,60.0,2012,transects
+Schalkhaar,Jeroen_Scheper_Brassica_napus_several_countries_2012,52.2838335344193,6.19000472894135,Brassica napus,conventional,4.0,5.0,60.0,2012,transects
+SF1,Jeroen_Scheper_Helianthus_annuus_France_2015,46.226733288989,-0.38450384303664,Helianthus annuus,conventional,10.0,6.0,,2015,transects
+SF2,Jeroen_Scheper_Helianthus_annuus_France_2015,46.2481078415923,-0.452262182080704,Helianthus annuus,conventional,3.0,48.0,,2015,transects
+SF3,Jeroen_Scheper_Helianthus_annuus_France_2015,46.220100913499,-0.434668935740155,Helianthus annuus,conventional,4.0,39.0,,2015,transects
+SF4,Jeroen_Scheper_Helianthus_annuus_France_2015,46.2092307738201,-0.263388059460109,Helianthus annuus,conventional,1.0,17.0,,2015,transects
+SF5,Jeroen_Scheper_Helianthus_annuus_France_2015,46.2001747971646,-0.447052474402227,Helianthus annuus,organic,25.0,49.0,,2015,transects
+SF6,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1922493154838,-0.548884135645175,Helianthus annuus,conventional,14.0,58.0,,2015,transects
+SF7,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1923421258147,-0.40644298463739,Helianthus annuus,conventional,7.0,23.0,,2015,transects
+SF8,Jeroen_Scheper_Helianthus_annuus_France_2015,46.191175817578,-0.44163428861843,Helianthus annuus,conventional,11.0,35.0,,2015,transects
+SF9,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1967206873642,-0.369581641508488,Helianthus annuus,conventional,6.0,19.0,,2015,transects
+SF10,Jeroen_Scheper_Helianthus_annuus_France_2015,46.18987671038,-0.524892203239548,Helianthus annuus,conventional,10.0,16.0,,2015,transects
+SF11,Jeroen_Scheper_Helianthus_annuus_France_2015,46.178201579502,-0.359667446796563,Helianthus annuus,conventional,17.0,9.0,,2015,transects
+SF12,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1790594787165,-0.300242543828558,Helianthus annuus,conventional,1.0,0.0,,2015,transects
+SF13,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1201194303449,-0.517321514749689,Helianthus annuus,conventional,10.0,40.0,,2015,transects
+SF14,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1976011751329,-0.532370932483667,Helianthus annuus,conventional,4.0,44.0,,2015,transects
+SF15,Jeroen_Scheper_Helianthus_annuus_France_2015,46.2049723170156,-0.424540952025273,Helianthus annuus,conventional,13.0,37.0,,2015,transects
+SF16,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1895362431053,-0.421987721835685,Helianthus annuus,conventional,3.0,30.0,,2015,transects
+SF17,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1986301847048,-0.264708459636587,Helianthus annuus,conventional,1.0,16.0,,2015,transects
+SF18,Jeroen_Scheper_Helianthus_annuus_France_2015,46.2011144483233,-0.360211622135072,Helianthus annuus,conventional,1.0,8.0,,2015,transects
+SF19,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1805248573009,-0.355248515993298,Helianthus annuus,conventional,2.0,5.0,,2015,transects
+SF20,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1573664433819,-0.328586739657363,Helianthus annuus,conventional,7.0,7.0,,2015,transects
+SF21,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1432153882458,-0.325365893483243,Helianthus annuus,conventional,4.0,5.0,,2015,transects
+SF22,Jeroen_Scheper_Helianthus_annuus_France_2015,46.2437180247653,-0.274799484199536,Helianthus annuus,conventional,2.0,25.0,,2015,transects
+SF23,Jeroen_Scheper_Helianthus_annuus_France_2015,46.2324188462084,-0.330166611677578,Helianthus annuus,conventional,6.0,0.0,,2015,transects
+SF24,Jeroen_Scheper_Helianthus_annuus_France_2015,46.1492806950299,-0.341132391493697,Helianthus annuus,conventional,0.0,15.0,,2015,transects
+Alpaca,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.844631,-77.11647,Cucurbita pepo,conventional,9.0,3.0,90.0,2011,focal observations
+Fish,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.98769636,-77.25185175,Cucurbita pepo,conventional,70.0,12.0,90.0,2011,focal observations
+Gates,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.87052996,-77.05395759,Cucurbita pepo,conventional,28.0,1.0,90.0,2011,focal observations
+GroMoore,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,43.016384,-77.707413,Cucurbita pepo,conventional,60.0,8.0,90.0,2011,focal observations
+HWY251,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.999027,-77.6651,Cucurbita pepo,conventional,56.0,18.0,90.0,2011,focal observations
+Hz2,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.889801,-77.037331,Cucurbita pepo,conventional,19.0,2.0,90.0,2011,focal observations
+Ma6,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.943081,-77.088692,Cucurbita pepo,conventional,18.0,4.0,90.0,2011,focal observations
+Macs,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.75024351,-77.01251361,Cucurbita pepo,conventional,2.0,33.0,90.0,2011,focal observations
+Magog,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,43.038483,-77.302292,Cucurbita pepo,conventional,129.0,1.0,90.0,2011,focal observations
+Mason,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,43.226223,-77.229378,Cucurbita pepo,conventional,45.0,6.0,90.0,2011,focal observations
+Meadville,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.983925,-76.798355,Cucurbita pepo,conventional,10.0,16.0,90.0,2011,focal observations
+P10,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.891544,-77.079971,Cucurbita pepo,conventional,8.0,0.0,90.0,2011,focal observations
+P105,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.88076,-77.107567,Cucurbita pepo,conventional,23.0,8.0,90.0,2011,focal observations
+P316,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.871185,-77.017548,Cucurbita pepo,conventional,5.0,4.0,90.0,2011,focal observations
+P34,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.873226,-77.083344,Cucurbita pepo,conventional,33.0,4.0,90.0,2011,focal observations
+P382,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.864452,-77.143806,Cucurbita pepo,conventional,69.0,2.0,90.0,2011,focal observations
+RidgeChapel,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,43.216312,-77.219727,Cucurbita pepo,conventional,19.0,6.0,90.0,2011,focal observations
+RN,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.87816168,-77.02844402,Cucurbita pepo,conventional,8.0,21.0,90.0,2011,focal observations
+RS,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.8659135,-77.02972,Cucurbita pepo,conventional,2.0,7.0,90.0,2011,focal observations
+Tim1,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.91326721,-76.34694904,Cucurbita pepo,conventional,146.0,5.0,90.0,2011,focal observations
+Tim2,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.91737,-76.360817,Cucurbita pepo,conventional,39.0,12.0,90.0,2011,focal observations
+Tim3,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.8992,-76.348801,Cucurbita pepo,conventional,397.0,6.0,90.0,2011,focal observations
+Tomion,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.75912308,-77.10065157,Cucurbita pepo,conventional,5.0,2.0,90.0,2011,focal observations
+Wickham,Jessica_D_Petersen_Cucurbita_pepo_USA_2011,42.849888,-77.093254,Cucurbita pepo,conventional,12.0,3.0,90.0,2011,focal observations
+L1763,Johan_Ekroos_Vicia_faba_Sweden_2016,56.224693,13.002534,Vicia faba,conventional,0.0,1.0,,2016,transects
+L3274,Johan_Ekroos_Vicia_faba_Sweden_2016,56.306071,12.78962,Vicia faba,conventional,0.0,13.0,,2016,transects
+M1444,Johan_Ekroos_Vicia_faba_Sweden_2016,55.60066,13.595592,Vicia faba,conventional,0.0,3.0,,2016,transects
+M16814,Johan_Ekroos_Vicia_faba_Sweden_2016,55.55271,13.971499,Vicia faba,organic,0.0,1.0,,2016,transects
+M3398,Johan_Ekroos_Vicia_faba_Sweden_2016,55.387692,13.464477,Vicia faba,organic,0.0,15.0,,2016,transects
+M3655,Johan_Ekroos_Vicia_faba_Sweden_2016,55.390799,14.048841,Vicia faba,organic,0.0,6.0,,2016,transects
+M3801,Johan_Ekroos_Vicia_faba_Sweden_2016,55.494064,13.895544,Vicia faba,organic,0.0,32.0,,2016,transects
+M5978,Johan_Ekroos_Vicia_faba_Sweden_2016,55.628619,13.900958,Vicia faba,conventional,0.0,29.0,,2016,transects
+M5980,Johan_Ekroos_Vicia_faba_Sweden_2016,55.636669,13.393289,Vicia faba,conventional,0.0,4.0,,2016,transects
+M6471,Johan_Ekroos_Vicia_faba_Sweden_2016,55.607351,13.484171,Vicia faba,conventional,0.0,1.0,,2016,transects
+M6516,Johan_Ekroos_Vicia_faba_Sweden_2016,55.473687,13.808316,Vicia faba,conventional,0.0,15.0,,2016,transects
+M6625,Johan_Ekroos_Vicia_faba_Sweden_2016,55.885621,13.247477,Vicia faba,organic,0.0,3.0,,2016,transects
+M7056,Johan_Ekroos_Vicia_faba_Sweden_2016,55.758217,13.747599,Vicia faba,organic,0.0,45.0,,2016,transects
+M8377,Johan_Ekroos_Vicia_faba_Sweden_2016,55.900902,13.425308,Vicia faba,organic,0.0,2.0,,2016,transects
+M8718,Johan_Ekroos_Vicia_faba_Sweden_2016,55.633519,13.809406,Vicia faba,conventional,0.0,11.0,,2016,transects
+M8762,Johan_Ekroos_Vicia_faba_Sweden_2016,55.826514,13.50833,Vicia faba,organic,0.0,7.0,,2016,transects
+C02,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.484167098999,-41.3119430541992,Coffea arabica,conventional,1.0,0.0,40.0,2013,sweep net
+C08,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.2961111068726,-41.3819427490234,Coffea arabica,conventional,3.0,0.0,40.0,2013,sweep net
+C09,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.319167137146,-41.3258323669434,Coffea arabica,conventional,3.0,2.0,40.0,2013,sweep net
+C14,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-12.8619441986084,-41.522777557373,Coffea arabica,conventional,4.0,0.0,40.0,2013,sweep net
+C17,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.0383329391479,-41.4249992370605,Coffea arabica,conventional,2.0,1.0,40.0,2013,sweep net
+C18,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.0583333969116,-41.4152793884277,Coffea arabica,conventional,1.0,0.0,40.0,2013,sweep net
+C19,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.2494440078735,-41.3344459533691,Coffea arabica,conventional,1.0,0.0,40.0,2013,sweep net
+O01,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.5094442367554,-41.460277557373,Coffea arabica,organic,2.0,0.0,40.0,2013,sweep net
+O03,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.4497222900391,-41.3047218322754,Coffea arabica,organic,2.0,0.0,40.0,2013,sweep net
+O04,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.4138889312744,-41.3152770996094,Coffea arabica,organic,0.0,1.0,40.0,2013,sweep net
+O06,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.3680553436279,-41.3347206115723,Coffea arabica,organic,2.0,0.0,40.0,2013,sweep net
+O08,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.3613891601562,-41.3600006103516,Coffea arabica,organic,1.0,0.0,40.0,2013,sweep net
+O09,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.352222442627,-41.3211097717285,Coffea arabica,organic,2.0,0.0,40.0,2013,sweep net
+O12,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.3613891601562,-41.2922210693359,Coffea arabica,organic,0.0,2.0,40.0,2013,sweep net
+O14,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.3216667175293,-41.2983322143555,Coffea arabica,organic,1.0,0.0,40.0,2013,sweep net
+O18,Juliana_Hipolito_Coffea_arabica_Brazil_2013,-13.1483335494995,-41.3691673278809,Coffea arabica,organic,3.0,0.0,40.0,2013,sweep net
+C03,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.4341669082642,-41.289722442627,Coffea arabica,conventional,6.0,2.0,40.0,2014,sweep net
+C04,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.4125003814697,-41.2722206115723,Coffea arabica,conventional,1.0,2.0,40.0,2014,sweep net
+C07,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.2994441986084,-41.3488883972168,Coffea arabica,conventional,4.0,1.0,40.0,2014,sweep net
+C09,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.319167137146,-41.3258323669434,Coffea arabica,conventional,1.0,0.0,40.0,2014,sweep net
+C17,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.0383329391479,-41.4249992370605,Coffea arabica,conventional,1.0,2.0,40.0,2014,sweep net
+O01,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.5094442367554,-41.460277557373,Coffea arabica,organic,2.0,0.0,40.0,2014,sweep net
+O03,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.4497222900391,-41.3047218322754,Coffea arabica,organic,1.0,1.0,40.0,2014,sweep net
+O04,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.4138889312744,-41.3152770996094,Coffea arabica,organic,1.0,0.0,40.0,2014,sweep net
+O07,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.3691672,-41.3285047,Coffea arabica,organic,8.0,0.0,40.0,2014,sweep net
+O08,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.3613891601562,-41.3600006103516,Coffea arabica,organic,2.0,0.0,40.0,2014,sweep net
+O09,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.352222442627,-41.3211097717285,Coffea arabica,organic,1.0,0.0,40.0,2014,sweep net
+O14,Juliana_Hipolito_Coffea_arabica_Brazil_2014,-13.3216667175293,-41.2983322143555,Coffea arabica,organic,1.0,1.0,40.0,2014,sweep net
+1,Juliana_Hipolito_Mangifera_indica_Brazil_2005,-9.45888900756836,-40.4625015258789,Mangifera indica,conventional,2.0,0.0,2880.0,2005,sweep net
+2,Juliana_Hipolito_Mangifera_indica_Brazil_2005,-9.48916625976562,-40.435001373291,Mangifera indica,conventional,1.0,0.0,1440.0,2005,sweep net
+3,Juliana_Hipolito_Mangifera_indica_Brazil_2005,-9.45222187042236,-40.3805541992188,Mangifera indica,conventional,7.0,0.0,1440.0,2005,sweep net
+4,Juliana_Hipolito_Mangifera_indica_Brazil_2005,-9.51472187042236,-40.3366661071777,Mangifera indica,conventional,3.0,0.0,1440.0,2005,sweep net
+c.IAJ.C,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.141402,-7.805607,Malus domestica,conventional,3.0,15.0,147.0,2018,transects
+c.IAJ.E,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.141447,-7.804151,Malus domestica,conventional,3.0,10.0,143.0,2018,transects
+c.LHO.C,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.141215,-8.739443,Malus domestica,conventional,8.0,5.0,142.0,2018,transects
+c.LHO.E,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.141537,-8.738346,Malus domestica,conventional,4.0,8.0,155.0,2018,transects
+c.LWO.C,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.358061,-7.476684,Malus domestica,conventional,0.0,10.0,146.0,2018,transects
+c.LWO.E,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.357896,-7.475144,Malus domestica,conventional,6.0,5.0,146.0,2018,transects
+c.MFO.C,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.583161,-7.296903,Malus domestica,conventional,2.0,5.0,148.0,2018,transects
+c.MFO.E,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.583281,-7.296022,Malus domestica,conventional,3.0,6.0,143.0,2018,transects
+d.BAF.C,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.226408,-6.573203,Malus domestica,conventional,11.0,54.0,208.0,2018,transects
+d.BAF.E,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.225487,-6.573774,Malus domestica,conventional,6.0,52.0,194.0,2018,transects
+d.IAJ.C,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.138815,-7.808374,Malus domestica,conventional,0.0,8.0,211.0,2018,transects
+d.IAJ.E,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.138606,-7.808374,Malus domestica,conventional,8.0,13.0,199.8,2018,transects
+d.LIA.C,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.304403,-7.280924,Malus domestica,conventional,3.0,29.0,207.0,2018,transects
+d.LIA.E,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.304991,-7.279732,Malus domestica,conventional,7.0,22.0,208.0,2018,transects
+d.TAF.C,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.380339,-7.843109,Malus domestica,conventional,3.0,12.0,215.0,2018,transects
+d.TAF.E,Katherine_LW_Burns_Malus_domestica_Ireland_2018,52.379538,-7.844695,Malus domestica,conventional,7.0,7.0,205.0,2018,transects
+JGF.19.C,Katherine_LW_Burns_Vicia_faba_Ireland_2019,52.933482,-6.932175,Vicia faba,conventional,0.0,14.0,240.0,2019,focal observations
+KSF.19.C,Katherine_LW_Burns_Vicia_faba_Ireland_2019,52.876487,-6.899818,Vicia faba,conventional,0.0,7.0,240.0,2019,focal observations
+KSF.19.E,Katherine_LW_Burns_Vicia_faba_Ireland_2019,52.876653,-6.900544,Vicia faba,conventional,0.0,5.0,240.0,2019,focal observations
+NGF.19.C,Katherine_LW_Burns_Vicia_faba_Ireland_2019,52.9975065,-6.7041996,Vicia faba,conventional,0.0,30.0,240.0,2019,focal observations
+NGF.19.E,Katherine_LW_Burns_Vicia_faba_Ireland_2019,52.9971347,-6.7050235,Vicia faba,conventional,0.0,24.0,240.0,2019,focal observations
+SBF.19.C,Katherine_LW_Burns_Vicia_faba_Ireland_2019,52.818051,-6.122784,Vicia faba,conventional,0.0,9.0,240.0,2019,focal observations
+SBF.19.E,Katherine_LW_Burns_Vicia_faba_Ireland_2019,52.818266,-6.122188,Vicia faba,conventional,0.0,14.0,240.0,2019,focal observations
+1,Katrine_Hansen_Psidium_guajava_Thailand_2019,6.98899984359741,100.616607666016,Psidium guajava,conventional,165.0,0.0,,2019,focal observations
+3,Katrine_Hansen_Psidium_guajava_Thailand_2019,7.04843282699585,100.44913482666,Psidium guajava,conventional,5.0,0.0,,2019,focal observations
+4,Katrine_Hansen_Psidium_guajava_Thailand_2019,6.90807914733887,100.502342224121,Psidium guajava,conventional,66.0,0.0,,2019,focal observations
+S1,Louis_Sutter_Brassica_napus_Switzerland_2014,47.53631,8.37439,Brassica napus,conventional,8.0,6.0,288.0,2014,sweep net
+S2,Louis_Sutter_Brassica_napus_Switzerland_2014,47.47694,8.469864,Brassica napus,conventional,14.0,0.0,288.0,2014,sweep net
+S3,Louis_Sutter_Brassica_napus_Switzerland_2014,47.47129,8.389589,Brassica napus,conventional,14.0,0.0,288.0,2014,sweep net
+S4,Louis_Sutter_Brassica_napus_Switzerland_2014,47.61216,8.530445,Brassica napus,conventional,10.0,0.0,288.0,2014,sweep net
+S5,Louis_Sutter_Brassica_napus_Switzerland_2014,47.59069,8.502255,Brassica napus,conventional,14.0,0.0,288.0,2014,sweep net
+S6,Louis_Sutter_Brassica_napus_Switzerland_2014,47.53549,8.326349,Brassica napus,conventional,5.0,0.0,288.0,2014,sweep net
+S7,Louis_Sutter_Brassica_napus_Switzerland_2014,47.49965,8.441767,Brassica napus,conventional,8.0,2.0,288.0,2014,sweep net
+S8,Louis_Sutter_Brassica_napus_Switzerland_2014,47.41778,8.529269,Brassica napus,conventional,7.0,1.0,288.0,2014,sweep net
+S9,Louis_Sutter_Brassica_napus_Switzerland_2014,47.58498,8.475977,Brassica napus,conventional,29.0,0.0,288.0,2014,sweep net
+S10,Louis_Sutter_Brassica_napus_Switzerland_2014,47.5866,8.564512,Brassica napus,conventional,11.0,2.0,288.0,2014,sweep net
+S11,Louis_Sutter_Brassica_napus_Switzerland_2014,47.49948,8.383285,Brassica napus,conventional,14.0,1.0,288.0,2014,sweep net
+S12,Louis_Sutter_Brassica_napus_Switzerland_2014,47.52976,8.268525,Brassica napus,conventional,10.0,9.0,288.0,2014,sweep net
+S13,Louis_Sutter_Brassica_napus_Switzerland_2014,47.58226,8.520232,Brassica napus,conventional,47.0,0.0,288.0,2014,sweep net
+S14,Louis_Sutter_Brassica_napus_Switzerland_2014,47.43754,8.490246,Brassica napus,conventional,2.0,1.0,288.0,2014,sweep net
+S15,Louis_Sutter_Brassica_napus_Switzerland_2014,47.56304,8.518445,Brassica napus,conventional,6.0,1.0,288.0,2014,sweep net
+S16,Louis_Sutter_Brassica_napus_Switzerland_2014,47.51309,8.339039,Brassica napus,conventional,1.0,0.0,288.0,2014,sweep net
+S17,Louis_Sutter_Brassica_napus_Switzerland_2014,47.51272,8.361057,Brassica napus,conventional,2.0,0.0,288.0,2014,sweep net
+S18,Louis_Sutter_Brassica_napus_Switzerland_2014,47.49386,8.408321,Brassica napus,conventional,8.0,1.0,288.0,2014,sweep net
+carv01_01,Luisa_G_Carvalheiro_Mangifera_indica_South_Africa_2008,-24.432472,30.857639,Mangifera indica,organic,6.0,0.0,,2008,sweep net
+carv01_06,Luisa_G_Carvalheiro_Mangifera_indica_South_Africa_2008,-24.403333,30.862972,Mangifera indica,conventional,1.0,0.0,,2008,sweep net
+carv01_11,Luisa_G_Carvalheiro_Mangifera_indica_South_Africa_2008,-24.420389,30.839889,Mangifera indica,organic,1.0,0.0,,2008,sweep net
+carv03_Bavaria_L_LB1,Luisa_G_Carvalheiro_Mangifera_indica_South_Africa_2009,-24.40451,30.88588,Mangifera indica,organic,1.0,0.0,,2009,sweep net
+carv03_Moriah_A24,Luisa_G_Carvalheiro_Mangifera_indica_South_Africa_2009,-24.42757,30.85806,Mangifera indica,organic,1.0,0.0,,2009,sweep net
+carv03_Moriah_B30,Luisa_G_Carvalheiro_Mangifera_indica_South_Africa_2009,-24.43487,30.85165,Mangifera indica,organic,3.0,0.0,,2009,sweep net
+carv03_Moriah_B48,Luisa_G_Carvalheiro_Mangifera_indica_South_Africa_2009,-24.43096,30.85091,Mangifera indica,organic,4.0,0.0,,2009,sweep net
+carv03_Moriah_B53/54,Luisa_G_Carvalheiro_Mangifera_indica_South_Africa_2009,-24.43018,30.85016,Mangifera indica,organic,1.0,0.0,,2009,sweep net
+carv03_Moriah_C21,Luisa_G_Carvalheiro_Mangifera_indica_South_Africa_2009,-24.42519,30.84606,Mangifera indica,organic,1.0,0.0,,2009,sweep net
+Sel01,Marcos_Minarro_Malus_domestica_Spain_2015,43.5156,-5.34808,Malus domestica,organic,3.0,34.0,75.0,2015,focal observations
+Ria02,Marcos_Minarro_Malus_domestica_Spain_2015,43.5172,-5.3799,Malus domestica,IPM,2.0,1.0,75.0,2015,focal observations
+Tor03,Marcos_Minarro_Malus_domestica_Spain_2015,43.5042,-5.40746,Malus domestica,IPM,1.0,0.0,75.0,2015,focal observations
+Gai04,Marcos_Minarro_Malus_domestica_Spain_2015,43.4926,-5.41948,Malus domestica,IPM,1.0,2.0,75.0,2015,focal observations
+Sor05,Marcos_Minarro_Malus_domestica_Spain_2015,43.4807,-5.44598,Malus domestica,IPM,6.0,1.0,75.0,2015,focal observations
+Bus06,Marcos_Minarro_Malus_domestica_Spain_2015,43.4559,-5.46599,Malus domestica,IPM,4.0,0.0,75.0,2015,focal observations
+Cam07,Marcos_Minarro_Malus_domestica_Spain_2015,43.4526,-5.4831,Malus domestica,organic,3.001,1.0,75.0,2015,focal observations
+Cey08,Marcos_Minarro_Malus_domestica_Spain_2015,43.4564,-5.38314,Malus domestica,IPM,14.001,3.0,75.0,2015,focal observations
+Cay09,Marcos_Minarro_Malus_domestica_Spain_2015,43.4552,-5.41072,Malus domestica,IPM,4.0,8.0,75.0,2015,focal observations
+Por10,Marcos_Minarro_Malus_domestica_Spain_2015,43.438,-5.44881,Malus domestica,IPM,3.001,1.0,75.0,2015,focal observations
+Ver11,Marcos_Minarro_Malus_domestica_Spain_2015,43.404,-5.5007,Malus domestica,IPM,16.01,4.0,75.0,2015,focal observations
+Mas12,Marcos_Minarro_Malus_domestica_Spain_2015,43.4052,-5.52419,Malus domestica,IPM,6.0,2.0,75.0,2015,focal observations
+Col13,Marcos_Minarro_Malus_domestica_Spain_2015,43.3897,-5.58329,Malus domestica,IPM,2.0,1.0,75.0,2015,focal observations
+Val14,Marcos_Minarro_Malus_domestica_Spain_2015,43.4476,-5.61307,Malus domestica,IPM,9.0,4.0,75.0,2015,focal observations
+Qui15,Marcos_Minarro_Malus_domestica_Spain_2015,43.4548,-5.62866,Malus domestica,IPM,3.0,6.0,75.0,2015,focal observations
+Lav16,Marcos_Minarro_Malus_domestica_Spain_2015,43.4693,-5.64902,Malus domestica,IPM,6.0,4.0,75.0,2015,focal observations
+Cal17,Marcos_Minarro_Malus_domestica_Spain_2015,43.4929,-5.63121,Malus domestica,IPM,2.0,0.0,75.0,2015,focal observations
+San18,Marcos_Minarro_Malus_domestica_Spain_2015,43.5071,-5.62647,Malus domestica,IPM,2.0,1.0,75.0,2015,focal observations
+Que19,Marcos_Minarro_Malus_domestica_Spain_2015,43.4988,-5.65401,Malus domestica,IPM,4.0,2.0,75.0,2015,focal observations
+Sal20,Marcos_Minarro_Malus_domestica_Spain_2015,43.3808,-5.64925,Malus domestica,IPM,6.001,15.0,75.0,2015,focal observations
+Pan21,Marcos_Minarro_Malus_domestica_Spain_2015,43.4267,-5.71527,Malus domestica,IPM,5.0,4.0,75.0,2015,focal observations
+Nor22,Marcos_Minarro_Malus_domestica_Spain_2015,43.403,-5.7165,Malus domestica,IPM,9.0,4.0,75.0,2015,focal observations
+Obi23,Marcos_Minarro_Malus_domestica_Spain_2015,43.3682,-5.73765,Malus domestica,IPM,11.0,14.0,75.0,2015,focal observations
+Mun24,Marcos_Minarro_Malus_domestica_Spain_2015,43.3723,-5.75278,Malus domestica,organic,2.0,2.0,75.0,2015,focal observations
+Tin25,Marcos_Minarro_Malus_domestica_Spain_2015,43.3645,-5.76386,Malus domestica,IPM,13.0,3.0,75.0,2015,focal observations
+BakersAcres,Mia_Park_Malus_domestica_USA_2009,42.606647,-76.499462,Malus domestica,IPM,75.0,1.0,45.0,2009,sweep net
+Cornell01,Mia_Park_Malus_domestica_USA_2009,42.444969,-76.461382,Malus domestica,IPM,76.0,0.0,45.0,2009,sweep net
+Cornell02,Mia_Park_Malus_domestica_USA_2009,42.572777,-76.594966,Malus domestica,IPM,121.0,12.0,150.0,2009,sweep net
+Endres,Mia_Park_Malus_domestica_USA_2009,43.249082,-77.045889,Malus domestica,IPM,95.0,5.0,90.0,2009,sweep net
+GrisamoreFarms,Mia_Park_Malus_domestica_USA_2009,42.656582,-76.471825,Malus domestica,IPM,21.0,0.0,30.0,2009,sweep net
+IndianCreek,Mia_Park_Malus_domestica_USA_2009,42.469951,-76.550223,Malus domestica,IPM,65.0,1.0,45.0,2009,sweep net
+LittleTree,Mia_Park_Malus_domestica_USA_2009,42.351524,-76.564604,Malus domestica,IPM,99.0,7.0,90.0,2009,sweep net
+Merwin,Mia_Park_Malus_domestica_USA_2009,42.552672,-76.657362,Malus domestica,IPM,41.0,1.0,30.0,2009,sweep net
+ReisingerOrchards,Mia_Park_Malus_domestica_USA_2009,42.376591,-76.927016,Malus domestica,IPM,155.0,10.0,90.0,2009,sweep net
+Hemlock02,Mia_Park_Malus_domestica_USA_2009,42.357827,-76.511712,Malus domestica,organic,25.0,8.0,30.0,2009,sweep net
+WestHaven,Mia_Park_Malus_domestica_USA_2009,42.445266,-76.536158,Malus domestica,organic,21.0,0.0,30.0,2009,sweep net
+BartlesonAlton,Mia_Park_Malus_domestica_USA_2010,43.210033,-76.985768,Malus domestica,IPM,14.0,2.0,45.0,2010,sweep net
+BartlesonHill,Mia_Park_Malus_domestica_USA_2010,43.141205,-77.00617,Malus domestica,IPM,85.0,5.0,120.0,2010,sweep net
+BartlesonHome,Mia_Park_Malus_domestica_USA_2010,43.215188,-77.018801,Malus domestica,IPM,9.0,0.0,90.0,2010,sweep net
+Cornell01,Mia_Park_Malus_domestica_USA_2010,42.444969,-76.461382,Malus domestica,IPM,27.0,1.0,45.0,2010,sweep net
+Cornell02,Mia_Park_Malus_domestica_USA_2010,42.572777,-76.594966,Malus domestica,IPM,7.0,5.0,30.0,2010,sweep net
+Endres,Mia_Park_Malus_domestica_USA_2010,43.249082,-77.045889,Malus domestica,IPM,53.0,6.0,150.0,2010,sweep net
+LakeBreezeGates,Mia_Park_Malus_domestica_USA_2010,43.282155,-77.121445,Malus domestica,IPM,11.0,0.0,105.0,2010,sweep net
+LittleTree,Mia_Park_Malus_domestica_USA_2010,42.351524,-76.564604,Malus domestica,IPM,14.0,4.0,30.0,2010,sweep net
+Simpelaar,Mia_Park_Malus_domestica_USA_2010,43.149056,-76.972796,Malus domestica,IPM,65.0,13.0,90.0,2010,sweep net
+BakersAcres,Mia_Park_Malus_domestica_USA_2011,42.606647,-76.499462,Malus domestica,IPM,100.0,4.0,90.0,2011,sweep net
+BartlesonAlton,Mia_Park_Malus_domestica_USA_2011,43.210033,-76.985768,Malus domestica,IPM,159.0,4.0,180.0,2011,sweep net
+BartlesonHome,Mia_Park_Malus_domestica_USA_2011,43.215188,-77.018801,Malus domestica,IPM,42.0,6.0,180.0,2011,sweep net
+Cornell01,Mia_Park_Malus_domestica_USA_2011,42.444969,-76.461382,Malus domestica,IPM,72.0,1.0,90.0,2011,sweep net
+Cornell02,Mia_Park_Malus_domestica_USA_2011,42.572777,-76.594966,Malus domestica,IPM,45.0,5.0,90.0,2011,sweep net
+Endres,Mia_Park_Malus_domestica_USA_2011,43.249082,-77.045889,Malus domestica,IPM,211.0,3.0,180.0,2011,sweep net
+GrisamoreFarms,Mia_Park_Malus_domestica_USA_2011,42.656582,-76.471825,Malus domestica,IPM,26.0,2.0,90.0,2011,sweep net
+HomeSouth,Mia_Park_Malus_domestica_USA_2011,42.853851,-77.021808,Malus domestica,IPM,16.0,3.0,90.0,2011,sweep net
+IndianCreek,Mia_Park_Malus_domestica_USA_2011,42.469951,-76.550223,Malus domestica,IPM,33.0,2.0,60.0,2011,sweep net
+LakeBreezeGates,Mia_Park_Malus_domestica_USA_2011,43.282155,-77.121445,Malus domestica,IPM,14.0,2.0,180.0,2011,sweep net
+LakeBreezeHome,Mia_Park_Malus_domestica_USA_2011,43.275127,-77.088463,Malus domestica,IPM,29.0,4.0,120.0,2011,sweep net
+LakeFarm,Mia_Park_Malus_domestica_USA_2011,42.83129,-76.984798,Malus domestica,IPM,32.0,5.0,90.0,2011,sweep net
+Merwin,Mia_Park_Malus_domestica_USA_2011,42.552672,-76.657362,Malus domestica,IPM,25.0,1.0,60.0,2011,sweep net
+MWElectronics,Mia_Park_Malus_domestica_USA_2011,43.185902,-77.188852,Malus domestica,IPM,121.0,1.0,90.0,2011,sweep net
+ReisingerOrchards,Mia_Park_Malus_domestica_USA_2011,42.376591,-76.927016,Malus domestica,IPM,154.0,54.0,270.0,2011,sweep net
+RoseFarm,Mia_Park_Malus_domestica_USA_2011,42.776499,-77.000925,Malus domestica,IPM,53.0,8.0,210.0,2011,sweep net
+Hemlock02,Mia_Park_Malus_domestica_USA_2011,42.357827,-76.511712,Malus domestica,organic,30.0,17.0,30.0,2011,sweep net
+WestHaven,Mia_Park_Malus_domestica_USA_2011,42.445266,-76.536158,Malus domestica,organic,23.0,2.0,30.0,2011,sweep net
+B2CAS 2,Natacha_Chacoff_Citrus_limon_Argentina_2015,-27.0313333333333,-65.5494722222222,Citrus limon,conventional,15.0,16.0,630.0,2015,focal observations
+CA2CAS 3,Natacha_Chacoff_Citrus_limon_Argentina_2015,-27.0330833333333,-65.5395277777777,Citrus limon,conventional,9.0,4.0,675.0,2015,focal observations
+CA1CAS 5,Natacha_Chacoff_Citrus_limon_Argentina_2015,-27.0444166666666,-65.5486111111111,Citrus limon,conventional,1.0,0.0,345.0,2015,focal observations
+B4MON 1,Natacha_Chacoff_Citrus_limon_Argentina_2015,-26.9878611111111,-65.4366388888889,Citrus limon,conventional,5.0,16.0,480.0,2015,focal observations
+CA4MON 2,Natacha_Chacoff_Citrus_limon_Argentina_2015,-26.9953333333333,-65.4282777777777,Citrus limon,conventional,4.0,5.0,480.0,2015,focal observations
+B1CAS 1,Natacha_Chacoff_Citrus_limon_Argentina_2015,-27.0282777777777,-65.5672222222222,Citrus limon,conventional,33.0,19.0,525.0,2015,focal observations
+CE1CAS 6,Natacha_Chacoff_Citrus_limon_Argentina_2015,-27.0455833333333,-65.5529722222222,Citrus limon,conventional,0.0,1.0,375.0,2015,focal observations
+CE2CAS 4,Natacha_Chacoff_Citrus_limon_Argentina_2015,-27.0363333333333,-65.5426388888888,Citrus limon,conventional,2.0,5.0,600.0,2015,focal observations
+B3CAS 7,Natacha_Chacoff_Citrus_limon_Argentina_2015,-27.0475,-65.5195555555555,Citrus limon,conventional,1.0,1.0,435.0,2015,focal observations
+CA3CAS 8,Natacha_Chacoff_Citrus_limon_Argentina_2015,-27.05975,-65.5043333333333,Citrus limon,conventional,2.0,0.0,405.0,2015,focal observations
+Ballat,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.727846,5.73069,Malus domestica,organic,20.0,4.0,540.0,2019,sweep net
+Bianca 18O,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.926274,4.945741,Malus domestica,organic,23.0,4.0,540.0,2019,sweep net
+Bianca 20C,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.876635,4.904523,Malus domestica,IPM,6.0,26.0,540.0,2019,sweep net
+Bianca 21C,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.853677,5.25143,Malus domestica,IPM,0.0,8.0,540.0,2019,sweep net
+Bianca 21O,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.92741,5.024766,Malus domestica,organic,4.0,10.0,540.0,2019,sweep net
+Gasi_malus_2019,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.687773,4.819197,Malus domestica,organic,232.0,58.0,540.0,2019,sweep net
+Laduron,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.733162,5.786554,Malus domestica,organic,177.0,16.0,540.0,2019,sweep net
+Pommeraie_2019,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.558067,4.708504,Malus domestica,organic,84.0,27.0,540.0,2019,sweep net
+Vergers de Barry,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.58112,3.5445,Malus domestica,organic,16.0,3.0,540.0,2019,sweep net
+Vergers de Brunehaut,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.506134,3.382844,Malus domestica,IPM,55.0,125.0,540.0,2019,sweep net
+Vergers de la Vallee,Nicolas_J_Vereecken_Malus_domestica_Belgium_2019,50.59265,4.9507,Malus domestica,IPM,214.0,84.0,540.0,2019,sweep net
+Bois de la Borde,Nicolas_J_Vereecken_Malus_domestica_France_2019,47.557031,0.553025,Malus domestica,organic,14.0,32.0,540.0,2019,sweep net
+Dampleux,Nicolas_J_Vereecken_Malus_domestica_France_2019,49.245781,3.150376,Malus domestica,IPM,47.0,75.0,540.0,2019,sweep net
+Ferme de Canon,Nicolas_J_Vereecken_Malus_domestica_France_2019,49.0803,-0.09375,Malus domestica,organic,71.0,52.0,540.0,2019,sweep net
+Fontenay,Nicolas_J_Vereecken_Malus_domestica_France_2019,49.10034,-0.353761,Malus domestica,IPM,66.0,38.0,540.0,2019,sweep net
+Innenheim,Nicolas_J_Vereecken_Malus_domestica_France_2019,48.502409,7.557589,Malus domestica,IPM,61.0,38.0,540.0,2019,sweep net
+Jeunes de la Motte,Nicolas_J_Vereecken_Malus_domestica_France_2019,47.518982,0.468389,Malus domestica,IPM,14.0,49.0,540.0,2019,sweep net
+Le Plessis,Nicolas_J_Vereecken_Malus_domestica_France_2019,49.183461,3.059649,Malus domestica,organic,32.0,35.0,540.0,2019,sweep net
+Maillebois,Nicolas_J_Vereecken_Malus_domestica_France_2019,46.115485,5.913749,Malus domestica,organic,128.0,39.0,540.0,2019,sweep net
+SCA de la Plesse,Nicolas_J_Vereecken_Malus_domestica_France_2019,47.524699,-0.5062,Malus domestica,IPM,18.0,89.0,540.0,2019,sweep net
+SCA de Vauleard,Nicolas_J_Vereecken_Malus_domestica_France_2019,47.564191,-0.627172,Malus domestica,IPM,19.0,64.0,540.0,2019,sweep net
+Tilly,Nicolas_J_Vereecken_Malus_domestica_France_2019,46.107229,5.92304,Malus domestica,IPM,68.0,51.0,540.0,2019,sweep net
+Traenheim,Nicolas_J_Vereecken_Malus_domestica_France_2019,48.590605,7.477028,Malus domestica,organic,32.0,25.0,540.0,2019,sweep net
+Vergers Ohey,Nicolas_J_Vereecken_Malus_domestica_France_2019,50.443185,5.121998,Malus domestica,organic,54.0,36.0,540.0,2019,sweep net
+Gasi_2017,Nicolas_J_Vereecken_Malus_domestica_Belgium_2017,50.687784,4.819336,Malus domestica,organic,55.0,107.0,,2017,sweep net
+Penteville_2017,Nicolas_J_Vereecken_Malus_domestica_Belgium_2017,50.552216,4.653305,Malus domestica,organic,51.0,160.0,,2017,sweep net
+Pommeraie_2017,Nicolas_J_Vereecken_Malus_domestica_Belgium_2017,50.557979,4.707042,Malus domestica,organic,24.0,202.0,,2017,sweep net
+Fredandberries,Nicolas_J_Vereecken_Vaccinium_corymbosum_Belgium_2017,50.308921,5.883556,Vaccinium corymbosum,organic,1.0,11.0,180.0,2017,sweep net
+Myrtille de Chardeneux,Nicolas_J_Vereecken_Vaccinium_corymbosum_Belgium_2017,50.368968,5.361766,Vaccinium corymbosum,conventional,1.0,30.0,180.0,2017,sweep net
+P'tits Fruits d'Ici,Nicolas_J_Vereecken_Vaccinium_corymbosum_Belgium_2017,50.57221,3.966101,Vaccinium corymbosum,organic,11.0,71.0,360.0,2017,sweep net
+Flemalle,Nicolas_J_Vereecken_Brassica_napus_Belgium_2019,50.66625,4.643972,Brassica napus,conventional,25.0,125.0,540.0,2019,sweep net
+Freres_Delvaux,Nicolas_J_Vereecken_Brassica_napus_Belgium_2019,50.398343,4.7215,Brassica napus,conventional,22.0,7.0,540.0,2019,sweep net
+Pirmez,Nicolas_J_Vereecken_Brassica_napus_Belgium_2019,50.342707,4.731325,Brassica napus,organic,44.0,31.0,540.0,2019,sweep net
+Schiepers,Nicolas_J_Vereecken_Brassica_napus_Belgium_2019,50.553917,5.207083,Brassica napus,organic,17.0,47.0,540.0,2019,sweep net
+Coin_des_Champs,Nicolas_J_Vereecken_Fragaria_x_ananassa_Belgium_2019,50.641649,4.577286,Fragaria x ananassa,organic,42.0,29.0,540.0,2019,sweep net
+Ferme_du_Chateau,Nicolas_J_Vereecken_Fragaria_x_ananassa_Belgium_2019,50.48925,4.933753,Fragaria x ananassa,conventional,25.0,2.0,540.0,2019,sweep net
+Fruits_du_Verger,Nicolas_J_Vereecken_Fragaria_x_ananassa_Belgium_2019,50.528752,4.760494,Fragaria x ananassa,conventional,0.0,152.0,540.0,2019,sweep net
+Val-Notre-Dame,Nicolas_J_Vereecken_Fragaria_x_ananassa_Belgium_2019,50.548723,5.21781,Fragaria x ananassa,organic,18.0,21.0,540.0,2019,sweep net
+AB,Pablo_Cavigliasso_Vaccinium_corymbosum_Argentina_2016,-31.3265,-58.08404444,Vaccinium corymbosum,conventional,0.0,6.0,150.0,2016,focal observations
+AR,Pablo_Cavigliasso_Vaccinium_corymbosum_Argentina_2016,-31.4065083,-58.12713056,Vaccinium corymbosum,conventional,0.0,1.0,150.0,2016,focal observations
+BB,Pablo_Cavigliasso_Vaccinium_corymbosum_Argentina_2016,-31.4587111,-58.14964167,Vaccinium corymbosum,conventional,1.0,0.0,150.0,2016,focal observations
+BBR4,Pablo_Cavigliasso_Vaccinium_corymbosum_Argentina_2016,-31.2238583,-58.04071389,Vaccinium corymbosum,conventional,0.0,3.0,150.0,2016,focal observations
+BBR5,Pablo_Cavigliasso_Vaccinium_corymbosum_Argentina_2016,-31.2207528,-58.05311944,Vaccinium corymbosum,conventional,0.0,7.0,150.0,2016,focal observations
+BSA,Pablo_Cavigliasso_Vaccinium_corymbosum_Argentina_2016,-31.1934417,-58.04826111,Vaccinium corymbosum,conventional,2.0,0.0,150.0,2016,focal observations
+BSF,Pablo_Cavigliasso_Vaccinium_corymbosum_Argentina_2016,-31.1856028,-58.04411944,Vaccinium corymbosum,conventional,1.0,6.0,150.0,2016,focal observations
+PSE,Pablo_Cavigliasso_Vaccinium_corymbosum_Argentina_2016,-31.372975,-58.12293889,Vaccinium corymbosum,conventional,0.0,9.0,150.0,2016,focal observations
+PSO,Pablo_Cavigliasso_Vaccinium_corymbosum_Argentina_2016,-31.3703806,-58.12677222,Vaccinium corymbosum,conventional,0.0,7.0,150.0,2016,focal observations
+QT,Pablo_Cavigliasso_Vaccinium_corymbosum_Argentina_2016,-31.2615194,-58.08898333,Vaccinium corymbosum,conventional,0.0,2.0,150.0,2016,focal observations
+ced,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.334556,-75.355869,Citrullus lanatus,,6.0,0.0,,2004,transects
+del,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.296316,-75.150671,Citrullus lanatus,,5.0,0.0,,2004,transects
+ker,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.341541,-74.767837,Citrullus lanatus,,7.0,0.0,,2004,transects
+lee,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.26608,-74.56288,Citrullus lanatus,,2.0,0.0,,2004,transects
+lit,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.309244,-74.752274,Citrullus lanatus,,13.0,1.0,,2004,transects
+map,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.11802,-75.269978,Citrullus lanatus,,6.0,2.0,,2004,transects
+phi,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.572188,-75.159774,Citrullus lanatus,,3.0,1.0,,2004,transects
+ter,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.328397,-74.726268,Citrullus lanatus,,23.0,0.0,,2004,transects
+tra,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.565016,-75.183267,Citrullus lanatus,,7.0,0.0,,2004,transects
+wat,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.350566,-74.764343,Citrullus lanatus,,21.0,1.0,,2004,transects
+wil,Rachael_Winfree_Citrullus_lanatus_USA_2004,40.193496,-75.369129,Citrullus lanatus,,13.0,1.0,,2004,transects
+anc,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.2758,-74.9987,Citrullus lanatus,,41.0,12.0,,2005,transects
+bar,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.1726,-75.4038,Citrullus lanatus,,45.0,24.0,,2005,transects
+bra,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.3848,-75.2614,Citrullus lanatus,,46.0,1.0,,2005,transects
+bri,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.5273,-75.0688,Citrullus lanatus,,49.0,35.0,,2005,transects
+ced,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.3346,-75.3562,Citrullus lanatus,,54.0,3.0,,2005,transects
+che,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.3104,-74.7155,Citrullus lanatus,,2.0,9.0,,2005,transects
+del,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.2961,-75.1502,Citrullus lanatus,,24.0,26.0,,2005,transects
+ker,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.342,-74.7685,Citrullus lanatus,,38.0,32.0,,2005,transects
+kim,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.1428,-75.5832,Citrullus lanatus,,10.0,5.0,,2005,transects
+lee,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.2653,-74.5641,Citrullus lanatus,,5.0,3.0,,2005,transects
+lit,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.3088,-74.7546,Citrullus lanatus,,76.0,2.0,,2005,transects
+mapa,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.1187,-75.2738,Citrullus lanatus,,24.0,11.0,,2005,transects
+mapb,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.1115,-75.2697,Citrullus lanatus,,67.0,4.0,,2005,transects
+non,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.3173,-75.0579,Citrullus lanatus,,0.0,53.0,,2005,transects
+pea,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.6091,-74.943,Citrullus lanatus,,33.0,11.0,,2005,transects
+pen,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.4362,-75.1721,Citrullus lanatus,,44.0,1.0,,2005,transects
+phi,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.57,-75.1588,Citrullus lanatus,,54.0,33.0,,2005,transects
+ray,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.3189,-75.3741,Citrullus lanatus,,35.0,3.0,,2005,transects
+sanb,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.1472,-75.6046,Citrullus lanatus,,70.0,8.0,,2005,transects
+sun,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.3066,-75.4031,Citrullus lanatus,,44.0,11.0,,2005,transects
+ter,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.3282,-74.7261,Citrullus lanatus,,48.0,0.0,,2005,transects
+tra,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.5651,-75.1816,Citrullus lanatus,,12.0,8.0,,2005,transects
+wat,Rachael_Winfree_Citrullus_lanatus_USA_2005,40.3512,-74.7697,Citrullus lanatus,,85.0,16.0,,2005,transects
+anc,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.2761,-74.9985,Citrullus lanatus,,3.0,16.0,,2007,transects
+bar,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.1726,-75.4044,Citrullus lanatus,,6.0,6.0,,2007,transects
+ced,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.3339,-75.3556,Citrullus lanatus,,3.0,5.0,,2007,transects
+che,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.309,-74.7163,Citrullus lanatus,,7.0,10.0,,2007,transects
+ker,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.3418,-74.7679,Citrullus lanatus,,18.0,5.0,,2007,transects
+kim,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.1432,-75.5836,Citrullus lanatus,,1.0,1.0,,2007,transects
+lit,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.3091,-74.7524,Citrullus lanatus,,12.0,2.0,,2007,transects
+non,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.3173,-75.0571,Citrullus lanatus,,9.0,3.0,,2007,transects
+pea,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.6076,-74.9424,Citrullus lanatus,,2.0,5.0,,2007,transects
+pen,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.4368,-75.1718,Citrullus lanatus,,11.0,12.0,,2007,transects
+phi,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.57,-75.1545,Citrullus lanatus,,4.0,1.0,,2007,transects
+ray,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.3185,-75.3746,Citrullus lanatus,,22.0,0.0,,2007,transects
+san,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.1475,-75.5994,Citrullus lanatus,,9.0,8.0,,2007,transects
+sun,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.3061,-75.4036,Citrullus lanatus,,1.0,4.0,,2007,transects
+tra,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.5673,-75.1863,Citrullus lanatus,,3.0,22.0,,2007,transects
+wat,Rachael_Winfree_Citrullus_lanatus_USA_2007,40.3509,-74.767,Citrullus lanatus,,6.0,15.0,,2007,transects
+bar,Rachael_Winfree_Cucumis_melo_USA_2004,40.171578,-75.403945,Cucumis melo,,14.0,7.0,30.0,2004,transects
+del,Rachael_Winfree_Cucumis_melo_USA_2004,40.296256,-75.150598,Cucumis melo,,9.0,1.0,30.0,2004,transects
+ker,Rachael_Winfree_Cucumis_melo_USA_2004,40.341596,-74.767972,Cucumis melo,,0.0,3.0,30.0,2004,transects
+lee,Rachael_Winfree_Cucumis_melo_USA_2004,40.266198,-74.563116,Cucumis melo,,2.0,0.0,30.0,2004,transects
+lit,Rachael_Winfree_Cucumis_melo_USA_2004,40.30949,-74.752612,Cucumis melo,,3.0,2.0,30.0,2004,transects
+map,Rachael_Winfree_Cucumis_melo_USA_2004,40.118056,-75.270109,Cucumis melo,,7.0,3.0,30.0,2004,transects
+non,Rachael_Winfree_Cucumis_melo_USA_2004,40.318046,-75.058363,Cucumis melo,,2.0,2.0,30.0,2004,transects
+pen,Rachael_Winfree_Cucumis_melo_USA_2004,40.436941,-75.173595,Cucumis melo,,3.0,0.0,30.0,2004,transects
+phi,Rachael_Winfree_Cucumis_melo_USA_2004,40.572263,-75.159815,Cucumis melo,,0.0,16.0,30.0,2004,transects
+ray,Rachael_Winfree_Cucumis_melo_USA_2004,40.318463,-75.374531,Cucumis melo,,2.0,0.0,30.0,2004,transects
+spr,Rachael_Winfree_Cucumis_melo_USA_2004,40.381194,-74.758451,Cucumis melo,,7.0,13.0,30.0,2004,transects
+ter,Rachael_Winfree_Cucumis_melo_USA_2004,40.328383,-74.726315,Cucumis melo,,1.0,3.0,30.0,2004,transects
+tra,Rachael_Winfree_Cucumis_melo_USA_2004,40.565136,-75.184283,Cucumis melo,,11.0,5.0,30.0,2004,transects
+1,Rachael_Winfree_Malus_Domestica_USA_2004,40.32,-74.72,Malus domestica,,23.0,1.0,,2004,sweep net
+2,Rachael_Winfree_Malus_Domestica_USA_2004,40.33,-74.73,Malus domestica,,1.0,0.0,,2004,sweep net
+3,Rachael_Winfree_Malus_Domestica_USA_2004,40.4,-74.68,Malus domestica,,2.0,0.0,,2004,sweep net
+4,Rachael_Winfree_Malus_Domestica_USA_2004,40.423,-74.462,Malus domestica,,19.0,4.0,,2004,sweep net
+5,Rachael_Winfree_Malus_Domestica_USA_2004,40.53,-74.11,Malus domestica,,1.0,0.0,,2004,sweep net
+6,Rachael_Winfree_Malus_Domestica_USA_2004,40.555,-74.96,Malus domestica,,1.0,0.0,,2004,sweep net
+7,Rachael_Winfree_Malus_Domestica_USA_2004,40.56,-74.96,Malus domestica,,11.0,1.0,,2004,sweep net
+8,Rachael_Winfree_Malus_Domestica_USA_2004,40.568,-74.966,Malus domestica,,0.0,1.0,,2004,sweep net
+9,Rachael_Winfree_Malus_Domestica_USA_2004,40.57,-74.97,Malus domestica,,4.0,1.0,,2004,sweep net
+10,Rachael_Winfree_Malus_Domestica_USA_2004,40.63,-75.113,Malus domestica,,1.0,0.0,,2004,sweep net
+11,Rachael_Winfree_Malus_Domestica_USA_2004,40.67,-74.75,Malus domestica,,17.0,0.0,,2004,sweep net
+12,Rachael_Winfree_Malus_Domestica_USA_2004,40.69,-74.45,Malus domestica,,6.0,2.0,,2004,sweep net
+13,Rachael_Winfree_Malus_Domestica_USA_2004,40.73,-74.84,Malus domestica,,5.0,0.0,,2004,sweep net
+14,Rachael_Winfree_Malus_Domestica_USA_2004,40.734,-74.837,Malus domestica,,1.0,0.0,,2004,sweep net
+15,Rachael_Winfree_Malus_Domestica_USA_2004,40.738,-74.539,Malus domestica,,1.0,0.0,,2004,sweep net
+16,Rachael_Winfree_Malus_Domestica_USA_2004,40.74,-74.54,Malus domestica,,13.0,3.0,,2004,sweep net
+aun,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.393329,-74.745286,Solanum lycopersicum,,4.0,0.0,30.0,2004,transects
+bar,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.171394,-75.405438,Solanum lycopersicum,,4.0,2.0,30.0,2004,transects
+che,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.311069,-74.716323,Solanum lycopersicum,,7.0,6.0,30.0,2004,transects
+del,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.295893,-75.150872,Solanum lycopersicum,,3.0,0.0,30.0,2004,transects
+hop,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.399062,-74.759854,Solanum lycopersicum,,19.0,2.0,30.0,2004,transects
+ker,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.341842,-74.768246,Solanum lycopersicum,,5.0,1.0,30.0,2004,transects
+mis,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.53801,-74.921152,Solanum lycopersicum,,9.0,0.0,30.0,2004,transects
+pen,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.437309,-75.172804,Solanum lycopersicum,,5.0,0.0,30.0,2004,transects
+phi,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.572189,-75.153653,Solanum lycopersicum,,1.0,2.0,30.0,2004,transects
+ray,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.318942,-75.374323,Solanum lycopersicum,,3.0,1.0,30.0,2004,transects
+sny,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.55734,-74.962348,Solanum lycopersicum,,18.0,0.0,30.0,2004,transects
+sun,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.305742,-75.404814,Solanum lycopersicum,,1.0,0.0,30.0,2004,transects
+trad,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.630643,-75.111375,Solanum lycopersicum,,6.0,0.0,30.0,2004,transects
+wat,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.349836,-74.766848,Solanum lycopersicum,,2.0,1.0,30.0,2004,transects
+wil,Rachael_Winfree_Solanum_lycopersicum_USA_2004,40.19379,-75.369415,Solanum lycopersicum,,16.0,1.0,30.0,2004,transects
+bar,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.1726,-75.4038,Solanum lycopersicum,,4.0,4.0,30.0,2005,transects
+bra,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.3848,-75.2614,Solanum lycopersicum,,7.0,3.0,30.0,2005,transects
+bri,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.5273,-75.0688,Solanum lycopersicum,,5.0,4.0,30.0,2005,transects
+ker,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.342,-74.7685,Solanum lycopersicum,,6.0,0.0,30.0,2005,transects
+kim,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.1428,-75.5832,Solanum lycopersicum,,2.0,1.0,30.0,2005,transects
+lee,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.2653,-74.5641,Solanum lycopersicum,,0.0,1.0,30.0,2005,transects
+lit,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.3088,-74.7546,Solanum lycopersicum,,4.0,0.0,30.0,2005,transects
+pen,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.4362,-75.1721,Solanum lycopersicum,,4.0,0.0,30.0,2005,transects
+phi,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.57,-75.1588,Solanum lycopersicum,,3.0,3.0,30.0,2005,transects
+ray,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.3189,-75.3741,Solanum lycopersicum,,4.0,13.0,30.0,2005,transects
+ter,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.3282,-74.7261,Solanum lycopersicum,,3.0,0.0,30.0,2005,transects
+tra,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.5651,-75.1816,Solanum lycopersicum,,3.0,4.0,30.0,2005,transects
+wat,Rachael_Winfree_Solanum_lycopersicum_USA_2005,40.3512,-74.7697,Solanum lycopersicum,,5.0,3.0,30.0,2005,transects
+AH,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.547799,-74.780821,Vaccinium corymbosum,,1.0,0.0,180.0,2010,transects
+AML,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.478388,-74.727364,Vaccinium corymbosum,,4.0,2.0,180.0,2010,transects
+BER,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.611428,-74.818625,Vaccinium corymbosum,,7.0,0.0,180.0,2010,transects
+DEL,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.644322,-74.751574,Vaccinium corymbosum,,1.0,0.0,180.0,2010,transects
+DEM,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.663066,-74.733103,Vaccinium corymbosum,,12.0,3.0,180.0,2010,transects
+DH,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.662869,-74.771815,Vaccinium corymbosum,,11.0,1.0,180.0,2010,transects
+DON,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.64897,-74.737931,Vaccinium corymbosum,,3.0,0.0,180.0,2010,transects
+GLO,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.653023,-74.762916,Vaccinium corymbosum,,31.0,0.0,180.0,2010,transects
+GRA,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.684197,-74.816985,Vaccinium corymbosum,,2.0,1.0,180.0,2010,transects
+LEE,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.783986,-74.847539,Vaccinium corymbosum,,23.0,5.0,180.0,2010,transects
+MAC,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.706868,-74.756514,Vaccinium corymbosum,,1.0,12.0,180.0,2010,transects
+MBR,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.644437,-74.768434,Vaccinium corymbosum,,8.0,0.0,180.0,2010,transects
+MIL,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.791671,-74.784838,Vaccinium corymbosum,,13.0,9.0,180.0,2010,transects
+MOO,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.81459,-74.641169,Vaccinium corymbosum,,16.0,10.0,180.0,2010,transects
+RS,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.564237,-74.683863,Vaccinium corymbosum,,6.0,1.0,180.0,2010,transects
+WHA,Rachael_Winfree_Vaccinium_corymbosum_USA_2010,39.764943,-74.729036,Vaccinium corymbosum,,31.0,19.0,180.0,2010,transects
+AH,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.547799,-74.780821,Vaccinium corymbosum,,15.0,2.0,180.0,2011,transects
+AML,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.478388,-74.727364,Vaccinium corymbosum,,3.0,0.0,180.0,2011,transects
+BER,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.611428,-74.818625,Vaccinium corymbosum,,15.0,0.0,180.0,2011,transects
+DEL,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.644322,-74.751574,Vaccinium corymbosum,,2.0,0.0,180.0,2011,transects
+DEM,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.663066,-74.733103,Vaccinium corymbosum,,28.0,14.0,180.0,2011,transects
+DH,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.662869,-74.771815,Vaccinium corymbosum,,7.0,2.0,180.0,2011,transects
+DON,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.64897,-74.737931,Vaccinium corymbosum,,10.0,0.0,180.0,2011,transects
+GLO,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.653023,-74.762916,Vaccinium corymbosum,,22.0,0.0,180.0,2011,transects
+GRA,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.684197,-74.816985,Vaccinium corymbosum,,12.0,2.0,180.0,2011,transects
+LEE,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.783986,-74.847539,Vaccinium corymbosum,,47.0,5.0,180.0,2011,transects
+MAC,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.706868,-74.756514,Vaccinium corymbosum,,21.0,19.0,180.0,2011,transects
+MBR,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.644437,-74.768434,Vaccinium corymbosum,,4.0,1.0,180.0,2011,transects
+MIL,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.791671,-74.784838,Vaccinium corymbosum,,41.0,10.0,180.0,2011,transects
+MOO,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.81459,-74.641169,Vaccinium corymbosum,,44.0,18.0,180.0,2011,transects
+RS,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.564237,-74.683863,Vaccinium corymbosum,,5.0,1.0,180.0,2011,transects
+WHA,Rachael_Winfree_Vaccinium_corymbosum_USA_2011,39.764943,-74.729036,Vaccinium corymbosum,,26.0,20.0,180.0,2011,transects
+BU,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.908426,-74.694853,Vaccinium macrocarpon,,27.0,62.0,240.0,2009,transects
+HC,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.724777,-74.544536,Vaccinium macrocarpon,,51.0,59.0,240.0,2009,transects
+HN,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.763725,-74.519458,Vaccinium macrocarpon,,33.0,56.0,240.0,2009,transects
+HP,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.74966,-74.521564,Vaccinium macrocarpon,,26.0,54.0,240.0,2009,transects
+HR,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.736335,-74.539535,Vaccinium macrocarpon,,28.0,26.0,240.0,2009,transects
+HS,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.72873,-74.532794,Vaccinium macrocarpon,,6.0,25.0,240.0,2009,transects
+HU,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.739291,-74.521881,Vaccinium macrocarpon,,29.0,24.0,240.0,2009,transects
+JE,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.940202,-74.485499,Vaccinium macrocarpon,,15.0,78.0,240.0,2009,transects
+JN,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.95018,-74.502903,Vaccinium macrocarpon,,12.0,27.0,240.0,2009,transects
+JW,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.938123,-74.500473,Vaccinium macrocarpon,,13.0,46.0,240.0,2009,transects
+LC,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.654163,-74.506836,Vaccinium macrocarpon,,34.0,90.0,240.0,2009,transects
+LE,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.753874,-74.543119,Vaccinium macrocarpon,,4.0,28.0,240.0,2009,transects
+MO,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.81314,-74.651381,Vaccinium macrocarpon,,13.0,64.0,240.0,2009,transects
+TH,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.926812,-74.628863,Vaccinium macrocarpon,,24.0,73.0,240.0,2009,transects
+UC,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.68076,-74.498111,Vaccinium macrocarpon,,34.0,101.0,240.0,2009,transects
+WH,Rachael_Winfree_Vaccinium_macrocarpon_USA_2009,39.763911,-74.726513,Vaccinium macrocarpon,,47.0,17.0,240.0,2009,transects
+BU,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.908426,-74.694853,Vaccinium macrocarpon,,28.0,132.0,240.0,2010,transects
+HC,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.724777,-74.544536,Vaccinium macrocarpon,,67.0,65.0,240.0,2010,transects
+HN,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.763725,-74.519458,Vaccinium macrocarpon,,46.0,67.0,240.0,2010,transects
+HP,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.74966,-74.521564,Vaccinium macrocarpon,,17.0,79.0,240.0,2010,transects
+HR,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.736335,-74.539535,Vaccinium macrocarpon,,33.0,67.0,240.0,2010,transects
+HS,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.72873,-74.532794,Vaccinium macrocarpon,,14.0,18.0,240.0,2010,transects
+HU,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.739291,-74.521881,Vaccinium macrocarpon,,16.0,53.0,240.0,2010,transects
+JE,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.940202,-74.485499,Vaccinium macrocarpon,,11.0,134.0,240.0,2010,transects
+JN,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.95018,-74.502903,Vaccinium macrocarpon,,8.0,49.0,240.0,2010,transects
+JW,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.938123,-74.500473,Vaccinium macrocarpon,,12.0,83.0,240.0,2010,transects
+LC,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.654163,-74.506836,Vaccinium macrocarpon,,26.0,150.0,240.0,2010,transects
+LE,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.753874,-74.543119,Vaccinium macrocarpon,,13.0,19.0,240.0,2010,transects
+MO,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.81314,-74.651381,Vaccinium macrocarpon,,94.0,118.0,240.0,2010,transects
+TH,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.926812,-74.628863,Vaccinium macrocarpon,,36.0,36.0,240.0,2010,transects
+UC,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.68076,-74.498111,Vaccinium macrocarpon,,67.0,98.0,240.0,2010,transects
+WH,Rachael_Winfree_Vaccinium_macrocarpon_USA_2010,39.763911,-74.726513,Vaccinium macrocarpon,,7.0,90.0,240.0,2010,transects
+pond1,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4425166666667,13.7913333333333,Fragaria x ananassa,,9.0,0.0,,2014,sweep net
+seminatural1,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4425166666667,13.7913333333333,Fragaria x ananassa,,11.0,0.0,,2014,sweep net
+control1,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4425166666667,13.7913333333333,Fragaria x ananassa,,3.0,0.0,,2014,sweep net
+pond2,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.445,13.8185333333333,Fragaria x ananassa,,13.0,0.0,,2014,sweep net
+seminatural2,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.445,13.8185333333333,Fragaria x ananassa,,9.0,0.0,,2014,sweep net
+control2,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.445,13.8185333333333,Fragaria x ananassa,,2.0,0.0,,2014,sweep net
+pond3,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.44475,13.8136,Fragaria x ananassa,,8.0,0.0,,2014,sweep net
+seminatural3,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.44475,13.8136,Fragaria x ananassa,,5.0,0.0,,2014,sweep net
+control3,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.44475,13.8136,Fragaria x ananassa,,12.0,0.0,,2014,sweep net
+pond4,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4481166666667,13.71875,Fragaria x ananassa,,8.0,0.0,,2014,sweep net
+seminatural4,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4481166666667,13.71875,Fragaria x ananassa,,6.0,0.0,,2014,sweep net
+control4,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4481166666667,13.71875,Fragaria x ananassa,,3.0,0.0,,2014,sweep net
+pond5,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4448833333333,13.6721166666667,Fragaria x ananassa,,13.0,0.0,,2014,sweep net
+seminatural5,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4448833333333,13.6721166666667,Fragaria x ananassa,,6.0,0.0,,2014,sweep net
+control5,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4448833333333,13.6721166666667,Fragaria x ananassa,,3.0,0.0,,2014,sweep net
+pond6,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4503,13.67155,Fragaria x ananassa,,2.0,0.0,,2014,sweep net
+seminatural6,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4503,13.67155,Fragaria x ananassa,,2.0,0.0,,2014,sweep net
+control6,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4503,13.67155,Fragaria x ananassa,,1.0,0.0,,2014,sweep net
+pond7,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4478166666667,13.6885666666667,Fragaria x ananassa,,3.0,0.0,,2014,sweep net
+seminatural7,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4478166666667,13.6885666666667,Fragaria x ananassa,,4.0,0.0,,2014,sweep net
+control7,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.4478166666667,13.6885666666667,Fragaria x ananassa,,3.0,0.0,,2014,sweep net
+pond8,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.6653166666667,13.2037833333333,Fragaria x ananassa,,5.0,0.0,,2014,sweep net
+seminatural8,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.6653166666667,13.2037833333333,Fragaria x ananassa,,11.0,0.0,,2014,sweep net
+control8,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.6653166666667,13.2037833333333,Fragaria x ananassa,,7.0,0.0,,2014,sweep net
+pond9,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.7218666666667,13.2233333333333,Fragaria x ananassa,,13.0,0.0,,2014,sweep net
+seminatural9,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.7218666666667,13.2233333333333,Fragaria x ananassa,,5.0,0.0,,2014,sweep net
+control9,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.7218666666667,13.2233333333333,Fragaria x ananassa,,8.0,0.0,,2014,sweep net
+pond10,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.7384833333333,13.2489333333333,Fragaria x ananassa,,3.0,0.0,,2014,sweep net
+seminatural10,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.7384833333333,13.2489333333333,Fragaria x ananassa,,14.0,0.0,,2014,sweep net
+control10,Rebecca_Steward_Fragaria_ananassa_Sweden_2014,55.7384833333333,13.2489333333333,Fragaria x ananassa,,1.0,0.0,,2014,sweep net
+A1,Ruan_Veldtman_Helianthus_annuus_South_Africa_2011,-24.99804,28.54212,Helianthus annuus,conventional,48.0,0.0,136.0,2011,sweep net
+A2,Ruan_Veldtman_Helianthus_annuus_South_Africa_2011,-25.0084,28.54034,Helianthus annuus,conventional,59.0,0.0,104.0,2011,sweep net
+A3,Ruan_Veldtman_Helianthus_annuus_South_Africa_2011,-25.03055,28.50256,Helianthus annuus,conventional,24.0,0.0,134.0,2011,sweep net
+A4,Ruan_Veldtman_Helianthus_annuus_South_Africa_2011,-25.01007,28.39907,Helianthus annuus,conventional,3.0,0.0,140.0,2011,sweep net
+A5,Ruan_Veldtman_Helianthus_annuus_South_Africa_2011,-25.03486,28.40107,Helianthus annuus,conventional,4.0,0.0,102.0,2011,sweep net
+N1,Ruan_Veldtman_Helianthus_annuus_South_Africa_2011,-25.01626,28.48907,Helianthus annuus,conventional,110.0,0.0,153.0,2011,sweep net
+N2,Ruan_Veldtman_Helianthus_annuus_South_Africa_2011,-24.94432,28.46757,Helianthus annuus,conventional,32.0,0.0,134.0,2011,sweep net
+N3,Ruan_Veldtman_Helianthus_annuus_South_Africa_2011,-24.94365,28.4476,Helianthus annuus,conventional,22.0,0.0,114.0,2011,sweep net
+N4,Ruan_Veldtman_Helianthus_annuus_South_Africa_2011,-24.92749,28.50247,Helianthus annuus,conventional,11.0,0.0,114.0,2011,sweep net
+N5,Ruan_Veldtman_Helianthus_annuus_South_Africa_2011,-24.9285,28.56098,Helianthus annuus,conventional,22.0,0.0,139.0,2011,sweep net
+1,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.596337,14.066991,Brassica napus,conventional,14.0,8.0,80.0,2011,sweep net + focal observations
+2,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.589944,14.018528,Brassica napus,conventional,5.0,3.0,80.0,2011,sweep net + focal observations
+5,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.893511,14.130531,Brassica napus,conventional,2.0,1.0,80.0,2011,sweep net + focal observations
+6,Sandra_Lindstrom_Brassica_napus_Sweden_2011,56.130065,13.102656,Brassica napus,conventional,5.0,9.0,80.0,2011,sweep net + focal observations
+7,Sandra_Lindstrom_Brassica_napus_Sweden_2011,56.214972,13.006222,Brassica napus,conventional,6.0,35.0,80.0,2011,sweep net + focal observations
+8,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.724425,13.516826,Brassica napus,conventional,6.0,4.0,80.0,2011,sweep net + focal observations
+10,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.740348,13.4244,Brassica napus,conventional,7.0,8.0,80.0,2011,sweep net + focal observations
+11,Sandra_Lindstrom_Brassica_napus_Sweden_2011,56.101285,14.171707,Brassica napus,conventional,4.0,25.0,80.0,2011,sweep net + focal observations
+12,Sandra_Lindstrom_Brassica_napus_Sweden_2011,56.161395,14.180455,Brassica napus,conventional,5.0,54.0,80.0,2011,sweep net + focal observations
+13,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.824751,13.216125,Brassica napus,conventional,15.0,0.0,80.0,2011,sweep net + focal observations
+14,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.431039,13.051673,Brassica napus,conventional,6.0,2.0,80.0,2011,sweep net + focal observations
+15,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.524448,14.202363,Brassica napus,conventional,2.0,0.0,80.0,2011,sweep net + focal observations
+16,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.536656,14.127874,Brassica napus,conventional,1.0,4.0,80.0,2011,sweep net + focal observations
+17,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.963048,12.961272,Brassica napus,conventional,7.0,4.0,80.0,2011,sweep net + focal observations
+18,Sandra_Lindstrom_Brassica_napus_Sweden_2011,56.170095,12.819199,Brassica napus,conventional,8.0,0.0,80.0,2011,sweep net + focal observations
+19,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.50471,14.073645,Brassica napus,conventional,4.0,4.0,80.0,2011,sweep net + focal observations
+20,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.496097,14.135217,Brassica napus,conventional,1.0,0.0,80.0,2011,sweep net + focal observations
+21,Sandra_Lindstrom_Brassica_napus_Sweden_2011,56.210671,12.951719,Brassica napus,conventional,2.0,2.0,80.0,2011,sweep net + focal observations
+22,Sandra_Lindstrom_Brassica_napus_Sweden_2011,56.007435,12.983124,Brassica napus,conventional,5.0,2.0,80.0,2011,sweep net + focal observations
+23,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.719082,13.556341,Brassica napus,conventional,4.0,2.0,80.0,2011,sweep net + focal observations
+24,Sandra_Lindstrom_Brassica_napus_Sweden_2011,55.572256,13.144224,Brassica napus,conventional,6.0,1.0,80.0,2011,sweep net + focal observations
+25,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.586959,14.027641,Brassica napus,conventional,2.0,2.0,100.0,2012,sweep net + focal observations
+27,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.745538,13.423749,Brassica napus,conventional,5.0,0.0,100.0,2012,sweep net + focal observations
+28,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.735674,13.478173,Brassica napus,conventional,0.0,2.0,100.0,2012,sweep net + focal observations
+29,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.560066,14.060954,Brassica napus,conventional,8.0,1.0,100.0,2012,sweep net + focal observations
+30,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.629739,14.036961,Brassica napus,conventional,3.0,3.0,80.0,2012,sweep net + focal observations
+31,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.622753,13.867227,Brassica napus,conventional,5.0,0.0,100.0,2012,sweep net + focal observations
+32,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.629259,13.835226,Brassica napus,conventional,6.0,1.0,100.0,2012,sweep net + focal observations
+33,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.948558,14.209685,Brassica napus,conventional,0.0,4.0,100.0,2012,sweep net + focal observations
+34,Sandra_Lindstrom_Brassica_napus_Sweden_2012,56.032518,14.232756,Brassica napus,conventional,4.0,1.0,100.0,2012,sweep net + focal observations
+35,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.537646,14.126073,Brassica napus,conventional,1.0,0.0,100.0,2012,sweep net + focal observations
+37,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.848507,13.153327,Brassica napus,conventional,3.0,1.0,100.0,2012,sweep net + focal observations
+38,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.875184,13.174234,Brassica napus,conventional,10.0,0.0,100.0,2012,sweep net + focal observations
+39,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.96951,12.955495,Brassica napus,conventional,2.0,4.0,100.0,2012,sweep net + focal observations
+40,Sandra_Lindstrom_Brassica_napus_Sweden_2012,56.000034,12.895937,Brassica napus,conventional,1.0,1.0,100.0,2012,sweep net + focal observations
+41,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.500109,14.135601,Brassica napus,conventional,1.0,0.0,100.0,2012,sweep net + focal observations
+42,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.502608,14.064763,Brassica napus,conventional,2.0,0.0,100.0,2012,sweep net + focal observations
+43,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.517158,12.958978,Brassica napus,conventional,7.0,1.0,100.0,2012,sweep net + focal observations
+44,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.450888,13.010098,Brassica napus,conventional,0.0,1.0,100.0,2012,sweep net + focal observations
+45,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.802405,13.068518,Brassica napus,conventional,1.0,0.0,100.0,2012,sweep net + focal observations
+46,Sandra_Lindstrom_Brassica_napus_Sweden_2012,55.946531,12.996031,Brassica napus,conventional,18.0,1.0,100.0,2012,sweep net + focal observations
+Chris,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.78231923,-96.8034964,Gossypium hirsutum,conventional,50.0,0.0,180.0,2014,sweep net
+House.Block,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.30436455,-97.41532738,Gossypium hirsutum,conventional,24.0,0.0,180.0,2014,sweep net
+JJ.35,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.40800229,-96.90214143,Gossypium hirsutum,conventional,4.0,0.0,180.0,2014,sweep net
+JJ.Aransas,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.36358956,-96.8181205,Gossypium hirsutum,conventional,25.0,0.0,180.0,2014,sweep net
+JJ.Home,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.3646632,-96.86211152,Gossypium hirsutum,conventional,7.0,0.0,180.0,2014,sweep net
+JR.Corner,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.32352668,-96.93442543,Gossypium hirsutum,conventional,12.0,0.0,180.0,2014,sweep net
+Ken.2014,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.78678028,-96.84345309,Gossypium hirsutum,conventional,21.0,0.0,180.0,2014,sweep net
+New.Ground,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.30212708,-97.38016764,Gossypium hirsutum,conventional,94.0,1.0,180.0,2014,sweep net
+South.Clarkson,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.28455026,-97.38604168,Gossypium hirsutum,conventional,77.0,0.0,180.0,2014,sweep net
+South.Floerke,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.31805642,-97.38834565,Gossypium hirsutum,conventional,56.0,0.0,180.0,2014,sweep net
+Tom.1,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.73981648,-96.86173259,Gossypium hirsutum,conventional,25.0,0.0,180.0,2014,sweep net
+Tom.2,Sarah_Cusser_Gossypium_hirsutum_USA_2014,28.71140291,-96.92031951,Gossypium hirsutum,conventional,39.0,1.0,180.0,2014,sweep net
+a,Saul_A_Cunningham_Brassica_napus_Australia_2006,-34.3833333333333,148.683333333333,Brassica napus,conventional,448.00000006,0.0,221.0,2006,transects
+b,Saul_A_Cunningham_Brassica_napus_Australia_2006,-34.3,148.733333333333,Brassica napus,conventional,240.000000012,0.0,234.0,2006,transects
+c,Saul_A_Cunningham_Brassica_napus_Australia_2006,-34.4,148.683333333333,Brassica napus,conventional,81.999999994,0.0,143.0,2006,transects
+d,Saul_A_Cunningham_Brassica_napus_Australia_2006,-34.4666666666667,148.6,Brassica napus,conventional,14.999999994,0.0,117.0,2006,transects
+e,Saul_A_Cunningham_Brassica_napus_Australia_2006,-34.5333333333333,148.666666666667,Brassica napus,conventional,70.0,0.0,455.0,2006,transects
+f,Saul_A_Cunningham_Brassica_napus_Australia_2006,-34.4833333333333,148.566666666667,Brassica napus,conventional,89.0,0.0,208.0,2006,transects
+AUS-EGI1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.2200393676758,-3.61456990242004,Helianthus annuus,conventional,6.0,0.0,342.0,2017,focal observations
+AUS-EGI2_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.2371406555176,-3.5623300075531,Helianthus annuus,conventional,9.0,0.0,314.0,2017,focal observations
+AUS-NON1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.2221794128418,-3.62108993530273,Helianthus annuus,conventional,1.0,0.0,252.0,2017,focal observations
+MEL-EGI1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.4169502258301,-4.31999015808105,Helianthus annuus,conventional,10.0,4.0,377.0,2017,focal observations
+MEL-NGI1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.399730682373,-4.27059984207153,Helianthus annuus,conventional,7.0,4.0,383.0,2017,focal observations
+MEL-NON1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.403881072998,-4.26730012893677,Helianthus annuus,conventional,1.0,3.0,320.0,2017,focal observations
+PRE-EGI1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.2010192871094,-3.87654995918274,Helianthus annuus,conventional,2.0,0.0,300.0,2017,focal observations
+PRE-EGI2_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.1875915527344,-3.82961988449097,Helianthus annuus,conventional,9.0,0.0,334.0,2017,focal observations
+PRE-NON1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.2097702026367,-3.88255000114441,Helianthus annuus,conventional,1.0,1.0,289.0,2017,focal observations
+RED-EGI1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.471549987793,-3.10825991630554,Helianthus annuus,conventional,3.0,5.0,290.0,2017,focal observations
+RED-EGI2_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.4618301391602,-3.1055600643158,Helianthus annuus,conventional,12.0,4.0,276.0,2017,focal observations
+RED-NGI1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.4804611206055,-3.10335993766785,Helianthus annuus,conventional,2.0,1.0,409.0,2017,focal observations
+RED-NON1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,42.4808082580566,-3.10787010192871,Helianthus annuus,conventional,12.0,3.0,321.0,2017,focal observations
+VIL-EGI1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,41.9302597045898,-3.88073992729187,Helianthus annuus,conventional,5.0,1.0,384.0,2017,focal observations
+VIL-EGI2_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,41.9387702941895,-3.91416001319885,Helianthus annuus,conventional,5.0,0.0,375.0,2017,focal observations
+VIL-NGI1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,41.9380187988281,-3.8450300693512,Helianthus annuus,conventional,4.0,0.0,316.0,2017,focal observations
+VIL-NON1_2017,Silvia_Castro_Helianthus_annuus_Spain_2017,41.9396095275879,-3.85509991645813,Helianthus annuus,conventional,4.0,0.0,385.0,2017,focal observations
+AUS-EGI1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.2200584411621,-3.61490988731384,Helianthus annuus,conventional,10.0,0.0,233.0,2018,focal observations
+AUS-EGI2_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.2370681762695,-3.56196999549866,Helianthus annuus,conventional,1.0,3.0,285.0,2018,focal observations
+AUS-NGI1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.2391204833984,-3.56858992576599,Helianthus annuus,conventional,1.0,1.0,387.0,2018,focal observations
+AUS-NON1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.2273788452148,-3.62284994125366,Helianthus annuus,conventional,3.0,0.0,320.0,2018,focal observations
+MEL-EGI1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.4169883728027,-4.32018995285034,Helianthus annuus,conventional,2.0,1.0,284.0,2018,focal observations
+MEL-NGI1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.4546813964844,-4.24151992797852,Helianthus annuus,conventional,3.0,4.0,339.0,2018,focal observations
+MEL-NON1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.3845291137695,-4.24806022644043,Helianthus annuus,conventional,2.0,1.0,357.0,2018,focal observations
+PRE-EGI2_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.1873016357422,-3.83000993728638,Helianthus annuus,conventional,1.0,0.0,200.0,2018,focal observations
+PRE-NGI1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.1771697998047,-3.83527994155884,Helianthus annuus,conventional,3.0,1.0,321.0,2018,focal observations
+PRE-NON1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.2069511413574,-3.86470007896423,Helianthus annuus,conventional,1.0,0.0,321.0,2018,focal observations
+RED-EGI1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.4714508056641,-3.10807991027832,Helianthus annuus,conventional,5.0,19.0,195.0,2018,focal observations
+RED-EGI2_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.4617004394531,-3.10559010505676,Helianthus annuus,conventional,5.0,96.0,280.0,2018,focal observations
+RED-NGI1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.4639511108398,-3.11277008056641,Helianthus annuus,conventional,5.0,75.0,369.0,2018,focal observations
+RED-NON1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,42.4503707885742,-3.11188006401062,Helianthus annuus,conventional,0.0,105.0,320.0,2018,focal observations
+VIL-EGI1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,41.9299697875977,-3.88045001029968,Helianthus annuus,conventional,3.0,1.0,281.0,2018,focal observations
+VIL-EGI2_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,41.9389801025391,-3.91416001319885,Helianthus annuus,conventional,3.0,4.0,210.0,2018,focal observations
+VIL-NGI1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,41.9250984191895,-3.92553997039795,Helianthus annuus,conventional,3.0,2.0,315.0,2018,focal observations
+VIL-NON1_2018,Silvia_Castro_Helianthus_annuus_Spain_2018,41.9201507568359,-3.92223000526428,Helianthus annuus,conventional,3.0,3.0,326.0,2018,focal observations
+UK1,Simon_Potts_Vicia_faba_UK_2005,51.60611743,-0.922647887,Vicia faba,conventional,0.0,4.0,,2005,transects
+UK10,Simon_Potts_Vicia_faba_UK_2005,51.56583333,-1.404444444,Vicia faba,conventional,1.0,7.0,,2005,transects
+UK2,Simon_Potts_Vicia_faba_UK_2005,51.59605473,-1.00518756,Vicia faba,conventional,2.0,18.0,,2005,transects
+UK3,Simon_Potts_Vicia_faba_UK_2005,51.4137184,-1.280954732,Vicia faba,conventional,0.0,1.0,,2005,transects
+UK4,Simon_Potts_Vicia_faba_UK_2005,51.37410504,-1.025811658,Vicia faba,conventional,2.0,4.0,,2005,transects
+UK5,Simon_Potts_Vicia_faba_UK_2005,51.63855379,-1.033162478,Vicia faba,conventional,0.0,11.0,,2005,transects
+UK6,Simon_Potts_Vicia_faba_UK_2005,51.52910488,-1.328157573,Vicia faba,conventional,5.0,13.0,,2005,transects
+UK7,Simon_Potts_Vicia_faba_UK_2005,51.70090625,-1.520986138,Vicia faba,conventional,0.0,15.0,,2005,transects
+UK8,Simon_Potts_Vicia_faba_UK_2005,51.57394151,-1.480470686,Vicia faba,conventional,0.0,8.0,,2005,transects
+UK9,Simon_Potts_Vicia_faba_UK_2005,51.51361111,-1.430277778,Vicia faba,conventional,0.0,2.0,,2005,transects
+bal,Smitha_Krishnan_Coffea_canephora_India_2007,12.091125,75.988587,Coffea canephora,conventional,78.0,0.0,270.0,2007,focal observations
+bas,Smitha_Krishnan_Coffea_canephora_India_2007,12.10022,75.9904,Coffea canephora,conventional,9.0,0.0,270.0,2007,focal observations
+baso,Smitha_Krishnan_Coffea_canephora_India_2007,12.0988,75.99071,Coffea canephora,conventional,22.0,0.0,180.0,2007,focal observations
+be,Smitha_Krishnan_Coffea_canephora_India_2007,12.10932,76.01263,Coffea canephora,conventional,3.0,0.0,180.0,2007,focal observations
+chl,Smitha_Krishnan_Coffea_canephora_India_2007,12.1016833333333,75.9613,Coffea canephora,conventional,15.0,0.0,270.0,2007,focal observations
+chs,Smitha_Krishnan_Coffea_canephora_India_2007,12.106761,75.961584,Coffea canephora,conventional,16.0,0.0,270.0,2007,focal observations
+devpur,Smitha_Krishnan_Coffea_canephora_India_2007,12.20735,75.9576166666667,Coffea canephora,conventional,144.0,0.0,225.0,2007,focal observations
+dhm,Smitha_Krishnan_Coffea_canephora_India_2007,12.177747,76.003894,Coffea canephora,conventional,47.0,0.0,270.0,2007,focal observations
+hal,Smitha_Krishnan_Coffea_canephora_India_2007,12.13705,75.93175,Coffea canephora,conventional,47.0,0.0,270.0,2007,focal observations
+has,Smitha_Krishnan_Coffea_canephora_India_2007,12.1447333333333,75.9300833333333,Coffea canephora,conventional,30.0,0.0,270.0,2007,focal observations
+kap,Smitha_Krishnan_Coffea_canephora_India_2007,12.1542,75.9571833333333,Coffea canephora,conventional,26.0,0.0,270.0,2007,focal observations
+kil,Smitha_Krishnan_Coffea_canephora_India_2007,12.145114,75.965714,Coffea canephora,conventional,76.0,0.0,270.0,2007,focal observations
+kis,Smitha_Krishnan_Coffea_canephora_India_2007,12.1419833333333,75.9843833333333,Coffea canephora,conventional,12.0,0.0,270.0,2007,focal observations
+bshbck,Smitha_Krishnan_Coffea_canephora_India_2008,12.0852,75.9017,Coffea canephora,conventional,4.0,0.0,225.0,2008,focal observations
+dha.sulu,Smitha_Krishnan_Coffea_canephora_India_2008,12.174543,76.045192,Coffea canephora,conventional,5.0,0.0,225.0,2008,focal observations
+hardha,Smitha_Krishnan_Coffea_canephora_India_2008,12.05506,76.0046,Coffea canephora,conventional,10.0,0.0,225.0,2008,focal observations
+harkas,Smitha_Krishnan_Coffea_canephora_India_2008,12.0652,75.99213,Coffea canephora,conventional,3.0,0.0,225.0,2008,focal observations
+ichbha,Smitha_Krishnan_Coffea_canephora_India_2008,12.14689,75.90853,Coffea canephora,conventional,35.0,0.0,225.0,2008,focal observations
+kottageri,Smitha_Krishnan_Coffea_canephora_India_2008,12.1117,76.03495,Coffea canephora,conventional,1.0,0.0,225.0,2008,focal observations
+kutnan,Smitha_Krishnan_Coffea_canephora_India_2008,12.10104,75.86985,Coffea canephora,conventional,1.0,0.0,225.0,2008,focal observations
+nal,Smitha_Krishnan_Coffea_canephora_India_2008,12.13184,76.00611,Coffea canephora,conventional,9.0,0.0,225.0,2008,focal observations
+nit,Smitha_Krishnan_Coffea_canephora_India_2008,12.1163,76.05664,Coffea canephora,conventional,18.0,0.0,225.0,2008,focal observations
+polche,Smitha_Krishnan_Coffea_canephora_India_2008,12.277651,75.956483,Coffea canephora,conventional,14.0,0.0,225.0,2008,focal observations
+porpon,Smitha_Krishnan_Coffea_canephora_India_2008,12.03403,75.92679,Coffea canephora,conventional,1.0,0.0,225.0,2008,focal observations
+titbck,Smitha_Krishnan_Coffea_canephora_India_2008,12.21177,76.002385,Coffea canephora,conventional,3.0,0.0,225.0,2008,focal observations
+tittat,Smitha_Krishnan_Coffea_canephora_India_2008,12.2408666666667,76.0124166666667,Coffea canephora,conventional,1.0,0.0,225.0,2008,focal observations
+tshkor,Smitha_Krishnan_Coffea_canephora_India_2008,12.03143,75.98459,Coffea canephora,conventional,2.0,0.0,225.0,2008,focal observations
+tshogr,Smitha_Krishnan_Coffea_canephora_India_2008,12.03702,75.95436,Coffea canephora,conventional,5.0,0.0,225.0,2008,focal observations
+armnew,Smitha_Krishnan_Coffea_canephora_India_2009,12.2383333333333,75.7721333333333,Coffea canephora,conventional,40.0,0.0,375.0,2009,focal observations
+bolnew,Smitha_Krishnan_Coffea_canephora_India_2009,12.228834,75.789863,Coffea canephora,conventional,97.0,0.0,375.0,2009,focal observations
+deviyynew,Smitha_Krishnan_Coffea_canephora_India_2009,12.2593833333333,75.8069333333333,Coffea canephora,conventional,123.0,0.0,375.0,2009,focal observations
+devtatnew,Smitha_Krishnan_Coffea_canephora_India_2009,12.25562,75.79833,Coffea canephora,conventional,16.0,0.0,375.0,2009,focal observations
+hatvannew,Smitha_Krishnan_Coffea_canephora_India_2009,12.1710666666667,75.8763333333333,Coffea canephora,conventional,70.0,0.0,375.0,2009,focal observations
+kottolinew,Smitha_Krishnan_Coffea_canephora_India_2009,12.1845166666667,75.7643333333333,Coffea canephora,conventional,39.0,0.0,375.0,2009,focal observations
+maibatnew,Smitha_Krishnan_Coffea_canephora_India_2009,12.26379,75.79112,Coffea canephora,conventional,14.0,0.0,375.0,2009,focal observations
+maimalnew,Smitha_Krishnan_Coffea_canephora_India_2009,12.2453333333333,75.7671166666667,Coffea canephora,conventional,15.0,0.0,375.0,2009,focal observations
+maimannew,Smitha_Krishnan_Coffea_canephora_India_2009,12.2614833333333,75.7798666666667,Coffea canephora,conventional,5.0,0.0,375.0,2009,focal observations
+kushal org,Smitha_Krishnan_Coffea_canephora_India_2014,12.16945,76.00502,Coffea canephora,organic,6.0,0.0,135.0,2014,focal observations
+bharath,Smitha_Krishnan_Coffea_canephora_India_2014,12.27235,75.92194,Coffea canephora,organic,32.0,0.0,135.0,2014,focal observations
+vasanti,Smitha_Krishnan_Coffea_canephora_India_2014,12.14675,75.94505,Coffea canephora,organic,77.0,0.0,90.0,2014,focal observations
+BBtC org,Smitha_Krishnan_Coffea_canephora_India_2014,12.28536,75.91512,Coffea canephora,organic,20.0,0.0,135.0,2014,focal observations
+karumbaiah,Smitha_Krishnan_Coffea_canephora_India_2014,12.14531,75.9791,Coffea canephora,organic,23.0,0.0,135.0,2014,focal observations
+muthanna,Smitha_Krishnan_Coffea_canephora_India_2014,12.29617,75.89725,Coffea canephora,organic,4.0,0.0,135.0,2014,focal observations
+kushal Nt,Smitha_Krishnan_Coffea_canephora_India_2014,12.18033,76.01575,Coffea canephora,conventional,33.0,0.0,135.0,2014,focal observations
+skanda Nt,Smitha_Krishnan_Coffea_canephora_India_2014,12.21443,75.99288,Coffea canephora,conventional,5.0,0.0,135.0,2014,focal observations
+raju,Smitha_Krishnan_Coffea_canephora_India_2014,12.15116,75.84397,Coffea canephora,conventional,1.0,0.0,135.0,2014,focal observations
+subaiah,Smitha_Krishnan_Coffea_canephora_India_2014,12.26894,75.82188,Coffea canephora,conventional,18.0,0.0,135.0,2014,focal observations
+BBtC conv,Smitha_Krishnan_Coffea_canephora_India_2014,12.29101,75.91398,Coffea canephora,conventional,19.0,0.0,135.0,2014,focal observations
+somanna,Smitha_Krishnan_Coffea_canephora_India_2014,12.1702,75.92939,Coffea canephora,conventional,8.0,0.0,135.0,2014,focal observations
+raja,Smitha_Krishnan_Coffea_canephora_India_2014,12.18323,75.76732,Coffea canephora,conventional,11.0,0.0,135.0,2014,focal observations
+nanda,Smitha_Krishnan_Coffea_canephora_India_2014,12.29073,75.8177,Coffea canephora,conventional,3.0,0.0,135.0,2014,focal observations
+BCK,Smitha_Krishnan_Coffea_canephora_India_2014,12.08561,75.8995,Coffea canephora,conventional,15.0,0.0,135.0,2014,focal observations
+sannu,Smitha_Krishnan_Coffea_canephora_India_2014,12.13277,75.93153,Coffea canephora,conventional,2.0,0.0,135.0,2014,focal observations
+mohan,Smitha_Krishnan_Coffea_canephora_India_2014,12.17165,75.93238,Coffea canephora,conventional,68.0,0.0,135.0,2014,focal observations
+manna,Smitha_Krishnan_Coffea_canephora_India_2014,12.19536,75.77373,Coffea canephora,conventional,1.0,0.0,135.0,2014,focal observations
+skanda SO,Smitha_Krishnan_Coffea_canephora_India_2014,12.22791,75.99079,Coffea canephora,conventional,3.0,0.0,135.0,2014,focal observations
+bopanna,Smitha_Krishnan_Coffea_canephora_India_2014,12.17563,75.9716,Coffea canephora,conventional,4.0,0.0,135.0,2014,focal observations
+chinappa,Smitha_Krishnan_Coffea_canephora_India_2014,12.15526,75.77745,Coffea canephora,conventional,4.0,0.0,135.0,2014,focal observations
+13,Virginie_Boreux_Coffea_canephora_India_2008,12.13271,75.99983,Coffea canephora,conventional,51.0,0.0,750.0,2008,focal observations
+16,Virginie_Boreux_Coffea_canephora_India_2008,12.12848,75.98927,Coffea canephora,conventional,6.0,0.0,600.0,2008,focal observations
+18,Virginie_Boreux_Coffea_canephora_India_2008,12.13937,75.9564,Coffea canephora,conventional,2.0,0.0,600.0,2008,focal observations
+20,Virginie_Boreux_Coffea_canephora_India_2008,12.16691,75.97461,Coffea canephora,conventional,23.0,0.0,750.0,2008,focal observations
+27,Virginie_Boreux_Coffea_canephora_India_2008,12.22384,75.96174,Coffea canephora,conventional,15.0,0.0,600.0,2008,focal observations
+28,Virginie_Boreux_Coffea_canephora_India_2008,12.08721,75.93929,Coffea canephora,conventional,8.0,0.0,450.0,2008,focal observations
+46,Virginie_Boreux_Coffea_canephora_India_2008,12.09618,75.94219,Coffea canephora,conventional,2.0,0.0,450.0,2008,focal observations
+53,Virginie_Boreux_Coffea_canephora_India_2008,12.09439,75.99122,Coffea canephora,conventional,3.0,0.0,600.0,2008,focal observations
+54,Virginie_Boreux_Coffea_canephora_India_2008,12.08687,75.99807,Coffea canephora,conventional,1.0,0.0,600.0,2008,focal observations
+55,Virginie_Boreux_Coffea_canephora_India_2008,12.0969,75.98143,Coffea canephora,conventional,3.0,0.0,600.0,2008,focal observations
+58,Virginie_Boreux_Coffea_canephora_India_2008,12.0866,75.95695,Coffea canephora,conventional,3.0,0.0,600.0,2008,focal observations
+102,Virginie_Boreux_Coffea_canephora_India_2008,12.12463,75.96705,Coffea canephora,conventional,1.0,0.0,450.0,2008,focal observations
+124,Virginie_Boreux_Coffea_canephora_India_2008,12.151,75.96645,Coffea canephora,conventional,1.0,0.0,600.0,2008,focal observations
+140,Virginie_Boreux_Coffea_canephora_India_2008,12.16162,75.98124,Coffea canephora,conventional,2.0,0.0,750.0,2008,focal observations
+162,Virginie_Boreux_Coffea_canephora_India_2008,12.14244,75.93395,Coffea canephora,conventional,2.0,0.0,450.0,2008,focal observations
+176,Virginie_Boreux_Coffea_canephora_India_2008,12.17895,76.00022,Coffea canephora,conventional,6.0,0.0,750.0,2008,focal observations
+185,Virginie_Boreux_Coffea_canephora_India_2008,12.08321,76.01609,Coffea canephora,conventional,1.0,0.0,600.0,2008,focal observations
+216,Virginie_Boreux_Coffea_canephora_India_2008,12.17054,75.85494,Coffea canephora,conventional,2.0,0.0,450.0,2008,focal observations
+220,Virginie_Boreux_Coffea_canephora_India_2008,12.15252,76.01904,Coffea canephora,conventional,1.0,0.0,450.0,2008,focal observations
+222,Virginie_Boreux_Coffea_canephora_India_2008,12.14360107,76.03206338,Coffea canephora,conventional,4.0,0.0,600.0,2008,focal observations
+245,Virginie_Boreux_Coffea_canephora_India_2008,12.1484,76.00171,Coffea canephora,conventional,3.0,0.0,450.0,2008,focal observations
+251,Virginie_Boreux_Coffea_canephora_India_2008,12.03658,75.97446,Coffea canephora,conventional,3.0,0.0,450.0,2008,focal observations
+252,Virginie_Boreux_Coffea_canephora_India_2008,12.03082,76.00204,Coffea canephora,conventional,1.0,0.0,450.0,2008,focal observations
+255,Virginie_Boreux_Coffea_canephora_India_2008,12.1623,75.94164,Coffea canephora,conventional,20.0,0.0,450.0,2008,focal observations
+257,Virginie_Boreux_Coffea_canephora_India_2008,12.17546,75.96359,Coffea canephora,conventional,5.0,0.0,600.0,2008,focal observations
+262,Virginie_Boreux_Coffea_canephora_India_2008,12.11183,75.9624,Coffea canephora,conventional,7.0,0.0,600.0,2008,focal observations
+263,Virginie_Boreux_Coffea_canephora_India_2008,12.10691,75.982,Coffea canephora,conventional,2.0,0.0,600.0,2008,focal observations
+264,Virginie_Boreux_Coffea_canephora_India_2008,12.10652,76.00268,Coffea canephora,conventional,3.0,0.0,600.0,2008,focal observations
+265,Virginie_Boreux_Coffea_canephora_India_2008,12.10752,76.01521,Coffea canephora,conventional,12.0,0.0,600.0,2008,focal observations
+268,Virginie_Boreux_Coffea_canephora_India_2008,12.05073,76.03168,Coffea canephora,conventional,12.0,0.0,900.0,2008,focal observations
+274,Virginie_Boreux_Coffea_canephora_India_2008,12.12954,75.89961,Coffea canephora,conventional,80.0,0.0,900.0,2008,focal observations
+276,Virginie_Boreux_Coffea_canephora_India_2008,12.093,75.88341,Coffea canephora,conventional,7.0,0.0,450.0,2008,focal observations
+279,Virginie_Boreux_Coffea_canephora_India_2008,12.12697,75.84016,Coffea canephora,conventional,14.0,0.0,450.0,2008,focal observations
+280,Virginie_Boreux_Coffea_canephora_India_2008,12.13562,75.8466,Coffea canephora,conventional,17.0,0.0,450.0,2008,focal observations
+284,Virginie_Boreux_Coffea_canephora_India_2008,12.14246,75.88369,Coffea canephora,conventional,30.0,0.0,450.0,2008,focal observations
+285,Virginie_Boreux_Coffea_canephora_India_2008,12.15478,75.88855,Coffea canephora,conventional,19.0,0.0,450.0,2008,focal observations
+286,Virginie_Boreux_Coffea_canephora_India_2008,12.16218,75.88353,Coffea canephora,conventional,25.0,0.0,450.0,2008,focal observations
+287,Virginie_Boreux_Coffea_canephora_India_2008,12.17958,75.87492,Coffea canephora,conventional,8.0,0.0,450.0,2008,focal observations
+293,Virginie_Boreux_Coffea_canephora_India_2008,12.15285,76.03595,Coffea canephora,conventional,42.0,0.0,1500.0,2008,focal observations
+296,Virginie_Boreux_Coffea_canephora_India_2008,12.21809,75.97126,Coffea canephora,conventional,6.0,0.0,750.0,2008,focal observations
+298,Virginie_Boreux_Coffea_canephora_India_2008,12.20358,75.96136,Coffea canephora,conventional,52.0,0.0,900.0,2008,focal observations
+300,Virginie_Boreux_Coffea_canephora_India_2008,12.12461,76.03326,Coffea canephora,conventional,35.0,0.0,1050.0,2008,focal observations
+302,Virginie_Boreux_Coffea_canephora_India_2008,12.09915,76.03733,Coffea canephora,conventional,25.0,0.0,600.0,2008,focal observations
+304,Virginie_Boreux_Coffea_canephora_India_2008,12.07993,76.05161,Coffea canephora,conventional,2.0,0.0,900.0,2008,focal observations
+315,Virginie_Boreux_Coffea_canephora_India_2008,12.23448,75.99284,Coffea canephora,conventional,61.0,0.0,750.0,2008,focal observations
+325,Virginie_Boreux_Coffea_canephora_India_2008,12.05929,75.96036,Coffea canephora,conventional,6.0,0.0,450.0,2008,focal observations
+bio1,Virginie_Boreux_Malus_domestica_Germany_2015,47.7368104560112,9.32303161893743,Malus domestica,organic,3.0,0.0,30.0,2015,transects
+bio2,Virginie_Boreux_Malus_domestica_Germany_2015,47.6768584757538,9.41047115210244,Malus domestica,organic,3.0,1.0,30.0,2015,transects
+bio4,Virginie_Boreux_Malus_domestica_Germany_2015,47.7867850826914,9.49638019987654,Malus domestica,organic,5.0,4.0,30.0,2015,transects
+bio5,Virginie_Boreux_Malus_domestica_Germany_2015,47.7676966375335,9.44250810161693,Malus domestica,organic,8.0,6.0,30.0,2015,transects
+bio6,Virginie_Boreux_Malus_domestica_Germany_2015,47.7679284427174,9.48956782149168,Malus domestica,organic,0.0,2.0,30.0,2015,transects
+bio7,Virginie_Boreux_Malus_domestica_Germany_2015,47.8121775127822,9.15824303527739,Malus domestica,organic,24.0,11.0,30.0,2015,transects
+bio8,Virginie_Boreux_Malus_domestica_Germany_2015,47.8042718594802,9.22160281598458,Malus domestica,organic,2.0,3.0,30.0,2015,transects
+bio10,Virginie_Boreux_Malus_domestica_Germany_2015,47.6673459833504,9.54680946498903,Malus domestica,organic,1.0,0.0,30.0,2015,transects
+bio11,Virginie_Boreux_Malus_domestica_Germany_2015,47.6274892350598,9.5932054503026,Malus domestica,organic,2.0,2.0,30.0,2015,transects
+bio12,Virginie_Boreux_Malus_domestica_Germany_2015,47.6060446858346,9.5504277628667,Malus domestica,organic,2.0,1.0,30.0,2015,transects
+bio13,Virginie_Boreux_Malus_domestica_Germany_2015,47.6375423236828,9.64284255956335,Malus domestica,organic,4.0,1.0,30.0,2015,transects
+bio14,Virginie_Boreux_Malus_domestica_Germany_2015,47.8284537567087,8.98288404887019,Malus domestica,organic,5.0,2.0,30.0,2015,transects
+bio15,Virginie_Boreux_Malus_domestica_Germany_2015,47.8237972198572,9.03750209066106,Malus domestica,organic,7.0,7.0,30.0,2015,transects
+ip1,Virginie_Boreux_Malus_domestica_Germany_2015,47.831430254555,8.97403731871548,Malus domestica,conventional,3.0,2.0,30.0,2015,transects
+ip3,Virginie_Boreux_Malus_domestica_Germany_2015,47.8039892937655,9.01916460197281,Malus domestica,conventional,1.0,1.0,30.0,2015,transects
+ip4,Virginie_Boreux_Malus_domestica_Germany_2015,47.7713314995836,9.24818307390594,Malus domestica,conventional,5.0,34.0,30.0,2015,transects
+ip6,Virginie_Boreux_Malus_domestica_Germany_2015,47.7066222982659,9.4106247968977,Malus domestica,conventional,4.0,0.0,30.0,2015,transects
+ip7,Virginie_Boreux_Malus_domestica_Germany_2015,47.690338775228,9.47093090827557,Malus domestica,conventional,0.0,1.0,30.0,2015,transects
+ip10,Virginie_Boreux_Malus_domestica_Germany_2015,47.7147304982891,9.52112027611416,Malus domestica,conventional,1.0,2.0,30.0,2015,transects
+ip11,Virginie_Boreux_Malus_domestica_Germany_2015,47.7517178566682,9.53329692336844,Malus domestica,conventional,1.0,0.0,30.0,2015,transects
+ip12,Virginie_Boreux_Malus_domestica_Germany_2015,47.7879002353309,9.24197361387411,Malus domestica,conventional,3.0,16.0,30.0,2015,transects
+ip13,Virginie_Boreux_Malus_domestica_Germany_2015,47.7944303709299,9.57412583782966,Malus domestica,conventional,1.0,6.0,30.0,2015,transects
+ip14,Virginie_Boreux_Malus_domestica_Germany_2015,47.6091763697272,9.56147758157641,Malus domestica,conventional,1.0,0.0,30.0,2015,transects
+ip15,Virginie_Boreux_Malus_domestica_Germany_2015,47.6200987373973,9.59035371908575,Malus domestica,conventional,0.0,1.0,30.0,2015,transects
+1,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.6144789907159,34.8373151141897,Citrullus lanatus,conventional,5.0,0.0,,2009,sweep net
+2,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.6263049564199,34.8303789862569,Citrullus lanatus,conventional,3.0,0.0,,2009,sweep net
+3,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.6337028969014,34.8176615811587,Citrullus lanatus,conventional,1.0,0.0,,2009,sweep net
+4,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.6441199277957,34.8209220697175,Citrullus lanatus,conventional,4.0,0.0,,2009,sweep net
+5,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.6529060330801,34.81202464659,Citrullus lanatus,conventional,1.0,0.0,,2009,sweep net
+6,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.6558691562123,34.8692379298526,Citrullus lanatus,conventional,32.0,0.0,,2009,sweep net
+7,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.6597786678577,34.8547631142222,Citrullus lanatus,conventional,13.0,0.0,,2009,sweep net
+8,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.6676881660736,34.8442681965505,Citrullus lanatus,conventional,5.0,0.0,,2009,sweep net
+9,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.7112604108208,34.8314132451377,Citrullus lanatus,conventional,4.0,0.0,,2009,sweep net
+10,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.8138449891606,34.9273419624852,Citrullus lanatus,conventional,8.0,0.0,,2009,sweep net
+11,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.8141899714458,34.910448154107,Citrullus lanatus,conventional,4.0,0.0,,2009,sweep net
+12,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.8295102873622,34.9762654512483,Citrullus lanatus,conventional,4.0,0.0,,2009,sweep net
+13,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.8298983081303,34.9628564777213,Citrullus lanatus,conventional,2.0,0.0,,2009,sweep net
+14,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.8299180463512,34.8717873950229,Citrullus lanatus,conventional,10.0,0.0,,2009,sweep net
+15,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.8455502531209,34.9538893899165,Citrullus lanatus,conventional,6.0,0.0,,2009,sweep net
+16,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.8586765528286,34.9799523270558,Citrullus lanatus,conventional,6.0,0.0,,2009,sweep net
+17,Yael_Mandelik_Citrullus_lanatus_Israel_2009,31.8623045969118,34.967030708754,Citrullus lanatus,conventional,24.0,0.0,,2009,sweep net
+1,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.6034410483401,34.8829445445152,Citrullus lanatus,conventional,35.0,0.0,,2010,sweep net
+2,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.6138375582319,34.8813619929648,Citrullus lanatus,conventional,19.0,0.0,,2010,sweep net
+3,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.6276407733911,34.8441099618529,Citrullus lanatus,conventional,7.0,0.0,,2010,sweep net
+4,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.6279047353894,34.8877595323916,Citrullus lanatus,conventional,62.0,0.0,,2010,sweep net
+5,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.6371383420002,34.8855211838847,Citrullus lanatus,conventional,29.0,0.0,,2010,sweep net
+6,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.6396494679876,34.8432926470504,Citrullus lanatus,conventional,9.0,0.0,,2010,sweep net
+7,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.6426039044036,34.8572687937675,Citrullus lanatus,conventional,5.0,0.0,,2010,sweep net
+8,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.7329127126696,34.8122085109129,Citrullus lanatus,conventional,25.0,0.0,,2010,sweep net
+9,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.7371264363469,34.8266448351965,Citrullus lanatus,conventional,14.0,0.0,,2010,sweep net
+10,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.8093708532177,34.8827804840753,Citrullus lanatus,conventional,28.0,0.0,,2010,sweep net
+11,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.8314027496887,34.8750925806844,Citrullus lanatus,conventional,15.0,0.0,,2010,sweep net
+12,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.8657802244451,34.9928924880524,Citrullus lanatus,conventional,29.0,0.0,,2010,sweep net
+13,Yael_Mandelik_Citrullus_lanatus_Israel_2010,31.8772670271067,34.9618521803009,Citrullus lanatus,conventional,17.0,0.0,,2010,sweep net
+1,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.6330540189216,34.8872310047838,Helianthus annuus,conventional,21.0,0.0,,2010,sweep net
+2,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.6569021829575,34.8290804928496,Helianthus annuus,conventional,14.0,0.0,,2010,sweep net
+3,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.6751887513312,34.9932391127037,Helianthus annuus,conventional,9.0,0.0,,2010,sweep net
+4,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.7941798171367,34.8170996701761,Helianthus annuus,conventional,9.0,0.0,,2010,sweep net
+5,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.7967014393193,34.885586246636,Helianthus annuus,conventional,87.0,0.0,,2010,sweep net
+6,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.8115696279982,34.8926485945846,Helianthus annuus,conventional,7.0,0.0,,2010,sweep net
+7,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.8120467134314,34.8787152243943,Helianthus annuus,conventional,15.0,0.0,,2010,sweep net
+8,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.8282457653626,34.8566458841444,Helianthus annuus,conventional,4.0,0.0,,2010,sweep net
+9,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.8291157345347,34.877264963208,Helianthus annuus,conventional,30.0,0.0,,2010,sweep net
+10,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.8311694385642,34.8664244165192,Helianthus annuus,conventional,5.0,0.0,,2010,sweep net
+11,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.8346678356683,34.9752132203782,Helianthus annuus,conventional,10.0,0.0,,2010,sweep net
+12,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.8414333546107,34.9517950210675,Helianthus annuus,conventional,4.0,1.0,,2010,sweep net
+13,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.8449861863152,34.9728971938344,Helianthus annuus,conventional,1.0,0.0,,2010,sweep net
+14,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.8481629562248,34.9832146551181,Helianthus annuus,conventional,4.0,0.0,,2010,sweep net
+15,Yael_Mandelik_Helianthus_annuus_Israel_2010,31.8550618845393,34.9745912478398,Helianthus annuus,conventional,9.0,0.0,,2010,sweep net
+Ariza_etal_2019_1,Ariza_etal_sweetcherry_Belgium_2019,50.9625242273677,4.14465605596089,Prunus avium,conventional,8.0,7.0,120.0,2019,sweep net
+Ariza_etal_2019_2,Ariza_etal_sweetcherry_Belgium_2019,51.0100320720083,3.54027305035789,Prunus avium,conventional,7.0,5.0,120.0,2019,sweep net
+Ariza_etal_2019_3,Ariza_etal_sweetcherry_Belgium_2019,50.8027694484111,5.42791736638254,Prunus avium,conventional,28.0,11.0,120.0,2019,sweep net
+Ariza_etal_2019_4,Ariza_etal_sweetcherry_Belgium_2019,50.8031982403574,5.28109225619956,Prunus avium,conventional,9.0,20.0,120.0,2019,sweep net
+Ariza_etal_2019_5,Ariza_etal_sweetcherry_Belgium_2019,50.8280407423863,5.13034926813109,Prunus avium,conventional,11.0,3.0,120.0,2019,sweep net
+Ariza_etal_2019_6,Ariza_etal_sweetcherry_Belgium_2019,50.7794737122977,5.06661343041594,Prunus avium,conventional,80.0,1.0,120.0,2019,sweep net
+Ariza_etal_2019_7,Ariza_etal_sweetcherry_Belgium_2019,50.7949672613938,5.11132411429653,Prunus avium,conventional,4.0,1.0,120.0,2019,sweep net
+Ariza_etal_2019_8,Ariza_etal_sweetcherry_Belgium_2019,50.7896300495933,5.22417371714952,Prunus avium,conventional,5.0,2.0,120.0,2019,sweep net
+Ariza_etal_2019_9,Ariza_etal_sweetcherry_Belgium_2019,50.8155691427545,5.1593760674869,Prunus avium,conventional,2.0,4.0,120.0,2019,sweep net
+Ariza_etal_2019_10,Ariza_etal_sweetcherry_Belgium_2019,50.9300805555556,4.97641500234677,Prunus avium,conventional,11.0,3.0,120.0,2019,sweep net
+Ariza_etal_2019_11,Ariza_etal_sweetcherry_Belgium_2019,50.9259615712677,4.93015421837571,Prunus avium,conventional,12.0,1.0,120.0,2019,sweep net
+Ariza_etal_2019_12,Ariza_etal_sweetcherry_Belgium_2019,51.174940780106,4.60425686081311,Prunus avium,conventional,49.0,0.0,120.0,2019,sweep net
+Ariza_etal_2019_13,Ariza_etal_sweetcherry_Belgium_2019,50.8039004796106,4.11087386691662,Prunus avium,conventional,50.0,14.0,120.0,2019,sweep net
+Ariza_etal_2019_14,Ariza_etal_sweetcherry_Belgium_2019,50.7555409964861,5.14092743765769,Prunus avium,conventional,12.0,1.0,120.0,2019,sweep net
+Ariza_etal_2019_15,Ariza_etal_sweetcherry_Belgium_2019,50.7926366577123,5.24131781708179,Prunus avium,conventional,2.0,3.0,120.0,2019,sweep net
+Ariza_etal_2019_16,Ariza_etal_sweetcherry_Belgium_2019,51.2704654749423,3.57123749030783,Prunus avium,conventional,14.0,6.0,120.0,2019,sweep net
+Ariza_etal_2019_1,Ariza_etal_apple_Belgium_2019,50.8884452463377,5.02435422897293,Malus domestica,conventional,8.0,3.0,120.0,2019,sweep net
+Ariza_etal_2019_2,Ariza_etal_apple_Belgium_2019,50.8730146086619,5.00840956798466,Malus domestica,conventional,2.0,13.0,120.0,2019,sweep net
+Ariza_etal_2019_3,Ariza_etal_apple_Belgium_2019,50.8752698768455,4.96508532599334,Malus domestica,conventional,7.0,17.0,120.0,2019,sweep net
+Ariza_etal_2019_4,Ariza_etal_apple_Belgium_2019,50.8262320643791,4.91717219087618,Malus domestica,conventional,7.0,8.0,120.0,2019,sweep net
+Ariza_etal_2019_5,Ariza_etal_apple_Belgium_2019,51.1199947420194,3.59194789588947,Malus domestica,conventional,5.0,5.0,120.0,2019,sweep net
+Ariza_etal_2019_6,Ariza_etal_apple_Belgium_2019,51.2482693878201,3.70305822174822,Malus domestica,conventional,2.0,11.0,120.0,2019,sweep net
+Ariza_etal_2019_7,Ariza_etal_apple_Belgium_2019,50.9033863133973,5.07862614123336,Malus domestica,conventional,2.0,4.0,120.0,2019,sweep net
+Ariza_etal_2019_8,Ariza_etal_apple_Belgium_2019,50.8986514777031,3.38112369179575,Malus domestica,conventional,6.0,10.0,120.0,2019,sweep net
+Ariza_etal_2019_9,Ariza_etal_apple_Belgium_2019,50.9067111259275,5.04619599652415,Malus domestica,conventional,9.0,2.0,120.0,2019,sweep net
+Ariza_etal_2019_10,Ariza_etal_apple_Belgium_2019,50.9203087992626,5.018760092503,Malus domestica,conventional,2.0,0.0,120.0,2019,sweep net
+Ariza_etal_2019_11,Ariza_etal_apple_Belgium_2019,51.2843810803478,3.62271780215638,Malus domestica,conventional,23.0,14.0,120.0,2019,sweep net
+Ariza_etal_2019_12,Ariza_etal_apple_Belgium_2019,50.8666623498564,3.32587710994118,Malus domestica,conventional,7.0,6.0,120.0,2019,sweep net
+Ariza_etal_2019_13,Ariza_etal_apple_Belgium_2019,50.9553202151251,3.39635130498703,Malus domestica,conventional,12.0,6.0,120.0,2019,sweep net
+Ariza_etal_2019_14,Ariza_etal_apple_Belgium_2019,50.9547416870069,3.4290567048266,Malus domestica,conventional,2.0,3.0,120.0,2019,sweep net
+BQ1,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-0.976966679096222,-78.5848007202148,Vicia faba,organic,8.0,2.0,90.0,2017,transects
+CUSU1,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-1.06701672077179,-78.6906967163086,Vicia faba,,10.0,1.0,90.0,2017,transects
+CUSU2,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-1.09193336963654,-78.7261199951172,Vicia faba,,2.0,2.0,90.0,2017,transects
+Q1,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-0.897866666316986,-78.7810821533203,Vicia faba,,0.0,4.0,90.0,2017,transects
+Q4,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-0.874766647815704,-78.9162139892578,Vicia faba,,0.0,1.0,90.0,2017,transects
+Q5,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-0.876550018787384,-78.9089660644531,Vicia faba,conventional,0.0,1.0,90.0,2017,transects
+CUMBI4,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-1.05083334445953,-78.5046844482422,Vicia faba,,1.0,0.0,90.0,2017,transects
+CUMBI5,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-1.03178334236145,-78.4778671264648,Vicia faba,,4.0,0.0,90.0,2017,transects
+CUMBI6,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-1.01160001754761,-78.4588165283203,Vicia faba,,1.0,0.0,90.0,2017,transects
+Q2,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-0.916649997234344,-78.8287811279297,Vicia faba,,1.0,0.0,90.0,2017,transects
+Q3,Carlos_Zaragoza_Trello_Vicia_faba_Ecuador_2017,-0.952400028705597,-78.8695526123047,Vicia faba,,6.0,0.0,90.0,2017,transects
+bp1,Diego_Nabaes_Jodar_Apple_Argentina_2019,-38.998277,-67.954604,Malus domestica,organic,0.0,6.0,30.0,2019,transects
+bp13,Diego_Nabaes_Jodar_Apple_Argentina_2019,-39.00361,-67.94514,Malus domestica,organic,1.0,3.0,30.0,2019,transects
+zec7,Diego_Nabaes_Jodar_Apple_Argentina_2019,-38.615072,-68.323733,Malus domestica,conventional,0.0,1.0,30.0,2019,transects
+Brushojgard_2008,Dupont_redclover_Denmark_2008,56.4087552673392,10.1198346795792,Trifolium pratense,organic,0.0,102.0,40.9833333333333,2008,transects
+Braedstrup_2008,Dupont_redclover_Denmark_2008,55.948581962524,9.64366586178405,Trifolium pratense,organic,0.0,208.0,100.25,2008,transects
+"Frijsendalsvej, Sall_2008",Dupont_redclover_Denmark_2008,56.2789580192022,9.84569705896529,Trifolium pratense,organic,0.0,279.0,74.8,2008,transects
+Galten_2008,Dupont_redclover_Denmark_2008,56.1329281164457,9.95959168389954,Trifolium pratense,organic,0.0,674.0,293.033333333333,2008,transects
+"Gjern, Tingvejen_2008",Dupont_redclover_Denmark_2008,56.1970362991484,9.72949827937521,Trifolium pratense,organic,0.0,254.0,94.55,2008,transects
+Hesselballe_2008,Dupont_redclover_Denmark_2008,56.2640220357239,10.2645455454261,Trifolium pratense,organic,0.0,269.0,56.5666666666667,2008,transects
+Odense_2008,Dupont_redclover_Denmark_2008,55.4312569332887,10.4567423740814,Trifolium pratense,organic,0.0,331.0,111.15,2008,transects
+Randers NO Syd_2008,Dupont_redclover_Denmark_2008,56.4999192580371,10.074774847579,Trifolium pratense,organic,0.0,232.0,175.4,2008,transects
+Skejby_2008,Dupont_redclover_Denmark_2008,56.2014058471345,10.1711366687495,Trifolium pratense,organic,0.0,189.0,76.8333333333333,2008,transects
+Vamdrup_2008,Dupont_redclover_Denmark_2008,55.4163791450969,9.23785103432375,Trifolium pratense,organic,0.0,241.0,112.466666666667,2008,transects
+"Vester Skerninge, Amarksvej_2008",Dupont_redclover_Denmark_2008,55.051539874864,10.4660608133478,Trifolium pratense,organic,0.0,510.0,125.733333333333,2008,transects
+Braedstrup_2009,Dupont_redclover_Denmark_2009,55.9516546445599,9.64371683847053,Trifolium pratense,organic,0.0,23.0,113.166666666667,2009,transects
+Galten_2009,Dupont_redclover_Denmark_2009,56.1368311149132,9.93926860240262,Trifolium pratense,organic,0.0,64.0,117.816666666667,2009,transects
+"Gjern, Blak_2009",Dupont_redclover_Denmark_2009,56.1997017778184,9.67463627798065,Trifolium pratense,organic,0.0,85.0,101.416666666667,2009,transects
+"Gjern, Tingvejen_2009",Dupont_redclover_Denmark_2009,56.2001088014947,9.7295565961768,Trifolium pratense,organic,0.0,104.0,91.85,2009,transects
+Hammel 1_2009,Dupont_redclover_Denmark_2009,56.2789580192022,9.84569705896529,Trifolium pratense,organic,0.0,354.0,243.516666666667,2009,transects
+Hammel 2_2009,Dupont_redclover_Denmark_2009,56.2928585193325,9.86508538453536,Trifolium pratense,organic,0.0,164.0,148.183333333333,2009,transects
+Horning_2009,Dupont_redclover_Denmark_2009,56.0831878878951,10.0561852551629,Trifolium pratense,organic,0.0,726.0,243.1,2009,transects
+Nr. Aaby_2009,Dupont_redclover_Denmark_2009,55.424533375932,9.85605242521262,Trifolium pratense,organic,0.0,176.0,154.5,2009,transects
+Odense_2009,Dupont_redclover_Denmark_2009,55.4312569332887,10.4567423740814,Trifolium pratense,organic,0.0,376.0,135.766666666667,2009,transects
+Randers NO Nord_2009,Dupont_redclover_Denmark_2009,56.5122074861614,10.0751225693981,Trifolium pratense,organic,0.0,267.0,118.316666666667,2009,transects
+Randers NO Syd_2009,Dupont_redclover_Denmark_2009,56.4999192580371,10.074774847579,Trifolium pratense,organic,0.0,270.0,121.583333333333,2009,transects
+Randers SO_2009,Dupont_redclover_Denmark_2009,56.4027459363624,10.1046209105932,Trifolium pratense,organic,0.0,396.0,140.616666666667,2009,transects
+Ringe_2009,Dupont_redclover_Denmark_2009,55.2920481397125,10.5524170387281,Trifolium pratense,organic,0.0,330.0,127.5,2009,transects
+Ry_2009,Dupont_redclover_Denmark_2009,56.0538640170978,9.78588241212469,Trifolium pratense,organic,0.0,217.0,99.0833333333334,2009,transects
+Skive_2009,Dupont_redclover_Denmark_2009,56.5693828504499,8.87758706783352,Trifolium pratense,organic,0.0,77.0,121.616666666667,2009,transects
+"Vester Skerninge, Kohavevej_2009",Dupont_redclover_Denmark_2009,55.0818349371757,10.4810179128541,Trifolium pratense,organic,0.0,223.0,154.516666666667,2009,transects
+Viborg_2009,Dupont_redclover_Denmark_2009,56.4436722105575,9.29155898533987,Trifolium pratense,organic,0.0,107.0,163.3,2009,transects
+1,Leah_Blechschmidt_Malus_domestica_Canada_2018,44.5058326721191,-80.4339141845703,Malus domestica,conventional,4.0,0.0,67.5,2018,focal observations
+2,Leah_Blechschmidt_Malus_domestica_Canada_2018,44.531192779541,-80.4896697998047,Malus domestica,conventional,8.0,0.0,60.0,2018,focal observations
+3,Leah_Blechschmidt_Malus_domestica_Canada_2018,44.5428886413574,-80.4273300170899,Malus domestica,conventional,9.0,1.0,75.0,2018,focal observations
+4,Leah_Blechschmidt_Malus_domestica_Canada_2018,43.206111907959,-79.9377517700195,Malus domestica,conventional,9.0,2.0,75.0,2018,focal observations
+5,Leah_Blechschmidt_Malus_domestica_Canada_2018,43.3396110534668,-79.9471130371094,Malus domestica,conventional,27.0,1.0,84.375,2018,focal observations
+6,Leah_Blechschmidt_Malus_domestica_Canada_2018,42.6889991760254,-81.2306976318359,Malus domestica,conventional,0.0,2.0,56.25,2018,focal observations
+8,Leah_Blechschmidt_Malus_domestica_Canada_2018,43.1368064880371,-79.7104187011719,Malus domestica,conventional,11.0,0.0,75.0,2018,focal observations
+10,Leah_Blechschmidt_Malus_domestica_Canada_2018,44.0320816040039,-79.0091934204102,Malus domestica,conventional,166.0,3.0,83.8636363636364,2018,focal observations
+13,Leah_Blechschmidt_Malus_domestica_Canada_2018,43.9001388549805,-78.71630859375,Malus domestica,conventional,15.0,3.0,70.7142857142857,2018,focal observations
+14,Leah_Blechschmidt_Malus_domestica_Canada_2018,43.9238624572754,-78.6056365966797,Malus domestica,conventional,1.0,0.0,60.0,2018,focal observations
+1,Leah_Blechschmidt_Malus_domestica_Canada_2019,44.5058326721191,-80.4339141845703,Malus domestica,conventional,9.0,1.0,64.2857142857143,2019,focal observations
+2,Leah_Blechschmidt_Malus_domestica_Canada_2019,44.531192779541,-80.4896697998047,Malus domestica,conventional,4.0,2.0,54.0,2019,focal observations
+4,Leah_Blechschmidt_Malus_domestica_Canada_2019,43.206111907959,-79.9377517700195,Malus domestica,conventional,4.0,7.0,64.2857142857143,2019,focal observations
+5,Leah_Blechschmidt_Malus_domestica_Canada_2019,43.3396110534668,-79.9471130371094,Malus domestica,conventional,27.0,7.0,75.0,2019,focal observations
+7,Leah_Blechschmidt_Malus_domestica_Canada_2019,42.9389724731445,-80.3993911743164,Malus domestica,conventional,11.0,8.0,75.0,2019,focal observations
+8,Leah_Blechschmidt_Malus_domestica_Canada_2019,43.1368064880371,-79.7104187011719,Malus domestica,conventional,1.0,0.0,67.5,2019,focal observations
+9,Leah_Blechschmidt_Malus_domestica_Canada_2019,43.1810264587402,-79.5804138183594,Malus domestica,conventional,0.0,2.0,45.0,2019,focal observations
+10,Leah_Blechschmidt_Malus_domestica_Canada_2019,44.0320816040039,-79.0091934204102,Malus domestica,conventional,63.0,43.0,82.1739130434783,2019,focal observations
+11,Leah_Blechschmidt_Malus_domestica_Canada_2019,42.892749786377,-80.3389739990234,Malus domestica,conventional,8.0,2.0,70.0,2019,focal observations
+12,Leah_Blechschmidt_Malus_domestica_Canada_2019,42.875415802002,-80.2722473144531,Malus domestica,conventional,1.0,1.0,54.0,2019,focal observations
+14,Leah_Blechschmidt_Malus_domestica_Canada_2019,43.9238624572754,-78.6056365966797,Malus domestica,conventional,3.0,1.0,67.5,2019,focal observations
+Eeraerts_etal_2017_1,Eeraerts_etal_sweetcherry_Belgium_2015,50.7826690673828,5.25860118865967,Prunus avium,conventional,4.0,2.0,180.0,2015,sweep net
+Eeraerts_etal_2017_2,Eeraerts_etal_sweetcherry_Belgium_2015,50.8705177307129,5.22807455062866,Prunus avium,conventional,3.0,1.0,180.0,2015,sweep net
+Eeraerts_etal_2017_3,Eeraerts_etal_sweetcherry_Belgium_2015,50.7708625793457,5.32553243637085,Prunus avium,conventional,0.0,4.0,180.0,2015,sweep net
+Eeraerts_etal_2017_4,Eeraerts_etal_sweetcherry_Belgium_2015,50.8036155700684,4.11061811447144,Prunus avium,conventional,19.0,4.0,180.0,2015,sweep net
+Eeraerts_etal_2017_5,Eeraerts_etal_sweetcherry_Belgium_2015,50.9625968933105,4.14462280273438,Prunus avium,conventional,6.0,13.0,180.0,2015,sweep net
+Eeraerts_etal_2017_6,Eeraerts_etal_sweetcherry_Belgium_2015,50.8032073974609,5.28096294403076,Prunus avium,conventional,0.0,3.0,180.0,2015,sweep net
+Eeraerts_etal_2017_7,Eeraerts_etal_sweetcherry_Belgium_2015,50.7650680541992,5.51744651794434,Prunus avium,conventional,1.0,13.0,180.0,2015,sweep net
+Eeraerts_etal_2019_1,Eeraerts_etal_sweetcherry_Belgium_2016,50.7941055297852,5.27310371398926,Prunus avium,conventional,3.0,5.0,225.0,2016,sweep net
+Eeraerts_etal_2019_2,Eeraerts_etal_sweetcherry_Belgium_2016,50.8906669616699,5.20197772979736,Prunus avium,conventional,0.0,2.0,225.0,2016,sweep net
+Eeraerts_etal_2019_3,Eeraerts_etal_sweetcherry_Belgium_2016,50.8283500671387,5.13080406188965,Prunus avium,conventional,7.0,15.0,225.0,2016,sweep net
+Eeraerts_etal_2019_4,Eeraerts_etal_sweetcherry_Belgium_2016,50.7103996276855,5.16217422485352,Prunus avium,conventional,0.0,5.0,225.0,2016,sweep net
+Eeraerts_etal_2019_5,Eeraerts_etal_sweetcherry_Belgium_2016,50.7950248718262,5.35525369644165,Prunus avium,conventional,5.0,5.0,225.0,2016,sweep net
+Eeraerts_etal_2019_6,Eeraerts_etal_sweetcherry_Belgium_2016,50.8903045654297,5.22275829315186,Prunus avium,conventional,1.0,4.0,225.0,2016,sweep net
+Eeraerts_etal_2019_7,Eeraerts_etal_sweetcherry_Belgium_2016,50.9302101135254,4.97656726837158,Prunus avium,conventional,4.0,8.0,225.0,2016,sweep net
+Eeraerts_etal_2019_8,Eeraerts_etal_sweetcherry_Belgium_2016,50.7602081298828,5.23345375061035,Prunus avium,conventional,2.0,1.0,225.0,2016,sweep net
+Eeraerts_etal_2019_9,Eeraerts_etal_sweetcherry_Belgium_2016,50.8304595947266,5.45679664611816,Prunus avium,conventional,7.0,8.0,225.0,2016,sweep net
+Eeraerts_etal_2019_10,Eeraerts_etal_sweetcherry_Belgium_2016,50.897891998291,5.36768054962158,Prunus avium,conventional,0.0,2.0,225.0,2016,sweep net
+Eeraerts_etal_2019_11,Eeraerts_etal_sweetcherry_Belgium_2017,50.8130111694336,5.35992097854614,Prunus avium,conventional,2.0,10.0,225.0,2017,sweep net
+Eeraerts_etal_2019_12,Eeraerts_etal_sweetcherry_Belgium_2017,51.1745223999023,4.60074472427368,Prunus avium,conventional,4.0,26.0,225.0,2017,sweep net
+Eeraerts_etal_2019_13,Eeraerts_etal_sweetcherry_Belgium_2017,50.9625968933105,4.14462280273438,Prunus avium,conventional,10.0,13.0,225.0,2017,sweep net
+Eeraerts_etal_2019_14,Eeraerts_etal_sweetcherry_Belgium_2017,50.8032073974609,5.28096294403076,Prunus avium,conventional,0.0,5.0,225.0,2017,sweep net
+Eeraerts_etal_2019_15,Eeraerts_etal_sweetcherry_Belgium_2017,50.9258804321289,4.93035697937012,Prunus avium,conventional,6.0,20.0,225.0,2017,sweep net
+Eeraerts_etal_2019_16,Eeraerts_etal_sweetcherry_Belgium_2017,50.7927474975586,5.24130249023438,Prunus avium,conventional,1.0,2.0,225.0,2017,sweep net
+Eeraerts_etal_2019_17,Eeraerts_etal_sweetcherry_Belgium_2017,50.755687713623,5.14155244827271,Prunus avium,conventional,2.0,2.0,225.0,2017,sweep net
+Eeraerts_etal_2019_18,Eeraerts_etal_sweetcherry_Belgium_2017,50.7708625793457,5.32553243637085,Prunus avium,conventional,1.0,1.0,225.0,2017,sweep net
