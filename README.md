@@ -24,7 +24,7 @@ The folder **Machine Learning** contains the implementation of a machine learnin
 
 References:
 
-1) Gimenez-Garcia A, et al. (in preparation) Applicability of simple and reliable pollination supply models from local to global scale.
+1) Gimenez-Garcia A, et al. (in preparation) Pollination supply models from local to global scale.
 
 2) Lonsdorf E, et al. (2009) Modelling pollination services across agricultural landscapes. Annals of Botany 103(9):1589–1600.
 
