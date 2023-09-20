@@ -1,0 +1,23 @@
+landcover,nesting ground and wood,nesting cavity,management nesting,floral,management floral,descr
+20,0.93,0.93,0.1,0.87,0.1,shrub
+30,0.8,0.8,0,1,0,herbaceous
+40,0.2,0.2,0,0.1,0,annual crops
+50,0.22,0.22,0,0.1,0,urban
+60,0.5,0.5,0,0.23,0,sparse vegetation
+70,0,0,0,0,0,snow/ice
+80,0,0,0,0,0,permanent water bodies
+90,0.3,0.3,0,0.6,0,wetland
+100,0.9,0.9,0,1,0,moss and lichen
+111,0.8,0.8,0.1,0.3,0.1,"closed forest, evergreen needle leaf"
+112,0.8,0.8,0.1,0.9,0.1,"closed forest, evergreen broad leaf"
+113,0.8,0.8,0.1,0.3,0.1,"closed forest, deciduous needle leaf"
+114,0.8,0.8,0.1,0.9,0.1,"closed forest, deciduous broad leaf"
+115,0.8,0.8,0.1,0.6,0.1,"closed forest, mixed"
+116,0.8,0.8,0.1,0.6,0.1,"closed forest, other"
+121,0.8,0.8,0.1,0.3,0.1,"open forest, evergreen needle leaf"
+122,0.8,0.8,0.1,0.9,0.1,"open forest, evergreen broad leaf"
+123,0.8,0.8,0.1,0.3,0.1,"open forest, deciduous needle leaf"
+124,0.8,0.8,0.1,0.9,0.1,"open forest, deciduous broad leaf"
+125,0.8,0.8,0.1,0.6,0.1,"open forest, mixed"
+126,0.8,0.8,0.1,0.6,0.1,"open forest, other"
+200,0,0,0,0,0,"oceans, seas"
